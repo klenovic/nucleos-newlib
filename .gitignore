@@ -1,0 +1,10 @@
+*~
+*.o
+*.gz
+*.Z
+*.tar
+*.tgz
+*.bz2
+=*
+
+autom4te*.cache

@@ -443,6 +443,28 @@ case "${host}" in
 	##newlib_cflags="${newlib_cflags} -idirafter ${gcc_dir}include"
 	;;
 
+  i[3-7]86-*-nucleos*)
+	sys_dir=nucleos
+	posix_dir=posix
+	unix_dir=unix
+
+	default_newlib_io_c99_formats="yes"
+	default_newlib_io_long_double="yes"
+	default_newlib_io_long_long="yes"
+	default_newlib_io_pos_args="yes"
+
+	newlib_cflags="${newlib_cflags} -Wall"
+	newlib_cflags="${newlib_cflags} -D_I386MACH_ALLOW_HW_INTERRUPTS"
+	newlib_cflags="${newlib_cflags} -DREENTRANT_SYSCALLS_PROVIDED"
+	newlib_cflags="${newlib_cflags} -DSIGNAL_PROVIDED"
+
+	newlib_cflags="${newlib_cflags} -DHAVE_FCNTL"
+	newlib_cflags="${newlib_cflags} -DHAVE_GETTIMEOFDAY"
+	newlib_cflags="${newlib_cflags} -DHAVE_RENAME"
+	newlib_cflags="${newlib_cflags} -DHAVE_NANOSLEEP"
+	newlib_cflags="${newlib_cflags} -DHAVE_OPENDIR"
+	;;
+
   m68hc11-*-*|m6811-*-*|m6812-*-*|m68hc12-*-*)
 	;;
 

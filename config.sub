@@ -126,6 +126,7 @@ case $maybe_os in
   nto-qnx* | linux-gnu* | linux-dietlibc | linux-newlib* | linux-uclibc* | \
   uclinux-uclibc* | uclinux-gnu* | kfreebsd*-gnu* | knetbsd*-gnu* | netbsd*-gnu* | \
   kopensolaris*-gnu* | \
+  nucleos-gnu* | nucleos-newlib* | \
   storm-chaos* | os2-emx* | rtmk-nova*)
     os=-$maybe_os
     basic_machine=`echo $1 | sed 's/^\(.*\)-\([^-]*-[^-]*\)$/\1/'`
@@ -1431,6 +1432,9 @@ case $os in
 		;;
 	-dicos*)
 		os=-dicos
+		;;
+	-nucleos*)
+		os=-nucleos
 		;;
 	-none)
 		;;
