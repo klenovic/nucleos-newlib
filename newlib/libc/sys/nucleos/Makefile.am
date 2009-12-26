@@ -24,134 +24,100 @@ SUBLIBS = \
 	$(NUCLEOS_MACH_LIB)
 
 GENERAL_SOURCES = \
-	aio.c \
+	access.c \
+	alarm.c \
 	brk.c \
-	calloc.c \
-	callocr.c \
-	cfreer.c \
-	cfspeed.c \
-	clock_getres.c \
-	clock_gettime.c \
-	clock_settime.c \
-	flockfile.c \
-	free.c \
-	freer.c \
-	ftok.c \
-	funlockfile.c \
-	getdate.c \
-	getdate_err.c \
-	gethostid.c \
-	gethostname.c \
-	getreent.c \
-	ids.c \
-	inode.c \
-	io.c \
-	ipc.c \
-	isatty.c \
-	nucleos.c \
-	mallinfor.c \
-	malloc.c \
-	mallocr.c \
-	mallstatsr.c \
+	chdir.c \
+	chmod.c \
+	chown.c \
+	chroot.c \
+	close.c \
+	cprofile.c \
+	creat.c \
+	dup2.c \
+	dup.c \
+	execl.c \
+	execle.c \
+	execlp.c \
+	execv.c \
+	execve.c \
+	execvp.c \
+	_exit.c \
+	fchdir.c \
+	fchmod.c \
+	fchown.c \
+	fcntl.c \
+	fork.c \
+	fstat.c \
+	fstatfs.c \
+	fsync.c \
+	ftruncate.c \
+	getdents.c \
+	getegid.c \
+	geteuid.c \
+	getgid.c \
+	getitimer.c \
+	getpgrp.c \
+	getpid.c \
+	getppid.c \
+	getpriority.c \
+	gettimeofday.c \
+	getuid.c \
+	ioctl.c \
+	kill.c \
+	link.c \
+	lseek64.c \
+	lseek.c \
+	lstat.c \
+	mkdir.c \
+	mknod.c \
 	mmap.c \
-	mq_close.c \
-	mq_getattr.c \
-	mq_notify.c \
-	mq_open.c \
-	mq_receive.c \
-	mq_send.c \
-	mq_setattr.c \
-	mq_unlink.c \
-	msize.c \
-	msizer.c \
-	mstats.c \
-	mtrim.c \
-	mtrimr.c \
-	ntp_gettime.c \
-	pread.c \
-	process.c \
-	prof-freq.c \
-	profile.c \
-	psignal.c \
-	pwrite.c \
-	raise.c \
-	realloc.c \
-	reallocr.c \
+	mount.c \
+	munmap.c \
+	munmap_text.c \
+	open.c \
+	pause.c \
+	pipe.c \
+	read.c \
+	readlink.c \
+	reboot.c \
 	rename.c \
-	resource.c \
-	sched.c \
+	rmdir.c \
 	select.c \
+	setegid.c \
 	seteuid.c \
-	sethostid.c \
-	sethostname.c \
-	shm_open.c \
-	shm_unlink.c \
-	sig.c \
+	setgid.c \
+	setitimer.c \
+	setpriority.c \
+	setsid.c \
+	setuid.c \
 	sigaction.c \
-	sigqueue.c \
-	signal.c \
-	siglongjmp.c \
-	sigset.c \
-	sigwait.c \
-	socket.c \
-	sleep.c \
-	strsignal.c \
-	strverscmp.c \
-	sysconf.c \
-	sysctl.c \
-	systat.c \
-	tcdrain.c \
-	tcsendbrk.c \
-	termios.c \
+	sigpending.c \
+	sigprocmask.c \
+	sigreturn.c \
+	sigsuspend.c \
+	sprofile.c \
+	stat.c \
+	stime.c \
+	symlink.c \
+	sync.c \
 	time.c \
-	usleep.c \
-	versionsort.c 
+	times.c \
+	truncate.c \
+	umask.c \
+	umount.c \
+	uname.c \
+	unlink.c \
+	utime.c \
+	wait.c \
+	waitpid.c \
+	write.c
 
-ELIX_2_SOURCES = \
-	aio64.c \
-	confstr.c \
-	ctermid.c \
-	fclean.c \
-	fpathconf.c \
-	fstab.c \
-	fstatvfs.c \
-	fstatvfs64.c \
-	ftw.c \
-	ftw64.c \
-	getopt.c \
-	getopt1.c \
-	getrlimit64.c \
-	getwd.c \
-	io64.c \
-	malign.c \
-	malignr.c \
-	malloptr.c \
-	mcheck.c \
-	mntent.c \
-	mntent_r.c \
-	pathconf.c \
-	pread64.c \
-	pvallocr.c \
-	pwrite64.c \
-	readdir64.c \
-	realpath.c \
-	scandir64.c \
-	setrlimit64.c \
-	statvfs.c \
-	statvfs64.c \
-	ttyname_r.c \
-	utimes.c \
-	vallocr.c \
-	versionsort64.c
+ELIX_2_SOURCES =
 
-ELIX_3_SOURCES = \
-	system.c \
-	wait.c
+ELIX_3_SOURCES =
 
-ELIX_4_SOURCES = \
-	getlogin.c \
-	getpwent.c \
-	stack.c
+ELIX_4_SOURCES =
 
 if ELIX_LEVEL_1
 ELIX_SOURCES =
@@ -220,7 +186,7 @@ objectlist.awk.in: $(noinst_LTLIBRARIES) $(SUBLIBS)
 	    fi; \
 	done
 
-all-local: crt0.o crt1.o
+all-local: crt0.o
 
 crt0.o: machine/crt0.o
 	rm -f $@
