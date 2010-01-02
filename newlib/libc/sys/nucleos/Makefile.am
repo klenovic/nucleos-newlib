@@ -14,14 +14,16 @@ endif
 
 SUBDIRS = machine \
 	$(argp_dir) \
-	cmath \
 	$(EXTRA_SUBDIRS)\
 	.
+#cmath
+
 SUBLIBS = \
 	$(ARGP_LIB) \
-	cmath/libcmath.la \
 	$(EXTRA_SUBLIBS) \
 	$(NUCLEOS_MACH_LIB)
+
+#cmath/libcmath.la
 
 GENERAL_SOURCES = \
 	access.c \
@@ -135,7 +137,7 @@ endif
 
 # This will handle both /usr/src/nucleos-2.4/include/asm/signal.h (in Red Hat Nucleos 7.1)
 # and also /usr/src/nucleos/include/asm/signal.h in older versions of Red Hat Nucleos
-SIGNAL_H = /usr/include/asm/signal.h
+SIGNAL_H = $(newlib_basedir)/newlib/sys/nucleos/include/asm/signal.h
 
 libnucleos_la_LDFLAGS = -Xcompiler -nostdlib
 

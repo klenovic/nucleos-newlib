@@ -10,6 +10,8 @@
 #include <nucleos/unistd.h>
 #include <nucleos/wait.h>
 #include <asm/syscall.h>
+#include <sys/errno.h>
+#include <sys/types.h>
 
 pid_t wait(int *status)
 {

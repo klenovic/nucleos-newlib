@@ -10,6 +10,8 @@
 #include <nucleos/unistd.h>
 #include <nucleos/times.h>
 #include <asm/syscall.h>
+#include <sys/errno.h>
+#include <sys/types.h>
 
 clock_t times(struct tms *buf)
 {

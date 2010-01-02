@@ -57,16 +57,15 @@ LIBRARIES = $(noinst_LIBRARIES)
 ARFLAGS = cru
 lib_a_AR = $(AR) $(ARFLAGS)
 lib_a_LIBADD =
-am__objects_1 = lib_a-get_clockfreq.$(OBJEXT) \
-	lib_a-getpagesize.$(OBJEXT) lib_a-hp-timing.$(OBJEXT) \
-	lib_a-setjmp.$(OBJEXT) lib_a-sigaction.$(OBJEXT) \
-	lib_a-dl-procinfo.$(OBJEXT)
+am__objects_1 = lib_a-longjmp.$(OBJEXT) lib_a-__sigreturn.$(OBJEXT) \
+	lib_a-__setjmp.$(OBJEXT) lib_a-brksize.$(OBJEXT) \
+	lib_a-crt0.$(OBJEXT) lib_a-getpagesize.$(OBJEXT)
 @USE_LIBTOOL_FALSE@am_lib_a_OBJECTS = $(am__objects_1)
 lib_a_OBJECTS = $(am_lib_a_OBJECTS)
 LTLIBRARIES = $(noinst_LTLIBRARIES)
 libnucleosi386_la_LIBADD =
-am__objects_2 = get_clockfreq.lo getpagesize.lo hp-timing.lo setjmp.lo \
-	sigaction.lo dl-procinfo.lo
+am__objects_2 = longjmp.lo __sigreturn.lo __setjmp.lo brksize.lo \
+	crt0.lo getpagesize.lo
 @USE_LIBTOOL_TRUE@am_libnucleosi386_la_OBJECTS = $(am__objects_2)
 libnucleosi386_la_OBJECTS = $(am_libnucleosi386_la_OBJECTS)
 libnucleosi386_la_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) \
@@ -220,7 +219,7 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 AUTOMAKE_OPTIONS = cygnus
 INCLUDES = $(NEWLIB_CFLAGS) $(CROSS_CFLAGS) $(TARGET_CFLAGS)
-LIB_SOURCES = get_clockfreq.c getpagesize.c hp-timing.c setjmp.S sigaction.c dl-procinfo.c
+LIB_SOURCES = longjmp.S __sigreturn.S __setjmp.S brksize.S crt0.S getpagesize.c
 libnucleosi386_la_LDFLAGS = -Xcompiler -nostdlib
 AM_CFLAGS = -I$(srcdir)/../..
 AM_CCASFLAGS = -I$(srcdir)/../.. $(INCLUDES)
@@ -305,11 +304,35 @@ distclean-compile:
 .S.lo:
 	$(LTCPPASCOMPILE) -c -o $@ $<
 
-lib_a-setjmp.o: setjmp.S
-	$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CCASFLAGS) $(CCASFLAGS) -c -o lib_a-setjmp.o `test -f 'setjmp.S' || echo '$(srcdir)/'`setjmp.S
+lib_a-longjmp.o: longjmp.S
+	$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CCASFLAGS) $(CCASFLAGS) -c -o lib_a-longjmp.o `test -f 'longjmp.S' || echo '$(srcdir)/'`longjmp.S
 
-lib_a-setjmp.obj: setjmp.S
-	$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CCASFLAGS) $(CCASFLAGS) -c -o lib_a-setjmp.obj `if test -f 'setjmp.S'; then $(CYGPATH_W) 'setjmp.S'; else $(CYGPATH_W) '$(srcdir)/setjmp.S'; fi`
+lib_a-longjmp.obj: longjmp.S
+	$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CCASFLAGS) $(CCASFLAGS) -c -o lib_a-longjmp.obj `if test -f 'longjmp.S'; then $(CYGPATH_W) 'longjmp.S'; else $(CYGPATH_W) '$(srcdir)/longjmp.S'; fi`
+
+lib_a-__sigreturn.o: __sigreturn.S
+	$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CCASFLAGS) $(CCASFLAGS) -c -o lib_a-__sigreturn.o `test -f '__sigreturn.S' || echo '$(srcdir)/'`__sigreturn.S
+
+lib_a-__sigreturn.obj: __sigreturn.S
+	$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CCASFLAGS) $(CCASFLAGS) -c -o lib_a-__sigreturn.obj `if test -f '__sigreturn.S'; then $(CYGPATH_W) '__sigreturn.S'; else $(CYGPATH_W) '$(srcdir)/__sigreturn.S'; fi`
+
+lib_a-__setjmp.o: __setjmp.S
+	$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CCASFLAGS) $(CCASFLAGS) -c -o lib_a-__setjmp.o `test -f '__setjmp.S' || echo '$(srcdir)/'`__setjmp.S
+
+lib_a-__setjmp.obj: __setjmp.S
+	$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CCASFLAGS) $(CCASFLAGS) -c -o lib_a-__setjmp.obj `if test -f '__setjmp.S'; then $(CYGPATH_W) '__setjmp.S'; else $(CYGPATH_W) '$(srcdir)/__setjmp.S'; fi`
+
+lib_a-brksize.o: brksize.S
+	$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CCASFLAGS) $(CCASFLAGS) -c -o lib_a-brksize.o `test -f 'brksize.S' || echo '$(srcdir)/'`brksize.S
+
+lib_a-brksize.obj: brksize.S
+	$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CCASFLAGS) $(CCASFLAGS) -c -o lib_a-brksize.obj `if test -f 'brksize.S'; then $(CYGPATH_W) 'brksize.S'; else $(CYGPATH_W) '$(srcdir)/brksize.S'; fi`
+
+lib_a-crt0.o: crt0.S
+	$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CCASFLAGS) $(CCASFLAGS) -c -o lib_a-crt0.o `test -f 'crt0.S' || echo '$(srcdir)/'`crt0.S
+
+lib_a-crt0.obj: crt0.S
+	$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CCASFLAGS) $(CCASFLAGS) -c -o lib_a-crt0.obj `if test -f 'crt0.S'; then $(CYGPATH_W) 'crt0.S'; else $(CYGPATH_W) '$(srcdir)/crt0.S'; fi`
 
 .c.o:
 	$(COMPILE) -c $<
@@ -320,35 +343,11 @@ lib_a-setjmp.obj: setjmp.S
 .c.lo:
 	$(LTCOMPILE) -c -o $@ $<
 
-lib_a-get_clockfreq.o: get_clockfreq.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-get_clockfreq.o `test -f 'get_clockfreq.c' || echo '$(srcdir)/'`get_clockfreq.c
-
-lib_a-get_clockfreq.obj: get_clockfreq.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-get_clockfreq.obj `if test -f 'get_clockfreq.c'; then $(CYGPATH_W) 'get_clockfreq.c'; else $(CYGPATH_W) '$(srcdir)/get_clockfreq.c'; fi`
-
 lib_a-getpagesize.o: getpagesize.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getpagesize.o `test -f 'getpagesize.c' || echo '$(srcdir)/'`getpagesize.c
 
 lib_a-getpagesize.obj: getpagesize.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getpagesize.obj `if test -f 'getpagesize.c'; then $(CYGPATH_W) 'getpagesize.c'; else $(CYGPATH_W) '$(srcdir)/getpagesize.c'; fi`
-
-lib_a-hp-timing.o: hp-timing.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-hp-timing.o `test -f 'hp-timing.c' || echo '$(srcdir)/'`hp-timing.c
-
-lib_a-hp-timing.obj: hp-timing.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-hp-timing.obj `if test -f 'hp-timing.c'; then $(CYGPATH_W) 'hp-timing.c'; else $(CYGPATH_W) '$(srcdir)/hp-timing.c'; fi`
-
-lib_a-sigaction.o: sigaction.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-sigaction.o `test -f 'sigaction.c' || echo '$(srcdir)/'`sigaction.c
-
-lib_a-sigaction.obj: sigaction.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-sigaction.obj `if test -f 'sigaction.c'; then $(CYGPATH_W) 'sigaction.c'; else $(CYGPATH_W) '$(srcdir)/sigaction.c'; fi`
-
-lib_a-dl-procinfo.o: dl-procinfo.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-dl-procinfo.o `test -f 'dl-procinfo.c' || echo '$(srcdir)/'`dl-procinfo.c
-
-lib_a-dl-procinfo.obj: dl-procinfo.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-dl-procinfo.obj `if test -f 'dl-procinfo.c'; then $(CYGPATH_W) 'dl-procinfo.c'; else $(CYGPATH_W) '$(srcdir)/dl-procinfo.c'; fi`
 
 mostlyclean-libtool:
 	-rm -f *.lo

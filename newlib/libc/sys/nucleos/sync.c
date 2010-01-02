@@ -9,6 +9,7 @@
  */
 #include <nucleos/unistd.h>
 #include <asm/syscall.h>
+#include <sys/errno.h>
 
 int sync(void)
 {

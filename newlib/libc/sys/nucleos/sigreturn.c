@@ -7,9 +7,12 @@
  *  it under the terms of the GNU General Public License as published by
  *  the Free Software Foundation, version 2 of the License.
  */
-#include <nucleos/lib.h>
-#include <asm/sigcontext.h>
+#include <nucleos/unistd.h>
 #include <nucleos/signal.h>
+#include <asm/syscall.h>
+#include <asm/sigcontext.h>
+#include <sys/errno.h>
+#include <sys/types.h>
 
 int sigreturn(register struct sigcontext *scp)
 {

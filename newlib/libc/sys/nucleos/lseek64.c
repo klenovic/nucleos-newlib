@@ -9,6 +9,8 @@
  */
 #include <nucleos/unistd.h>
 #include <asm/syscall.h>
+#include <sys/errno.h>
+#include <sys/types.h>
 
 loff_t lseek64(int fd, loff_t offset, int whence)
 {

@@ -13,6 +13,7 @@
 #include <nucleos/unistd.h>
 #include <nucleos/time.h>
 #include <asm/syscall.h>
+#include <sys/errno.h>
 
 int setitimer(int which, const struct itimerval *__restrict value,
 	      struct itimerval *__restrict ovalue)

@@ -10,8 +10,11 @@
 /* utime(2) for POSIX		Authors: Terrence W. Holm & Edwin L. Froese */
 
 #include <nucleos/unistd.h>
-#include <nucleos/utime.h>
+#include <sys/utime.h>
 #include <asm/syscall.h>
+#include <sys/errno.h>
+#include <sys/types.h>
+
 
 int utime(const char *filename, const struct utimbuf *times)
 {

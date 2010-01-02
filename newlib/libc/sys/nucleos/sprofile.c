@@ -9,6 +9,7 @@
  */
 #include <nucleos/unistd.h>
 #include <asm/syscall.h>
+#include <sys/errno.h>
 
 int sprofile(int action, int size, int freq, char *ctl_ptr, int *mem_ptr)
 {

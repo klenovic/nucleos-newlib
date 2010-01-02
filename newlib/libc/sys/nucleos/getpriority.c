@@ -9,6 +9,7 @@
  */
 #include <nucleos/unistd.h>
 #include <asm/syscall.h>
+#include <sys/errno.h>
 
 /* The return value of getpriority is biased by this value
  * to avoid returning negative values. */

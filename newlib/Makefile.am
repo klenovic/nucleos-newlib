@@ -197,6 +197,9 @@ all-recursive: stmp-targ-include
 stmp-targ-include: config.status
 	-rm -rf targ-include stmp-targ-include
 	mkdir targ-include targ-include/sys targ-include/machine targ-include/bits
+	mkdir targ-include/asm targ-include/asm-generic targ-include/kernel targ-include/servers
+	mkdir targ-include/servers/ds targ-include/servers/rs targ-include/servers/vm
+	mkdir targ-include/nucleos
 	cp newlib.h targ-include/newlib.h
 	-for i in $(srcdir)/libc/machine/$(machine_dir)/machine/*.h; do \
 	    if [ -f $$i ]; then \
@@ -243,6 +246,41 @@ stmp-targ-include: config.status
 	      cp $$i targ-include/machine/`basename $$i`; \
 	    else true; fi ; \
 	  done
+	-for i in $(srcdir)/libc/sys/$(sys_dir)/include/asm/*.h; do \
+	    if [ -f $$i ]; then \
+	      cp $$i targ-include/asm/`basename $$i`; \
+	    else true; fi ; \
+	done
+	-for i in $(srcdir)/libc/sys/$(sys_dir)/include/asm-generic/*.h; do \
+	    if [ -f $$i ]; then \
+	      cp $$i targ-include/asm-generic/`basename $$i`; \
+	    else true; fi ; \
+	done
+	-for i in $(srcdir)/libc/sys/$(sys_dir)/include/kernel/*.h; do \
+	    if [ -f $$i ]; then \
+	      cp $$i targ-include/kernel/`basename $$i`; \
+	    else true; fi ; \
+	done
+	-for i in $(srcdir)/libc/sys/$(sys_dir)/include/servers/ds/*.h; do \
+	    if [ -f $$i ]; then \
+	      cp $$i targ-include/servers/ds/`basename $$i`; \
+	    else true; fi ; \
+	done
+	-for i in $(srcdir)/libc/sys/$(sys_dir)/include/servers/rs/*.h; do \
+	    if [ -f $$i ]; then \
+	      cp $$i targ-include/servers/rs/`basename $$i`; \
+	    else true; fi ; \
+	done
+	-for i in $(srcdir)/libc/sys/$(sys_dir)/include/servers/vm/*.h; do \
+	    if [ -f $$i ]; then \
+	      cp $$i targ-include/servers/vm/`basename $$i`; \
+	    else true; fi ; \
+	done
+	-for i in $(srcdir)/libc/sys/$(sys_dir)/include/nucleos/*.h; do \
+	    if [ -f $$i ]; then \
+	      cp $$i targ-include/nucleos/`basename $$i`; \
+	    else true; fi ; \
+	done
 	touch $@
 
 CLEANFILES = targ-include stmp-targ-include
@@ -307,6 +345,49 @@ endif
 	  for i in $(srcdir)/libc/sys/$(sys_dir)/machine/$(machine_dir)/include/*.h; do \
 	    if [ -f $$i ]; then \
 	     $(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/machine/`basename $$i`; \
+	    else true; fi ; \
+	  done ; \
+	  $(mkinstalldirs) $(DESTDIR)$(tooldir)/include/asm; \
+	  for i in $(srcdir)/libc/sys/$(sys_dir)/include/asm/*.h; do \
+	    if [ -f $$i ]; then \
+	     $(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/asm/`basename $$i`; \
+	    else true; fi ; \
+	  done ; \
+	  $(mkinstalldirs) $(DESTDIR)$(tooldir)/include/asm-generic; \
+	  for i in $(srcdir)/libc/sys/$(sys_dir)/include/asm-generic/*.h; do \
+	    if [ -f $$i ]; then \
+	     $(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/asm-generic/`basename $$i`; \
+	    else true; fi ; \
+	  done ; \
+	  $(mkinstalldirs) $(DESTDIR)$(tooldir)/include/kernel; \
+	  for i in $(srcdir)/libc/sys/$(sys_dir)/include/kernel/*.h; do \
+	    if [ -f $$i ]; then \
+	     $(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/kernel/`basename $$i`; \
+	    else true; fi ; \
+	  done ; \
+	  $(mkinstalldirs) $(DESTDIR)$(tooldir)/include/servers; \
+	  $(mkinstalldirs) $(DESTDIR)$(tooldir)/include/servers/ds; \
+	  for i in $(srcdir)/libc/sys/$(sys_dir)/include/servers/ds/*.h; do \
+	    if [ -f $$i ]; then \
+	     $(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/servers/ds/`basename $$i`; \
+	    else true; fi ; \
+	  done ; \
+	  $(mkinstalldirs) $(DESTDIR)$(tooldir)/include/servers/rs; \
+	  for i in $(srcdir)/libc/sys/$(sys_dir)/include/servers/rs/*.h; do \
+	    if [ -f $$i ]; then \
+	     $(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/servers/rs/`basename $$i`; \
+	    else true; fi ; \
+	  done ; \
+	  $(mkinstalldirs) $(DESTDIR)$(tooldir)/include/servers/vm; \
+	  for i in $(srcdir)/libc/sys/$(sys_dir)/include/servers/vm/*.h; do \
+	    if [ -f $$i ]; then \
+	     $(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/servers/vm/`basename $$i`; \
+	    else true; fi ; \
+	  done ; \
+	  $(mkinstalldirs) $(DESTDIR)$(tooldir)/include/nucleos; \
+	  for i in $(srcdir)/libc/sys/$(sys_dir)/include/nucleos/*.h; do \
+	    if [ -f $$i ]; then \
+	     $(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/nucleos/`basename $$i`; \
 	    else true; fi ; \
 	  done ; \
 	else true; fi

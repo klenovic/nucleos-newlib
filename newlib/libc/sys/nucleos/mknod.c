@@ -9,6 +9,8 @@
  */
 #include <nucleos/unistd.h>
 #include <asm/syscall.h>
+#include <sys/errno.h>
+#include <sys/types.h>
 
 int mknod(const char *name, mode_t mode, dev_t dev)
 {

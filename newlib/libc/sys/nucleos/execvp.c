@@ -16,8 +16,9 @@
 #include <stdlib.h>
 #include <nucleos/string.h>
 #include <nucleos/unistd.h>
-#include <nucleos/errno.h>
 #include <nucleos/stat.h>
+#include <sys/errno.h>
+#include <sys/stat.h>
 
 extern char * const **_penviron;	/* The default environment. */
 

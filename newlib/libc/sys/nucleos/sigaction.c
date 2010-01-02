@@ -11,6 +11,7 @@
 #include <asm/sigcontext.h>
 #include <nucleos/signal.h>
 #include <asm/syscall.h>
+#include <sys/errno.h>
 
 extern int __sigreturn(void);
 

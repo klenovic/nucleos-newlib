@@ -10,13 +10,21 @@
 #include <nucleos/unistd.h>
 #include <nucleos/stat.h>
 #include <asm/syscall.h>
+#include <sys/errno.h>
+#include <sys/kstat.h>
 
 int lstat(const char *path, struct stat *buffer)
 {
 	int r;
+	struct kstat kbuffer;
 
-	if ((r = INLINE_SYSCALL(lstat, 2, path, buffer)) >= 0)
+	if ((r = INLINE_SYSCALL(lstat, 2, path, &kbuffer)) >= 0)
 		return r;
+
+	if(r)
+		return r;
+
+	kstat_to_stat(buffer, &kbuffer);
 
 	return stat(path, buffer);
 }

@@ -11,10 +11,12 @@
 
    author: Edvard Tuinder  v892231@si.hhs.NL
  */
-
-#include <nucleos/lib.h>
 #include <nucleos/unistd.h>
+#include <unistd.h> /* RBT_MONITOR */
+#include <asm/syscall.h>
 #include <stdarg.h>
+#include <sys/errno.h>
+#include <sys/types.h>
 
 int reboot(int how, ...)
 {

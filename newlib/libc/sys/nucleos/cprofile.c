@@ -9,6 +9,7 @@
  */
 #include <nucleos/unistd.h>
 #include <asm/syscall.h>
+#include <sys/errno.h>
 
 int cprofile(int action, int size, char *ctl_ptr, int *mem_ptr)
 {

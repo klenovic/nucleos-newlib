@@ -12558,7 +12558,7 @@ if test -n "${machine_dir}"; then
   if test "${use_libtool}" = "yes"; then
     NUCLEOS_MACH_LIB=machine/${machine_dir}/libnucleos${machine_dir}.${aext}
   else
-    NUCLEOS_MACH_LIB=machine/lib.${aext}
+    NUCLEOS_MACH_LIB=machine/${machine_dir}/lib.${aext}
   fi
 fi
 
@@ -12567,7 +12567,8 @@ EXTRA_SUBDIRS=
 EXTRA_SUBLIBS=
 
 if test "x${newlib_elix_level}" = "x1"; then
-EXTRA_SUBDIRS=nucleosthreads net
+EXTRA_SUBDIRS=
+#nucleosthreads net
 else
 EXTRA_SUBDIRS="nucleosthreads net intl iconv dl"
 EXTRA_SUBLIBS="net/libnet.la intl/libintl.la iconv/libiconv.la dl/libdl.la"
@@ -12576,8 +12577,9 @@ fi
 
 
 
-ac_config_files="$ac_config_files Makefile intl/Makefile net/Makefile iconv/Makefile dl/Makefile cmath/Makefile argp/Makefile"
+ac_config_files="$ac_config_files Makefile"
 
+#AC_CONFIG_FILES([Makefile intl/Makefile net/Makefile iconv/Makefile dl/Makefile cmath/Makefile argp/Makefile])
 cat >confcache <<\_ACEOF
 # This file is a shell script that caches the results of configure
 # tests run on this system so they can be shared between configure
@@ -13534,12 +13536,6 @@ do
     "depfiles") CONFIG_COMMANDS="$CONFIG_COMMANDS depfiles" ;;
     "libtool") CONFIG_COMMANDS="$CONFIG_COMMANDS libtool" ;;
     "Makefile") CONFIG_FILES="$CONFIG_FILES Makefile" ;;
-    "intl/Makefile") CONFIG_FILES="$CONFIG_FILES intl/Makefile" ;;
-    "net/Makefile") CONFIG_FILES="$CONFIG_FILES net/Makefile" ;;
-    "iconv/Makefile") CONFIG_FILES="$CONFIG_FILES iconv/Makefile" ;;
-    "dl/Makefile") CONFIG_FILES="$CONFIG_FILES dl/Makefile" ;;
-    "cmath/Makefile") CONFIG_FILES="$CONFIG_FILES cmath/Makefile" ;;
-    "argp/Makefile") CONFIG_FILES="$CONFIG_FILES argp/Makefile" ;;
 
   *) { { $as_echo "$as_me:$LINENO: error: invalid argument: $ac_config_target" >&5
 $as_echo "$as_me: error: invalid argument: $ac_config_target" >&2;}

@@ -8,8 +8,9 @@
  *  the Free Software Foundation, version 2 of the License.
  */
 #include <nucleos/unistd.h>
-#include <nucleos/utsname.h>
+#include <sys/utsname.h>
 #include <asm/syscall.h>
+#include <sys/errno.h>
 
 int uname(struct utsname *buf)
 {

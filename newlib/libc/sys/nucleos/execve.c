@@ -14,6 +14,7 @@
 #include <nucleos/string.h>
 #include <nucleos/errno.h>
 #include <asm/syscall.h>
+#include <sys/errno.h>
 
 /**
  * @nucleos: Change let kernel side setup the stack.

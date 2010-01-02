@@ -7,11 +7,11 @@
  *  it under the terms of the GNU General Public License as published by
  *  the Free Software Foundation, version 2 of the License.
  */
-#include <nucleos/lib.h>
+#include <nucleos/unistd.h>
 #include <nucleos/mman.h>
-#include <nucleos/string.h>
-#include <nucleos/errno.h>
 #include <stdarg.h>
+#include <sys/errno.h>
+#include <sys/types.h>
 
 void *mmap(void *addr, size_t len, int prot, int flags, int fd, off_t offset)
 {

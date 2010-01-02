@@ -9,6 +9,8 @@
  */
 #include <nucleos/unistd.h>
 #include <asm/syscall.h>
+#include <sys/errno.h>
+#include <sys/types.h>
 
 ssize_t write(int fd, const void *buffer, size_t nbytes)
 {

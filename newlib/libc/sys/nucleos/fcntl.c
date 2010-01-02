@@ -10,6 +10,7 @@
 #include <nucleos/unistd.h>
 #include <asm/syscall.h>
 #include <stdarg.h>
+#include <sys/errno.h>
 
 int fcntl(int fd, int cmd, ...)
 {

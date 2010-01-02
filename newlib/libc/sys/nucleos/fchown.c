@@ -9,6 +9,8 @@
  */
 #include <nucleos/unistd.h>
 #include <asm/syscall.h>
+#include <sys/errno.h>
+#include <sys/types.h>
 
 int fchown(int fd, uid_t owner, gid_t grp)
 {

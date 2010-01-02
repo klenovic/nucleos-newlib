@@ -10,8 +10,18 @@
 #include <nucleos/unistd.h>
 #include <nucleos/stat.h>
 #include <asm/syscall.h>
+#include <sys/errno.h>
+#include <sys/kstat.h>
 
 int fstat(int fd, struct stat *buffer)
 {
-	return INLINE_SYSCALL(fstat, 2, fd, buffer);
+	int err;
+	struct kstat kbuffer;
+
+	err = INLINE_SYSCALL(fstat, 2, fd, &kbuffer);
+
+	if (!err)
+		kstat_to_stat(buffer, &kbuffer);
+
+	return err;
 }

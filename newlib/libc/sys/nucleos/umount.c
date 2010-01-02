@@ -7,15 +7,13 @@
  *  it under the terms of the GNU General Public License as published by
  *  the Free Software Foundation, version 2 of the License.
  */
-#include <nucleos/lib.h>
 #include <nucleos/string.h>
-#include <nucleos/mount.h>
+#include <sys/mount.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include <nucleos/stat.h>
-#include <nucleos/syslib.h>
-#include <servers/rs/rs.h>
-#include <nucleos/paths.h>
+#include <sys/stat.h>
+#include <paths.h>
+#include <sys/errno.h>
 
 #define FSPATH "/sbin/"
 #define FSDEFAULT "mfs"

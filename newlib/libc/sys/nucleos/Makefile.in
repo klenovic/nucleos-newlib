@@ -160,7 +160,7 @@ RECURSIVE_CLEAN_TARGETS = mostlyclean-recursive clean-recursive	\
   distclean-recursive maintainer-clean-recursive
 ETAGS = etags
 CTAGS = ctags
-DIST_SUBDIRS = machine argp cmath @EXTRA_SUBDIRS@ .
+DIST_SUBDIRS = machine argp @EXTRA_SUBDIRS@ .
 ACLOCAL = @ACLOCAL@
 AMTAR = @AMTAR@
 AR = @AR@
@@ -297,16 +297,17 @@ INCLUDES = -I$(srcdir)/include $(NEWLIB_CFLAGS) $(CROSS_CFLAGS) $(TARGET_CFLAGS)
 @ELIX_LEVEL_1_TRUE@ARGP_LIB = 
 SUBDIRS = machine \
 	$(argp_dir) \
-	cmath \
 	$(EXTRA_SUBDIRS)\
 	.
 
+#cmath
 SUBLIBS = \
 	$(ARGP_LIB) \
-	cmath/libcmath.la \
 	$(EXTRA_SUBLIBS) \
 	$(NUCLEOS_MACH_LIB)
 
+
+#cmath/libcmath.la
 GENERAL_SOURCES = \
 	access.c \
 	alarm.c \
@@ -407,7 +408,7 @@ ELIX_4_SOURCES =
 
 # This will handle both /usr/src/nucleos-2.4/include/asm/signal.h (in Red Hat Nucleos 7.1)
 # and also /usr/src/nucleos/include/asm/signal.h in older versions of Red Hat Nucleos
-SIGNAL_H = /usr/include/asm/signal.h
+SIGNAL_H = $(newlib_basedir)/newlib/sys/nucleos/include/asm/signal.h
 libnucleos_la_LDFLAGS = -Xcompiler -nostdlib
 ADD_OBJS = \
 	$(NUCLEOS_MACH_LIB)

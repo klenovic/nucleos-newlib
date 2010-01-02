@@ -13,6 +13,7 @@
 #include <nucleos/unistd.h>
 #include <nucleos/time.h>
 #include <asm/syscall.h>
+#include <sys/errno.h>
 
 /*
  * This is the implementation for the function to

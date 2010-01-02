@@ -31,7 +31,7 @@ if test -n "${machine_dir}"; then
   if test "${use_libtool}" = "yes"; then
     NUCLEOS_MACH_LIB=machine/${machine_dir}/libnucleos${machine_dir}.${aext}
   else
-    NUCLEOS_MACH_LIB=machine/lib.${aext}
+    NUCLEOS_MACH_LIB=machine/${machine_dir}/lib.${aext}
   fi
 fi
 AC_SUBST(NUCLEOS_MACH_LIB)
@@ -40,7 +40,8 @@ EXTRA_SUBDIRS=
 EXTRA_SUBLIBS=
 
 if test "x${newlib_elix_level}" = "x1"; then
-EXTRA_SUBDIRS=nucleosthreads net
+EXTRA_SUBDIRS=
+#nucleosthreads net
 else 
 EXTRA_SUBDIRS="nucleosthreads net intl iconv dl"
 EXTRA_SUBLIBS="net/libnet.la intl/libintl.la iconv/libiconv.la dl/libdl.la"
@@ -49,5 +50,6 @@ fi
 AC_SUBST(EXTRA_SUBDIRS)
 AC_SUBST(EXTRA_SUBLIBS)
 
-AC_CONFIG_FILES([Makefile intl/Makefile net/Makefile iconv/Makefile dl/Makefile cmath/Makefile argp/Makefile])
+AC_CONFIG_FILES([Makefile])
+#AC_CONFIG_FILES([Makefile intl/Makefile net/Makefile iconv/Makefile dl/Makefile cmath/Makefile argp/Makefile])
 AC_OUTPUT

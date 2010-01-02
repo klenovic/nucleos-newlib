@@ -8,9 +8,11 @@
  *  the Free Software Foundation, version 2 of the License.
  */
 #include <nucleos/unistd.h>
-#include <nucleos/time.h>
-#include <nucleos/select.h>
+#include <sys/time.h>
 #include <asm/syscall.h>
+#include <sys/select.h>
+#include <sys/errno.h>
+#include <sys/types.h>
 
 int select(int nfds, fd_set *readfds, fd_set *writefds, fd_set *errorfds,
 	   struct timeval *timeout)

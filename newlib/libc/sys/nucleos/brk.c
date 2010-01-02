@@ -10,6 +10,7 @@
 #include <nucleos/unistd.h>
 #include <nucleos/errno.h>
 #include <asm/syscall.h>
+#include <sys/errno.h>
 
 extern void *__curbrk;
 

@@ -10,6 +10,7 @@
 #include <nucleos/unistd.h>
 #include <nucleos/signal.h>
 #include <asm/syscall.h>
+#include <sys/errno.h>
 
 int sigsuspend(const sigset_t *set)
 {

@@ -8,8 +8,10 @@
  *  the Free Software Foundation, version 2 of the License.
  */
 #include <nucleos/unistd.h>
-#include <nucleos/dirent.h>
+#include <sys/dirent.h>
 #include <asm/syscall.h>
+#include <sys/errno.h>
+#include <sys/types.h>
 
 ssize_t getdents(int fd, struct dirent *buffer, size_t nbytes)
 {
