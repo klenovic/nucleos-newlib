@@ -99,7 +99,7 @@ am__objects_1 = lib_a-access.$(OBJEXT) lib_a-alarm.$(OBJEXT) \
 	lib_a-umount.$(OBJEXT) lib_a-uname.$(OBJEXT) \
 	lib_a-unlink.$(OBJEXT) lib_a-utime.$(OBJEXT) \
 	lib_a-wait.$(OBJEXT) lib_a-waitpid.$(OBJEXT) \
-	lib_a-write.$(OBJEXT)
+	lib_a-write.$(OBJEXT) lib_a-poll.$(OBJEXT)
 am__objects_2 =
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@am__objects_3 = $(am__objects_2) \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@	$(am__objects_2) \
@@ -127,7 +127,7 @@ am__objects_4 = access.lo alarm.lo brk.lo chdir.lo chmod.lo chown.lo \
 	sigpending.lo sigprocmask.lo sigreturn.lo sigsuspend.lo \
 	sprofile.lo stat.lo stime.lo symlink.lo sync.lo time.lo \
 	times.lo truncate.lo umask.lo umount.lo uname.lo unlink.lo \
-	utime.lo wait.lo waitpid.lo write.lo
+	utime.lo wait.lo waitpid.lo write.lo poll.lo
 @USE_LIBTOOL_TRUE@am_libnucleos_la_OBJECTS = $(am__objects_4) \
 @USE_LIBTOOL_TRUE@	$(am__objects_3)
 libnucleos_la_OBJECTS = $(am_libnucleos_la_OBJECTS)
@@ -396,7 +396,8 @@ GENERAL_SOURCES = \
 	utime.c \
 	wait.c \
 	waitpid.c \
-	write.c
+	write.c \
+	poll.c
 
 ELIX_2_SOURCES = 
 ELIX_3_SOURCES = 
@@ -1027,6 +1028,12 @@ lib_a-write.o: write.c
 
 lib_a-write.obj: write.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-write.obj `if test -f 'write.c'; then $(CYGPATH_W) 'write.c'; else $(CYGPATH_W) '$(srcdir)/write.c'; fi`
+
+lib_a-poll.o: poll.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-poll.o `test -f 'poll.c' || echo '$(srcdir)/'`poll.c
+
+lib_a-poll.obj: poll.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-poll.obj `if test -f 'poll.c'; then $(CYGPATH_W) 'poll.c'; else $(CYGPATH_W) '$(srcdir)/poll.c'; fi`
 
 mostlyclean-libtool:
 	-rm -f *.lo

@@ -113,7 +113,8 @@ GENERAL_SOURCES = \
 	utime.c \
 	wait.c \
 	waitpid.c \
-	write.c
+	write.c \
+	poll.c
 
 ELIX_2_SOURCES =
 
