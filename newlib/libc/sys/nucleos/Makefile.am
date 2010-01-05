@@ -119,7 +119,15 @@ GENERAL_SOURCES = \
 	sbrk.c \
 	sysconf.c \
 	sys_siglist.c \
-	strsignal.c
+	strsignal.c \
+	sigmisc.c \
+	signal.c \
+	flockfile.c \
+	funlockfile.c \
+	getgroups.c \
+	closedir.c \
+	opendir.c \
+	readdir.c
 
 ELIX_2_SOURCES =
 

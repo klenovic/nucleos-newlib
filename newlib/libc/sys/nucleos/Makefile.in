@@ -102,7 +102,11 @@ am__objects_1 = lib_a-access.$(OBJEXT) lib_a-alarm.$(OBJEXT) \
 	lib_a-write.$(OBJEXT) lib_a-poll.$(OBJEXT) \
 	lib_a-killpg.$(OBJEXT) lib_a-sbrk.$(OBJEXT) \
 	lib_a-sysconf.$(OBJEXT) lib_a-sys_siglist.$(OBJEXT) \
-	lib_a-strsignal.$(OBJEXT)
+	lib_a-strsignal.$(OBJEXT) lib_a-sigmisc.$(OBJEXT) \
+	lib_a-signal.$(OBJEXT) lib_a-flockfile.$(OBJEXT) \
+	lib_a-funlockfile.$(OBJEXT) lib_a-getgroups.$(OBJEXT) \
+	lib_a-closedir.$(OBJEXT) lib_a-opendir.$(OBJEXT) \
+	lib_a-readdir.$(OBJEXT)
 am__objects_2 =
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@am__objects_3 = $(am__objects_2) \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@	$(am__objects_2) \
@@ -131,7 +135,9 @@ am__objects_4 = access.lo alarm.lo brk.lo chdir.lo chmod.lo chown.lo \
 	sprofile.lo stat.lo stime.lo symlink.lo sync.lo time.lo \
 	times.lo truncate.lo umask.lo umount.lo uname.lo unlink.lo \
 	utime.lo wait.lo waitpid.lo write.lo poll.lo killpg.lo sbrk.lo \
-	sysconf.lo sys_siglist.lo strsignal.lo
+	sysconf.lo sys_siglist.lo strsignal.lo sigmisc.lo signal.lo \
+	flockfile.lo funlockfile.lo getgroups.lo closedir.lo \
+	opendir.lo readdir.lo
 @USE_LIBTOOL_TRUE@am_libnucleos_la_OBJECTS = $(am__objects_4) \
 @USE_LIBTOOL_TRUE@	$(am__objects_3)
 libnucleos_la_OBJECTS = $(am_libnucleos_la_OBJECTS)
@@ -406,7 +412,15 @@ GENERAL_SOURCES = \
 	sbrk.c \
 	sysconf.c \
 	sys_siglist.c \
-	strsignal.c
+	strsignal.c \
+	sigmisc.c \
+	signal.c \
+	flockfile.c \
+	funlockfile.c \
+	getgroups.c \
+	closedir.c \
+	opendir.c \
+	readdir.c
 
 ELIX_2_SOURCES = 
 ELIX_3_SOURCES = 
@@ -1070,6 +1084,54 @@ lib_a-strsignal.o: strsignal.c
 
 lib_a-strsignal.obj: strsignal.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-strsignal.obj `if test -f 'strsignal.c'; then $(CYGPATH_W) 'strsignal.c'; else $(CYGPATH_W) '$(srcdir)/strsignal.c'; fi`
+
+lib_a-sigmisc.o: sigmisc.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-sigmisc.o `test -f 'sigmisc.c' || echo '$(srcdir)/'`sigmisc.c
+
+lib_a-sigmisc.obj: sigmisc.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-sigmisc.obj `if test -f 'sigmisc.c'; then $(CYGPATH_W) 'sigmisc.c'; else $(CYGPATH_W) '$(srcdir)/sigmisc.c'; fi`
+
+lib_a-signal.o: signal.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-signal.o `test -f 'signal.c' || echo '$(srcdir)/'`signal.c
+
+lib_a-signal.obj: signal.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-signal.obj `if test -f 'signal.c'; then $(CYGPATH_W) 'signal.c'; else $(CYGPATH_W) '$(srcdir)/signal.c'; fi`
+
+lib_a-flockfile.o: flockfile.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-flockfile.o `test -f 'flockfile.c' || echo '$(srcdir)/'`flockfile.c
+
+lib_a-flockfile.obj: flockfile.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-flockfile.obj `if test -f 'flockfile.c'; then $(CYGPATH_W) 'flockfile.c'; else $(CYGPATH_W) '$(srcdir)/flockfile.c'; fi`
+
+lib_a-funlockfile.o: funlockfile.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-funlockfile.o `test -f 'funlockfile.c' || echo '$(srcdir)/'`funlockfile.c
+
+lib_a-funlockfile.obj: funlockfile.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-funlockfile.obj `if test -f 'funlockfile.c'; then $(CYGPATH_W) 'funlockfile.c'; else $(CYGPATH_W) '$(srcdir)/funlockfile.c'; fi`
+
+lib_a-getgroups.o: getgroups.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getgroups.o `test -f 'getgroups.c' || echo '$(srcdir)/'`getgroups.c
+
+lib_a-getgroups.obj: getgroups.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getgroups.obj `if test -f 'getgroups.c'; then $(CYGPATH_W) 'getgroups.c'; else $(CYGPATH_W) '$(srcdir)/getgroups.c'; fi`
+
+lib_a-closedir.o: closedir.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-closedir.o `test -f 'closedir.c' || echo '$(srcdir)/'`closedir.c
+
+lib_a-closedir.obj: closedir.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-closedir.obj `if test -f 'closedir.c'; then $(CYGPATH_W) 'closedir.c'; else $(CYGPATH_W) '$(srcdir)/closedir.c'; fi`
+
+lib_a-opendir.o: opendir.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-opendir.o `test -f 'opendir.c' || echo '$(srcdir)/'`opendir.c
+
+lib_a-opendir.obj: opendir.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-opendir.obj `if test -f 'opendir.c'; then $(CYGPATH_W) 'opendir.c'; else $(CYGPATH_W) '$(srcdir)/opendir.c'; fi`
+
+lib_a-readdir.o: readdir.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-readdir.o `test -f 'readdir.c' || echo '$(srcdir)/'`readdir.c
+
+lib_a-readdir.obj: readdir.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-readdir.obj `if test -f 'readdir.c'; then $(CYGPATH_W) 'readdir.c'; else $(CYGPATH_W) '$(srcdir)/readdir.c'; fi`
 
 mostlyclean-libtool:
 	-rm -f *.lo
