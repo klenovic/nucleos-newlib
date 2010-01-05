@@ -57,15 +57,15 @@ LIBRARIES = $(noinst_LIBRARIES)
 ARFLAGS = cru
 lib_a_AR = $(AR) $(ARFLAGS)
 lib_a_LIBADD =
-am__objects_1 = lib_a-longjmp.$(OBJEXT) lib_a-__sigreturn.$(OBJEXT) \
-	lib_a-__setjmp.$(OBJEXT) lib_a-brksize.$(OBJEXT) \
-	lib_a-crt0.$(OBJEXT) lib_a-getpagesize.$(OBJEXT)
+am__objects_1 = lib_a-__sigreturn.$(OBJEXT) lib_a-siglongjmp.$(OBJEXT) \
+	lib_a-sigsetjmp.$(OBJEXT) lib_a-brksize.$(OBJEXT) \
+	lib_a-getpagesize.$(OBJEXT)
 @USE_LIBTOOL_FALSE@am_lib_a_OBJECTS = $(am__objects_1)
 lib_a_OBJECTS = $(am_lib_a_OBJECTS)
 LTLIBRARIES = $(noinst_LTLIBRARIES)
 libnucleosi386_la_LIBADD =
-am__objects_2 = longjmp.lo __sigreturn.lo __setjmp.lo brksize.lo \
-	crt0.lo getpagesize.lo
+am__objects_2 = __sigreturn.lo siglongjmp.lo sigsetjmp.lo brksize.lo \
+	getpagesize.lo
 @USE_LIBTOOL_TRUE@am_libnucleosi386_la_OBJECTS = $(am__objects_2)
 libnucleosi386_la_OBJECTS = $(am_libnucleosi386_la_OBJECTS)
 libnucleosi386_la_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) \
@@ -219,7 +219,7 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 AUTOMAKE_OPTIONS = cygnus
 INCLUDES = $(NEWLIB_CFLAGS) $(CROSS_CFLAGS) $(TARGET_CFLAGS)
-LIB_SOURCES = longjmp.S __sigreturn.S __setjmp.S brksize.S crt0.S getpagesize.c
+LIB_SOURCES = __sigreturn.S siglongjmp.S sigsetjmp.S brksize.S getpagesize.c
 libnucleosi386_la_LDFLAGS = -Xcompiler -nostdlib
 AM_CFLAGS = -I$(srcdir)/../..
 AM_CCASFLAGS = -I$(srcdir)/../.. $(INCLUDES)
@@ -304,35 +304,29 @@ distclean-compile:
 .S.lo:
 	$(LTCPPASCOMPILE) -c -o $@ $<
 
-lib_a-longjmp.o: longjmp.S
-	$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CCASFLAGS) $(CCASFLAGS) -c -o lib_a-longjmp.o `test -f 'longjmp.S' || echo '$(srcdir)/'`longjmp.S
-
-lib_a-longjmp.obj: longjmp.S
-	$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CCASFLAGS) $(CCASFLAGS) -c -o lib_a-longjmp.obj `if test -f 'longjmp.S'; then $(CYGPATH_W) 'longjmp.S'; else $(CYGPATH_W) '$(srcdir)/longjmp.S'; fi`
-
 lib_a-__sigreturn.o: __sigreturn.S
 	$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CCASFLAGS) $(CCASFLAGS) -c -o lib_a-__sigreturn.o `test -f '__sigreturn.S' || echo '$(srcdir)/'`__sigreturn.S
 
 lib_a-__sigreturn.obj: __sigreturn.S
 	$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CCASFLAGS) $(CCASFLAGS) -c -o lib_a-__sigreturn.obj `if test -f '__sigreturn.S'; then $(CYGPATH_W) '__sigreturn.S'; else $(CYGPATH_W) '$(srcdir)/__sigreturn.S'; fi`
 
-lib_a-__setjmp.o: __setjmp.S
-	$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CCASFLAGS) $(CCASFLAGS) -c -o lib_a-__setjmp.o `test -f '__setjmp.S' || echo '$(srcdir)/'`__setjmp.S
+lib_a-siglongjmp.o: siglongjmp.S
+	$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CCASFLAGS) $(CCASFLAGS) -c -o lib_a-siglongjmp.o `test -f 'siglongjmp.S' || echo '$(srcdir)/'`siglongjmp.S
 
-lib_a-__setjmp.obj: __setjmp.S
-	$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CCASFLAGS) $(CCASFLAGS) -c -o lib_a-__setjmp.obj `if test -f '__setjmp.S'; then $(CYGPATH_W) '__setjmp.S'; else $(CYGPATH_W) '$(srcdir)/__setjmp.S'; fi`
+lib_a-siglongjmp.obj: siglongjmp.S
+	$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CCASFLAGS) $(CCASFLAGS) -c -o lib_a-siglongjmp.obj `if test -f 'siglongjmp.S'; then $(CYGPATH_W) 'siglongjmp.S'; else $(CYGPATH_W) '$(srcdir)/siglongjmp.S'; fi`
+
+lib_a-sigsetjmp.o: sigsetjmp.S
+	$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CCASFLAGS) $(CCASFLAGS) -c -o lib_a-sigsetjmp.o `test -f 'sigsetjmp.S' || echo '$(srcdir)/'`sigsetjmp.S
+
+lib_a-sigsetjmp.obj: sigsetjmp.S
+	$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CCASFLAGS) $(CCASFLAGS) -c -o lib_a-sigsetjmp.obj `if test -f 'sigsetjmp.S'; then $(CYGPATH_W) 'sigsetjmp.S'; else $(CYGPATH_W) '$(srcdir)/sigsetjmp.S'; fi`
 
 lib_a-brksize.o: brksize.S
 	$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CCASFLAGS) $(CCASFLAGS) -c -o lib_a-brksize.o `test -f 'brksize.S' || echo '$(srcdir)/'`brksize.S
 
 lib_a-brksize.obj: brksize.S
 	$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CCASFLAGS) $(CCASFLAGS) -c -o lib_a-brksize.obj `if test -f 'brksize.S'; then $(CYGPATH_W) 'brksize.S'; else $(CYGPATH_W) '$(srcdir)/brksize.S'; fi`
-
-lib_a-crt0.o: crt0.S
-	$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CCASFLAGS) $(CCASFLAGS) -c -o lib_a-crt0.o `test -f 'crt0.S' || echo '$(srcdir)/'`crt0.S
-
-lib_a-crt0.obj: crt0.S
-	$(CCAS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CCASFLAGS) $(CCASFLAGS) -c -o lib_a-crt0.obj `if test -f 'crt0.S'; then $(CYGPATH_W) 'crt0.S'; else $(CYGPATH_W) '$(srcdir)/crt0.S'; fi`
 
 .c.o:
 	$(COMPILE) -c $<

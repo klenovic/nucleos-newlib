@@ -10,7 +10,8 @@
 #include <nucleos/unistd.h>
 #include <asm/syscall.h>
 #include <sys/errno.h>
-#include <sys/statfs.h>
+#include <sys/types.h>
+#include <asm/statfs.h>
 
 int fstatfs(int fd, struct statfs *buffer)
 {

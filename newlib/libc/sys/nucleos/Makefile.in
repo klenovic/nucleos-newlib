@@ -99,7 +99,10 @@ am__objects_1 = lib_a-access.$(OBJEXT) lib_a-alarm.$(OBJEXT) \
 	lib_a-umount.$(OBJEXT) lib_a-uname.$(OBJEXT) \
 	lib_a-unlink.$(OBJEXT) lib_a-utime.$(OBJEXT) \
 	lib_a-wait.$(OBJEXT) lib_a-waitpid.$(OBJEXT) \
-	lib_a-write.$(OBJEXT) lib_a-poll.$(OBJEXT)
+	lib_a-write.$(OBJEXT) lib_a-poll.$(OBJEXT) \
+	lib_a-killpg.$(OBJEXT) lib_a-sbrk.$(OBJEXT) \
+	lib_a-sysconf.$(OBJEXT) lib_a-sys_siglist.$(OBJEXT) \
+	lib_a-strsignal.$(OBJEXT)
 am__objects_2 =
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@am__objects_3 = $(am__objects_2) \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@	$(am__objects_2) \
@@ -127,7 +130,8 @@ am__objects_4 = access.lo alarm.lo brk.lo chdir.lo chmod.lo chown.lo \
 	sigpending.lo sigprocmask.lo sigreturn.lo sigsuspend.lo \
 	sprofile.lo stat.lo stime.lo symlink.lo sync.lo time.lo \
 	times.lo truncate.lo umask.lo umount.lo uname.lo unlink.lo \
-	utime.lo wait.lo waitpid.lo write.lo poll.lo
+	utime.lo wait.lo waitpid.lo write.lo poll.lo killpg.lo sbrk.lo \
+	sysconf.lo sys_siglist.lo strsignal.lo
 @USE_LIBTOOL_TRUE@am_libnucleos_la_OBJECTS = $(am__objects_4) \
 @USE_LIBTOOL_TRUE@	$(am__objects_3)
 libnucleos_la_OBJECTS = $(am_libnucleos_la_OBJECTS)
@@ -397,7 +401,12 @@ GENERAL_SOURCES = \
 	wait.c \
 	waitpid.c \
 	write.c \
-	poll.c
+	poll.c \
+	killpg.c \
+	sbrk.c \
+	sysconf.c \
+	sys_siglist.c \
+	strsignal.c
 
 ELIX_2_SOURCES = 
 ELIX_3_SOURCES = 
@@ -406,10 +415,7 @@ ELIX_4_SOURCES =
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_TRUE@ELIX_SOURCES = $(ELIX_2_SOURCES) $(ELIX_3_SOURCES)
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_TRUE@ELIX_SOURCES = $(ELIX_2_SOURCES)
 @ELIX_LEVEL_1_TRUE@ELIX_SOURCES = 
-
-# This will handle both /usr/src/nucleos-2.4/include/asm/signal.h (in Red Hat Nucleos 7.1)
-# and also /usr/src/nucleos/include/asm/signal.h in older versions of Red Hat Nucleos
-SIGNAL_H = $(newlib_basedir)/newlib/sys/nucleos/include/asm/signal.h
+SIGNAL_H = $(srcdir)/include/asm/signal.h
 libnucleos_la_LDFLAGS = -Xcompiler -nostdlib
 ADD_OBJS = \
 	$(NUCLEOS_MACH_LIB)
@@ -1035,6 +1041,36 @@ lib_a-poll.o: poll.c
 lib_a-poll.obj: poll.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-poll.obj `if test -f 'poll.c'; then $(CYGPATH_W) 'poll.c'; else $(CYGPATH_W) '$(srcdir)/poll.c'; fi`
 
+lib_a-killpg.o: killpg.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-killpg.o `test -f 'killpg.c' || echo '$(srcdir)/'`killpg.c
+
+lib_a-killpg.obj: killpg.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-killpg.obj `if test -f 'killpg.c'; then $(CYGPATH_W) 'killpg.c'; else $(CYGPATH_W) '$(srcdir)/killpg.c'; fi`
+
+lib_a-sbrk.o: sbrk.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-sbrk.o `test -f 'sbrk.c' || echo '$(srcdir)/'`sbrk.c
+
+lib_a-sbrk.obj: sbrk.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-sbrk.obj `if test -f 'sbrk.c'; then $(CYGPATH_W) 'sbrk.c'; else $(CYGPATH_W) '$(srcdir)/sbrk.c'; fi`
+
+lib_a-sysconf.o: sysconf.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-sysconf.o `test -f 'sysconf.c' || echo '$(srcdir)/'`sysconf.c
+
+lib_a-sysconf.obj: sysconf.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-sysconf.obj `if test -f 'sysconf.c'; then $(CYGPATH_W) 'sysconf.c'; else $(CYGPATH_W) '$(srcdir)/sysconf.c'; fi`
+
+lib_a-sys_siglist.o: sys_siglist.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-sys_siglist.o `test -f 'sys_siglist.c' || echo '$(srcdir)/'`sys_siglist.c
+
+lib_a-sys_siglist.obj: sys_siglist.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-sys_siglist.obj `if test -f 'sys_siglist.c'; then $(CYGPATH_W) 'sys_siglist.c'; else $(CYGPATH_W) '$(srcdir)/sys_siglist.c'; fi`
+
+lib_a-strsignal.o: strsignal.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-strsignal.o `test -f 'strsignal.c' || echo '$(srcdir)/'`strsignal.c
+
+lib_a-strsignal.obj: strsignal.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-strsignal.obj `if test -f 'strsignal.c'; then $(CYGPATH_W) 'strsignal.c'; else $(CYGPATH_W) '$(srcdir)/strsignal.c'; fi`
+
 mostlyclean-libtool:
 	-rm -f *.lo
 
@@ -1223,7 +1259,7 @@ info: info-recursive
 
 info-am:
 
-install-data-am:
+install-data-am: install-data-local
 
 install-dvi: install-dvi-recursive
 
@@ -1271,15 +1307,15 @@ uninstall-am:
 	clean-noinstLTLIBRARIES ctags ctags-recursive distclean \
 	distclean-compile distclean-generic distclean-libtool \
 	distclean-tags dvi dvi-am html html-am info info-am install \
-	install-am install-data install-data-am install-dvi \
-	install-dvi-am install-exec install-exec-am install-html \
-	install-html-am install-info install-info-am install-man \
-	install-pdf install-pdf-am install-ps install-ps-am \
-	install-strip installcheck installcheck-am installdirs \
-	installdirs-am maintainer-clean maintainer-clean-generic \
-	mostlyclean mostlyclean-compile mostlyclean-generic \
-	mostlyclean-libtool pdf pdf-am ps ps-am tags tags-recursive \
-	uninstall uninstall-am
+	install-am install-data install-data-am install-data-local \
+	install-dvi install-dvi-am install-exec install-exec-am \
+	install-html install-html-am install-info install-info-am \
+	install-man install-pdf install-pdf-am install-ps \
+	install-ps-am install-strip installcheck installcheck-am \
+	installdirs installdirs-am maintainer-clean \
+	maintainer-clean-generic mostlyclean mostlyclean-compile \
+	mostlyclean-generic mostlyclean-libtool pdf pdf-am ps ps-am \
+	tags tags-recursive uninstall uninstall-am
 
 
 @USE_LIBTOOL_FALSE@lib.a:  $(lib_a_OBJECTS)
@@ -1290,7 +1326,7 @@ uninstall-am:
 @USE_LIBTOOL_FALSE@	for i in $(SUBLIBS); do \
 @USE_LIBTOOL_FALSE@	  $(AR) x ../$$i; \
 @USE_LIBTOOL_FALSE@	done; \
-@USE_LIBTOOL_FALSE@	$(AR) $(AR_FLAGS) ../$@ *.o
+@USE_LIBTOOL_FALSE@	$(AR) $(AR_FLAGS) ../$@ *.o ../*.o 
 @USE_LIBTOOL_FALSE@	$(RANLIB) $@
 @USE_LIBTOOL_FALSE@	rm -rf tmp
 
@@ -1316,7 +1352,7 @@ crt0.o: machine/crt0.o
 
 machine/crt0.o: ; @true
 
-$(lpfx)sig.$(oext):	siglist.inc
+$(lpfx)sys_siglist.$(oext):	siglist.inc
 
 siglist.inc:
 		$(AWK) '{ max = 32 } \
@@ -1326,6 +1362,45 @@ siglist.inc:
 		    { for (i = 0; i <= max; i++) print "\"" n[i] "\"," }' \
 		    < $(SIGNAL_H) > siglist.inc || \
 		    { rm -f siglist.inc; exit 1; }
+
+install-data-local: config.status
+	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/asm; \
+	for i in $(srcdir)/include/asm/*.h; do \
+		$(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/asm/`basename $$i`; \
+	done;
+	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/asm-generic; \
+	for i in $(srcdir)/include/asm-generic/*.h; do \
+		$(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/asm-generic/`basename $$i`; \
+	done;
+	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/servers; \
+	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/servers/ds; \
+	for i in $(srcdir)/include/servers/ds/*.h; do \
+		$(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/servers/ds/`basename $$i`; \
+	done;
+	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/servers/rs; \
+	for i in $(srcdir)/include/servers/rs/*.h; do \
+		$(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/servers/rs/`basename $$i`; \
+	done;
+	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/servers/vm; \
+	for i in $(srcdir)/include/servers/vm/*.h; do \
+		$(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/servers/vm/`basename $$i`; \
+	done;
+	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/arpa; \
+	for i in $(srcdir)/include/arpa/*.h; do \
+		$(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/arpa/`basename $$i`; \
+	done;
+	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/net; \
+	for i in $(srcdir)/include/net/*.h; do \
+		$(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/net/`basename $$i`; \
+	done;
+	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/netinet; \
+	for i in $(srcdir)/include/netinet/*.h; do \
+		$(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/netinet/`basename $$i`; \
+	done;
+	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/nucleos; \
+	for i in $(srcdir)/include/nucleos/*.h; do \
+		$(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/nucleos/`basename $$i`; \
+	done;
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
 .NOEXPORT:

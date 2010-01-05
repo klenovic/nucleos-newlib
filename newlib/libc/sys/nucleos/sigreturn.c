@@ -13,6 +13,7 @@
 #include <asm/sigcontext.h>
 #include <sys/errno.h>
 #include <sys/types.h>
+#include <sys/signal.h>
 
 int sigreturn(register struct sigcontext *scp)
 {

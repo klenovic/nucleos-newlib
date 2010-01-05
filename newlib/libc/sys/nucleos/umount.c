@@ -7,6 +7,7 @@
  *  it under the terms of the GNU General Public License as published by
  *  the Free Software Foundation, version 2 of the License.
  */
+#include <nucleos/unistd.h>
 #include <nucleos/string.h>
 #include <sys/mount.h>
 #include <stdlib.h>
@@ -14,6 +15,7 @@
 #include <sys/stat.h>
 #include <paths.h>
 #include <sys/errno.h>
+#include <asm/syscall.h>
 
 #define FSPATH "/sbin/"
 #define FSDEFAULT "mfs"

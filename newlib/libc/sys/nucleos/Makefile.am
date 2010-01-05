@@ -114,7 +114,12 @@ GENERAL_SOURCES = \
 	wait.c \
 	waitpid.c \
 	write.c \
-	poll.c
+	poll.c \
+	killpg.c \
+	sbrk.c \
+	sysconf.c \
+	sys_siglist.c \
+	strsignal.c
 
 ELIX_2_SOURCES =
 
@@ -136,9 +141,7 @@ endif
 endif
 endif
 
-# This will handle both /usr/src/nucleos-2.4/include/asm/signal.h (in Red Hat Nucleos 7.1)
-# and also /usr/src/nucleos/include/asm/signal.h in older versions of Red Hat Nucleos
-SIGNAL_H = $(newlib_basedir)/newlib/sys/nucleos/include/asm/signal.h
+SIGNAL_H = $(srcdir)/include/asm/signal.h
 
 libnucleos_la_LDFLAGS = -Xcompiler -nostdlib
 
@@ -169,7 +172,7 @@ lib.a:  $(lib_a_OBJECTS)
 	for i in $(SUBLIBS); do \
 	  $(AR) x ../$$i; \
 	done; \
-	$(AR) $(AR_FLAGS) ../$@ *.o
+	$(AR) $(AR_FLAGS) ../$@ *.o ../*.o 
 	$(RANLIB) $@
 	rm -rf tmp
 
@@ -197,7 +200,7 @@ crt0.o: machine/crt0.o
 
 machine/crt0.o: ; @true
 
-$(lpfx)sig.$(oext):	siglist.inc
+$(lpfx)sys_siglist.$(oext):	siglist.inc
 
 siglist.inc:
 		$(AWK) '{ max = 32 } \
@@ -207,6 +210,45 @@ siglist.inc:
 		    { for (i = 0; i <= max; i++) print "\"" n[i] "\"," }' \
 		    < $(SIGNAL_H) > siglist.inc || \
 		    { rm -f siglist.inc; exit 1; }
+
+install-data-local: config.status
+	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/asm; \
+	for i in $(srcdir)/include/asm/*.h; do \
+		$(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/asm/`basename $$i`; \
+	done;
+	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/asm-generic; \
+	for i in $(srcdir)/include/asm-generic/*.h; do \
+		$(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/asm-generic/`basename $$i`; \
+	done;
+	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/servers; \
+	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/servers/ds; \
+	for i in $(srcdir)/include/servers/ds/*.h; do \
+		$(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/servers/ds/`basename $$i`; \
+	done;
+	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/servers/rs; \
+	for i in $(srcdir)/include/servers/rs/*.h; do \
+		$(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/servers/rs/`basename $$i`; \
+	done;
+	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/servers/vm; \
+	for i in $(srcdir)/include/servers/vm/*.h; do \
+		$(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/servers/vm/`basename $$i`; \
+	done;
+	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/arpa; \
+	for i in $(srcdir)/include/arpa/*.h; do \
+		$(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/arpa/`basename $$i`; \
+	done;
+	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/net; \
+	for i in $(srcdir)/include/net/*.h; do \
+		$(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/net/`basename $$i`; \
+	done;
+	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/netinet; \
+	for i in $(srcdir)/include/netinet/*.h; do \
+		$(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/netinet/`basename $$i`; \
+	done;
+	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/nucleos; \
+	for i in $(srcdir)/include/nucleos/*.h; do \
+		$(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/nucleos/`basename $$i`; \
+	done;
 
 AM_CFLAGS = -I $(srcdir)/../../stdio
 ACLOCAL_AMFLAGS = -I ../../.. -I ../../../..

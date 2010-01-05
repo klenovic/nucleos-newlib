@@ -1007,49 +1007,6 @@ install-data-local:	install-toollibLIBRARIES
 	     $(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/machine/`basename $$i`; \
 	    else true; fi ; \
 	  done ; \
-	  $(mkinstalldirs) $(DESTDIR)$(tooldir)/include/asm; \
-	  for i in $(srcdir)/libc/sys/$(sys_dir)/include/asm/*.h; do \
-	    if [ -f $$i ]; then \
-	     $(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/asm/`basename $$i`; \
-	    else true; fi ; \
-	  done ; \
-	  $(mkinstalldirs) $(DESTDIR)$(tooldir)/include/asm-generic; \
-	  for i in $(srcdir)/libc/sys/$(sys_dir)/include/asm-generic/*.h; do \
-	    if [ -f $$i ]; then \
-	     $(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/asm-generic/`basename $$i`; \
-	    else true; fi ; \
-	  done ; \
-	  $(mkinstalldirs) $(DESTDIR)$(tooldir)/include/kernel; \
-	  for i in $(srcdir)/libc/sys/$(sys_dir)/include/kernel/*.h; do \
-	    if [ -f $$i ]; then \
-	     $(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/kernel/`basename $$i`; \
-	    else true; fi ; \
-	  done ; \
-	  $(mkinstalldirs) $(DESTDIR)$(tooldir)/include/servers; \
-	  $(mkinstalldirs) $(DESTDIR)$(tooldir)/include/servers/ds; \
-	  for i in $(srcdir)/libc/sys/$(sys_dir)/include/servers/ds/*.h; do \
-	    if [ -f $$i ]; then \
-	     $(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/servers/ds/`basename $$i`; \
-	    else true; fi ; \
-	  done ; \
-	  $(mkinstalldirs) $(DESTDIR)$(tooldir)/include/servers/rs; \
-	  for i in $(srcdir)/libc/sys/$(sys_dir)/include/servers/rs/*.h; do \
-	    if [ -f $$i ]; then \
-	     $(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/servers/rs/`basename $$i`; \
-	    else true; fi ; \
-	  done ; \
-	  $(mkinstalldirs) $(DESTDIR)$(tooldir)/include/servers/vm; \
-	  for i in $(srcdir)/libc/sys/$(sys_dir)/include/servers/vm/*.h; do \
-	    if [ -f $$i ]; then \
-	     $(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/servers/vm/`basename $$i`; \
-	    else true; fi ; \
-	  done ; \
-	  $(mkinstalldirs) $(DESTDIR)$(tooldir)/include/nucleos; \
-	  for i in $(srcdir)/libc/sys/$(sys_dir)/include/nucleos/*.h; do \
-	    if [ -f $$i ]; then \
-	     $(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/nucleos/`basename $$i`; \
-	    else true; fi ; \
-	  done ; \
 	else true; fi
 
 # Force makedoc to be built before building info files.

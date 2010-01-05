@@ -8,8 +8,8 @@
  *  the Free Software Foundation, version 2 of the License.
  */
 #include <nucleos/unistd.h>
-#include <nucleos/signal.h>
 #include <asm/syscall.h>
+#include <sys/signal.h>
 #include <sys/errno.h>
 
 int sigprocmask(int how, const sigset_t *set, sigset_t *oldset)

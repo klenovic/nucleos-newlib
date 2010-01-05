@@ -4,7 +4,7 @@ AUTOMAKE_OPTIONS = cygnus
 
 INCLUDES = $(NEWLIB_CFLAGS) $(CROSS_CFLAGS) $(TARGET_CFLAGS)
 
-LIB_SOURCES = longjmp.S __sigreturn.S __setjmp.S brksize.S crt0.S getpagesize.c
+LIB_SOURCES = __sigreturn.S siglongjmp.S sigsetjmp.S brksize.S getpagesize.c
 
 libnucleosi386_la_LDFLAGS = -Xcompiler -nostdlib
 

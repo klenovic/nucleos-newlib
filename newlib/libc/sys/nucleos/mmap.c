@@ -12,6 +12,7 @@
 #include <stdarg.h>
 #include <sys/errno.h>
 #include <sys/types.h>
+#include <asm/syscall.h>
 
 void *mmap(void *addr, size_t len, int prot, int flags, int fd, off_t offset)
 {

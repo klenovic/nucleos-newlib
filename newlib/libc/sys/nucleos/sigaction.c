@@ -9,9 +9,9 @@
  */
 #include <nucleos/unistd.h>
 #include <asm/sigcontext.h>
-#include <nucleos/signal.h>
 #include <asm/syscall.h>
 #include <sys/errno.h>
+#include <sys/signal.h>
 
 extern int __sigreturn(void);
 
