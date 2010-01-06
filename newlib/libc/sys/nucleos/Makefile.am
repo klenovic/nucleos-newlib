@@ -8,8 +8,10 @@ if ELIX_LEVEL_1
 argp_dir=
 ARGP_LIB=
 else
-argp_dir=argp
-ARGP_LIB=argp/libargp.la
+argp_dir=
+#argp
+ARGP_LIB=
+#argp/libargp.la
 endif
 
 SUBDIRS = machine \
@@ -127,7 +129,8 @@ GENERAL_SOURCES = \
 	getgroups.c \
 	closedir.c \
 	opendir.c \
-	readdir.c
+	readdir.c \
+	nanosleep.c
 
 ELIX_2_SOURCES =
 

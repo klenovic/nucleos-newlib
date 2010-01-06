@@ -106,7 +106,7 @@ am__objects_1 = lib_a-access.$(OBJEXT) lib_a-alarm.$(OBJEXT) \
 	lib_a-signal.$(OBJEXT) lib_a-flockfile.$(OBJEXT) \
 	lib_a-funlockfile.$(OBJEXT) lib_a-getgroups.$(OBJEXT) \
 	lib_a-closedir.$(OBJEXT) lib_a-opendir.$(OBJEXT) \
-	lib_a-readdir.$(OBJEXT)
+	lib_a-readdir.$(OBJEXT) lib_a-nanosleep.$(OBJEXT)
 am__objects_2 =
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@am__objects_3 = $(am__objects_2) \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@	$(am__objects_2) \
@@ -137,7 +137,7 @@ am__objects_4 = access.lo alarm.lo brk.lo chdir.lo chmod.lo chown.lo \
 	utime.lo wait.lo waitpid.lo write.lo poll.lo killpg.lo sbrk.lo \
 	sysconf.lo sys_siglist.lo strsignal.lo sigmisc.lo signal.lo \
 	flockfile.lo funlockfile.lo getgroups.lo closedir.lo \
-	opendir.lo readdir.lo
+	opendir.lo readdir.lo nanosleep.lo
 @USE_LIBTOOL_TRUE@am_libnucleos_la_OBJECTS = $(am__objects_4) \
 @USE_LIBTOOL_TRUE@	$(am__objects_3)
 libnucleos_la_OBJECTS = $(am_libnucleos_la_OBJECTS)
@@ -170,7 +170,7 @@ RECURSIVE_CLEAN_TARGETS = mostlyclean-recursive clean-recursive	\
   distclean-recursive maintainer-clean-recursive
 ETAGS = etags
 CTAGS = ctags
-DIST_SUBDIRS = machine argp @EXTRA_SUBDIRS@ .
+DIST_SUBDIRS = $(SUBDIRS)
 ACLOCAL = @ACLOCAL@
 AMTAR = @AMTAR@
 AR = @AR@
@@ -301,10 +301,12 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 AUTOMAKE_OPTIONS = cygnus
 INCLUDES = -I$(srcdir)/include $(NEWLIB_CFLAGS) $(CROSS_CFLAGS) $(TARGET_CFLAGS) $(INCLTDL)
-@ELIX_LEVEL_1_FALSE@argp_dir = argp
+@ELIX_LEVEL_1_FALSE@argp_dir = 
 @ELIX_LEVEL_1_TRUE@argp_dir = 
-@ELIX_LEVEL_1_FALSE@ARGP_LIB = argp/libargp.la
+#argp
+@ELIX_LEVEL_1_FALSE@ARGP_LIB = 
 @ELIX_LEVEL_1_TRUE@ARGP_LIB = 
+#argp/libargp.la
 SUBDIRS = machine \
 	$(argp_dir) \
 	$(EXTRA_SUBDIRS)\
@@ -420,7 +422,8 @@ GENERAL_SOURCES = \
 	getgroups.c \
 	closedir.c \
 	opendir.c \
-	readdir.c
+	readdir.c \
+	nanosleep.c
 
 ELIX_2_SOURCES = 
 ELIX_3_SOURCES = 
@@ -1132,6 +1135,12 @@ lib_a-readdir.o: readdir.c
 
 lib_a-readdir.obj: readdir.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-readdir.obj `if test -f 'readdir.c'; then $(CYGPATH_W) 'readdir.c'; else $(CYGPATH_W) '$(srcdir)/readdir.c'; fi`
+
+lib_a-nanosleep.o: nanosleep.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-nanosleep.o `test -f 'nanosleep.c' || echo '$(srcdir)/'`nanosleep.c
+
+lib_a-nanosleep.obj: nanosleep.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-nanosleep.obj `if test -f 'nanosleep.c'; then $(CYGPATH_W) 'nanosleep.c'; else $(CYGPATH_W) '$(srcdir)/nanosleep.c'; fi`
 
 mostlyclean-libtool:
 	-rm -f *.lo

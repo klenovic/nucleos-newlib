@@ -12568,10 +12568,12 @@ EXTRA_SUBLIBS=
 
 if test "x${newlib_elix_level}" = "x1"; then
 EXTRA_SUBDIRS=
-#nucleosthreads net
+#@nucleos: n/a nucleosthreads net
 else
-EXTRA_SUBDIRS="nucleosthreads net intl iconv dl"
-EXTRA_SUBLIBS="net/libnet.la intl/libintl.la iconv/libiconv.la dl/libdl.la"
+EXTRA_SUBDIRS=
+#@nucleos: n/a "nucleosthreads net intl iconv dl"
+EXTRA_SUBLIBS=
+#@nucleos: n/a "net/libnet.la intl/libintl.la iconv/libiconv.la dl/libdl.la"
 fi
 
 

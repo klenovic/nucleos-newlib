@@ -453,7 +453,6 @@ case "${host}" in
 	default_newlib_io_long_long="yes"
 	default_newlib_io_pos_args="yes"
 
-	newlib_elix_level="1"
 	newlib_multithread="no"
 
 	newlib_cflags="${newlib_cflags} -Wall"
