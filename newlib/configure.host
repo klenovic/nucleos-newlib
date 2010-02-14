@@ -464,6 +464,7 @@ case "${host}" in
 	newlib_cflags="${newlib_cflags} -DHAVE_RENAME"
 	newlib_cflags="${newlib_cflags} -DHAVE_NANOSLEEP"
 	newlib_cflags="${newlib_cflags} -DHAVE_OPENDIR"
+	newlib_cflags="${newlib_cflags} -DHAVE_GETOPT"
 	;;
 
   m68hc11-*-*|m6811-*-*|m6812-*-*|m68hc12-*-*)

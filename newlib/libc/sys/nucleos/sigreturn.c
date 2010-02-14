@@ -8,12 +8,11 @@
  *  the Free Software Foundation, version 2 of the License.
  */
 #include <nucleos/unistd.h>
-#include <nucleos/signal.h>
 #include <asm/syscall.h>
 #include <asm/sigcontext.h>
-#include <sys/errno.h>
+#include <signal.h>
+#include <errno.h>
 #include <sys/types.h>
-#include <sys/signal.h>
 
 int sigreturn(register struct sigcontext *scp)
 {

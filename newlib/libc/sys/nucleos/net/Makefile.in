@@ -52,126 +52,57 @@ LIBRARIES = $(noinst_LIBRARIES)
 ARFLAGS = cru
 lib_a_AR = $(AR) $(ARFLAGS)
 lib_a_LIBADD =
-am__objects_1 = lib_a-addr2ascii.$(OBJEXT) lib_a-ascii2addr.$(OBJEXT) \
-	lib_a-alias-lookup.$(OBJEXT) lib_a-base64.$(OBJEXT) \
-	lib_a-check_pf.$(OBJEXT) lib_a-digits_dots.$(OBJEXT) \
-	lib_a-ether_aton.$(OBJEXT) lib_a-ether_aton_r.$(OBJEXT) \
-	lib_a-ether_hton.$(OBJEXT) lib_a-ether_line.$(OBJEXT) \
-	lib_a-ether_ntoa.$(OBJEXT) lib_a-ether_ntoa_r.$(OBJEXT) \
-	lib_a-ether_ntoh.$(OBJEXT) lib_a-ethers-lookup.$(OBJEXT) \
-	lib_a-getaddrinfo.$(OBJEXT) lib_a-getaliasent.$(OBJEXT) \
-	lib_a-getaliasent_r.$(OBJEXT) lib_a-getaliasname.$(OBJEXT) \
-	lib_a-getaliasname_r.$(OBJEXT) lib_a-gethstbyad.$(OBJEXT) \
-	lib_a-gethstbyad_r.$(OBJEXT) lib_a-gethstbynm2.$(OBJEXT) \
-	lib_a-gethstbynm2_r.$(OBJEXT) lib_a-gethstbynm.$(OBJEXT) \
-	lib_a-gethstbynm_r.$(OBJEXT) lib_a-gethstent.$(OBJEXT) \
-	lib_a-gethstent_r.$(OBJEXT) lib_a-getnameinfo.$(OBJEXT) \
-	lib_a-getnetbyad.$(OBJEXT) lib_a-getnetbyad_r.$(OBJEXT) \
-	lib_a-getnetbynm.$(OBJEXT) lib_a-getnetbynm_r.$(OBJEXT) \
-	lib_a-getnetent.$(OBJEXT) lib_a-getnetent_r.$(OBJEXT) \
-	lib_a-getnetgrent.$(OBJEXT) lib_a-getnetgrent_r.$(OBJEXT) \
-	lib_a-getnssent.$(OBJEXT) lib_a-getnssent_r.$(OBJEXT) \
-	lib_a-getproto.$(OBJEXT) lib_a-getproto_r.$(OBJEXT) \
-	lib_a-getprtent.$(OBJEXT) lib_a-getprtent_r.$(OBJEXT) \
-	lib_a-getprtname.$(OBJEXT) lib_a-getprtname_r.$(OBJEXT) \
-	lib_a-getrpcbyname.$(OBJEXT) lib_a-getrpcbyname_r.$(OBJEXT) \
-	lib_a-getrpcbynumber.$(OBJEXT) \
-	lib_a-getrpcbynumber_r.$(OBJEXT) lib_a-getrpcent.$(OBJEXT) \
-	lib_a-getrpcent_r.$(OBJEXT) lib_a-getservent.$(OBJEXT) \
-	lib_a-getservent_r.$(OBJEXT) lib_a-getsrvbynm.$(OBJEXT) \
-	lib_a-getsrvbynm_r.$(OBJEXT) lib_a-getsrvbypt.$(OBJEXT) \
-	lib_a-getsrvbypt_r.$(OBJEXT) lib_a-grp-lookup.$(OBJEXT) \
-	lib_a-herrno.$(OBJEXT) lib_a-hosts-lookup.$(OBJEXT) \
-	lib_a-ifreq.$(OBJEXT) lib_a-in6_addr.$(OBJEXT) \
-	lib_a-inet6_option.$(OBJEXT) lib_a-inet_addr.$(OBJEXT) \
-	lib_a-inet_lnaof.$(OBJEXT) lib_a-inet_mkadr.$(OBJEXT) \
-	lib_a-inet_net.$(OBJEXT) lib_a-inet_neta.$(OBJEXT) \
-	lib_a-inet_netof.$(OBJEXT) lib_a-inet_net_ntop.$(OBJEXT) \
-	lib_a-inet_net_pton.$(OBJEXT) lib_a-inet_ntoa.$(OBJEXT) \
-	lib_a-inet_ntop.$(OBJEXT) lib_a-inet_pton.$(OBJEXT) \
-	lib_a-issetugid-stub.$(OBJEXT) lib_a-key-lookup.$(OBJEXT) \
-	lib_a-netgrp-lookup.$(OBJEXT) lib_a-network-lookup.$(OBJEXT) \
-	lib_a-nsswitch.$(OBJEXT) lib_a-ns_name.$(OBJEXT) \
-	lib_a-ns_netint.$(OBJEXT) lib_a-ns_parse.$(OBJEXT) \
-	lib_a-ns_print.$(OBJEXT) lib_a-ns_samedomain.$(OBJEXT) \
-	lib_a-ns_ttl.$(OBJEXT) lib_a-nsap_addr.$(OBJEXT) \
-	lib_a-proto-lookup.$(OBJEXT) lib_a-opensock.$(OBJEXT) \
-	lib_a-pwd-lookup.$(OBJEXT) lib_a-recv.$(OBJEXT) \
-	lib_a-res_comp.$(OBJEXT) lib_a-res_data.$(OBJEXT) \
-	lib_a-res_debug.$(OBJEXT) lib_a-res_hconf.$(OBJEXT) \
-	lib_a-res_init.$(OBJEXT) lib_a-res_libc.$(OBJEXT) \
-	lib_a-res_mkquery.$(OBJEXT) lib_a-res_query.$(OBJEXT) \
-	lib_a-res_send.$(OBJEXT) lib_a-rexec.$(OBJEXT) \
-	lib_a-rpc-lookup.$(OBJEXT) lib_a-ruserpass.$(OBJEXT) \
-	lib_a-send.$(OBJEXT) lib_a-service-lookup.$(OBJEXT) \
-	lib_a-spwd-lookup.$(OBJEXT)
-am__objects_2 = lib_a-ifname.$(OBJEXT)
+am__objects_1 = lib_a-accept.$(OBJEXT) lib_a-ethera2n.$(OBJEXT) \
+	lib_a-gethnmadr.$(OBJEXT) lib_a-getnetent.$(OBJEXT) \
+	lib_a-getsockname.$(OBJEXT) lib_a-inet_network.$(OBJEXT) \
+	lib_a-recv.$(OBJEXT) lib_a-res_send.$(OBJEXT) \
+	lib_a-setsockopt.$(OBJEXT) lib_a-bind.$(OBJEXT) \
+	lib_a-ethere2a.$(OBJEXT) lib_a-gethostent.$(OBJEXT) \
+	lib_a-getpeername.$(OBJEXT) lib_a-getsockopt.$(OBJEXT) \
+	lib_a-inet_ntoa.$(OBJEXT) lib_a-recvfrom.$(OBJEXT) \
+	lib_a-ruserok.$(OBJEXT) lib_a-shutdown.$(OBJEXT) \
+	lib_a-connect.$(OBJEXT) lib_a-etherh2n.$(OBJEXT) \
+	lib_a-gethostname.$(OBJEXT) lib_a-getproto.$(OBJEXT) \
+	lib_a-getsrvbyname.$(OBJEXT) lib_a-listen.$(OBJEXT) \
+	lib_a-res_comp.$(OBJEXT) lib_a-send.$(OBJEXT) \
+	lib_a-socket.$(OBJEXT) lib_a-dhcp_gettag.$(OBJEXT) \
+	lib_a-ether_line.$(OBJEXT) lib_a-getifaddrs.$(OBJEXT) \
+	lib_a-getprotoent.$(OBJEXT) lib_a-getsrvbyport.$(OBJEXT) \
+	lib_a-memcspn.$(OBJEXT) lib_a-res_init.$(OBJEXT) \
+	lib_a-sendto.$(OBJEXT) lib_a-strcasecmp.$(OBJEXT) \
+	lib_a-dhcp_settag.$(OBJEXT) lib_a-ethern2h.$(OBJEXT) \
+	lib_a-getnetbyaddr.$(OBJEXT) lib_a-getprotoname.$(OBJEXT) \
+	lib_a-hton.$(OBJEXT) lib_a-oneC_sum.$(OBJEXT) \
+	lib_a-res_mkquery.$(OBJEXT) lib_a-servxcheck.$(OBJEXT) \
+	lib_a-domainname.$(OBJEXT) lib_a-getdomain.$(OBJEXT) \
+	lib_a-getnetbyname.$(OBJEXT) lib_a-getservent.$(OBJEXT) \
+	lib_a-inet_addr.$(OBJEXT) lib_a-rcmd.$(OBJEXT) \
+	lib_a-res_query.$(OBJEXT) lib_a-sethostent.$(OBJEXT)
+am__objects_2 =
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@am__objects_3 = $(am__objects_2)
 @USE_LIBTOOL_FALSE@am_lib_a_OBJECTS = $(am__objects_1) \
 @USE_LIBTOOL_FALSE@	$(am__objects_3)
 lib_a_OBJECTS = $(am_lib_a_OBJECTS)
 LTLIBRARIES = $(noinst_LTLIBRARIES)
 libnet_la_LIBADD =
-am__objects_4 = libnet_la-addr2ascii.lo libnet_la-ascii2addr.lo \
-	libnet_la-alias-lookup.lo libnet_la-base64.lo \
-	libnet_la-check_pf.lo libnet_la-digits_dots.lo \
-	libnet_la-ether_aton.lo libnet_la-ether_aton_r.lo \
-	libnet_la-ether_hton.lo libnet_la-ether_line.lo \
-	libnet_la-ether_ntoa.lo libnet_la-ether_ntoa_r.lo \
-	libnet_la-ether_ntoh.lo libnet_la-ethers-lookup.lo \
-	libnet_la-getaddrinfo.lo libnet_la-getaliasent.lo \
-	libnet_la-getaliasent_r.lo libnet_la-getaliasname.lo \
-	libnet_la-getaliasname_r.lo libnet_la-gethstbyad.lo \
-	libnet_la-gethstbyad_r.lo libnet_la-gethstbynm2.lo \
-	libnet_la-gethstbynm2_r.lo libnet_la-gethstbynm.lo \
-	libnet_la-gethstbynm_r.lo libnet_la-gethstent.lo \
-	libnet_la-gethstent_r.lo libnet_la-getnameinfo.lo \
-	libnet_la-getnetbyad.lo libnet_la-getnetbyad_r.lo \
-	libnet_la-getnetbynm.lo libnet_la-getnetbynm_r.lo \
-	libnet_la-getnetent.lo libnet_la-getnetent_r.lo \
-	libnet_la-getnetgrent.lo libnet_la-getnetgrent_r.lo \
-	libnet_la-getnssent.lo libnet_la-getnssent_r.lo \
-	libnet_la-getproto.lo libnet_la-getproto_r.lo \
-	libnet_la-getprtent.lo libnet_la-getprtent_r.lo \
-	libnet_la-getprtname.lo libnet_la-getprtname_r.lo \
-	libnet_la-getrpcbyname.lo libnet_la-getrpcbyname_r.lo \
-	libnet_la-getrpcbynumber.lo libnet_la-getrpcbynumber_r.lo \
-	libnet_la-getrpcent.lo libnet_la-getrpcent_r.lo \
-	libnet_la-getservent.lo libnet_la-getservent_r.lo \
-	libnet_la-getsrvbynm.lo libnet_la-getsrvbynm_r.lo \
-	libnet_la-getsrvbypt.lo libnet_la-getsrvbypt_r.lo \
-	libnet_la-grp-lookup.lo libnet_la-herrno.lo \
-	libnet_la-hosts-lookup.lo libnet_la-ifreq.lo \
-	libnet_la-in6_addr.lo libnet_la-inet6_option.lo \
-	libnet_la-inet_addr.lo libnet_la-inet_lnaof.lo \
-	libnet_la-inet_mkadr.lo libnet_la-inet_net.lo \
-	libnet_la-inet_neta.lo libnet_la-inet_netof.lo \
-	libnet_la-inet_net_ntop.lo libnet_la-inet_net_pton.lo \
-	libnet_la-inet_ntoa.lo libnet_la-inet_ntop.lo \
-	libnet_la-inet_pton.lo libnet_la-issetugid-stub.lo \
-	libnet_la-key-lookup.lo libnet_la-netgrp-lookup.lo \
-	libnet_la-network-lookup.lo libnet_la-nsswitch.lo \
-	libnet_la-ns_name.lo libnet_la-ns_netint.lo \
-	libnet_la-ns_parse.lo libnet_la-ns_print.lo \
-	libnet_la-ns_samedomain.lo libnet_la-ns_ttl.lo \
-	libnet_la-nsap_addr.lo libnet_la-proto-lookup.lo \
-	libnet_la-opensock.lo libnet_la-pwd-lookup.lo \
-	libnet_la-recv.lo libnet_la-res_comp.lo libnet_la-res_data.lo \
-	libnet_la-res_debug.lo libnet_la-res_hconf.lo \
-	libnet_la-res_init.lo libnet_la-res_libc.lo \
-	libnet_la-res_mkquery.lo libnet_la-res_query.lo \
-	libnet_la-res_send.lo libnet_la-rexec.lo \
-	libnet_la-rpc-lookup.lo libnet_la-ruserpass.lo \
-	libnet_la-send.lo libnet_la-service-lookup.lo \
-	libnet_la-spwd-lookup.lo
-am__objects_5 = libnet_la-ifname.lo
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@am__objects_6 = $(am__objects_5)
+am__objects_4 = accept.lo ethera2n.lo gethnmadr.lo getnetent.lo \
+	getsockname.lo inet_network.lo recv.lo res_send.lo \
+	setsockopt.lo bind.lo ethere2a.lo gethostent.lo getpeername.lo \
+	getsockopt.lo inet_ntoa.lo recvfrom.lo ruserok.lo shutdown.lo \
+	connect.lo etherh2n.lo gethostname.lo getproto.lo \
+	getsrvbyname.lo listen.lo res_comp.lo send.lo socket.lo \
+	dhcp_gettag.lo ether_line.lo getifaddrs.lo getprotoent.lo \
+	getsrvbyport.lo memcspn.lo res_init.lo sendto.lo strcasecmp.lo \
+	dhcp_settag.lo ethern2h.lo getnetbyaddr.lo getprotoname.lo \
+	hton.lo oneC_sum.lo res_mkquery.lo servxcheck.lo domainname.lo \
+	getdomain.lo getnetbyname.lo getservent.lo inet_addr.lo \
+	rcmd.lo res_query.lo sethostent.lo
 @USE_LIBTOOL_TRUE@am_libnet_la_OBJECTS = $(am__objects_4) \
-@USE_LIBTOOL_TRUE@	$(am__objects_6)
+@USE_LIBTOOL_TRUE@	$(am__objects_3)
 libnet_la_OBJECTS = $(am_libnet_la_OBJECTS)
 libnet_la_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) \
-	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(libnet_la_CFLAGS) \
-	$(CFLAGS) $(libnet_la_LDFLAGS) $(LDFLAGS) -o $@
+	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
+	$(libnet_la_LDFLAGS) $(LDFLAGS) -o $@
 @USE_LIBTOOL_TRUE@am_libnet_la_rpath =
 DEFAULT_INCLUDES = -I.@am__isrc@
 depcomp =
@@ -319,45 +250,23 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 AUTOMAKE_OPTIONS = cygnus
 INCLUDES = -I$(srcdir)/../include -I$(srcdir)/.. $(NEWLIB_CFLAGS) $(CROSS_CFLAGS) $(TARGET_CFLAGS)
-GENERAL_SOURCES = addr2ascii.c ascii2addr.c alias-lookup.c \
-	base64.c check_pf.c digits_dots.c \
-	ether_aton.c ether_aton_r.c ether_hton.c \
-	ether_line.c ether_ntoa.c ether_ntoa_r.c ether_ntoh.c \
-	ethers-lookup.c getaddrinfo.c getaliasent.c \
-	getaliasent_r.c getaliasname.c getaliasname_r.c gethstbyad.c \
-	gethstbyad_r.c gethstbynm2.c gethstbynm2_r.c gethstbynm.c \
-	gethstbynm_r.c gethstent.c gethstent_r.c getnameinfo.c getnetbyad.c \
-	getnetbyad_r.c getnetbynm.c getnetbynm_r.c getnetent.c getnetent_r.c \
-	getnetgrent.c getnetgrent_r.c getnssent.c getnssent_r.c getproto.c \
-	getproto_r.c getprtent.c \
-	getprtent_r.c getprtname.c getprtname_r.c getrpcbyname.c \
-	getrpcbyname_r.c getrpcbynumber.c getrpcbynumber_r.c getrpcent.c \
-	getrpcent_r.c getservent.c getservent_r.c getsrvbynm.c getsrvbynm_r.c \
-	getsrvbypt.c getsrvbypt_r.c grp-lookup.c \
-	herrno.c hosts-lookup.c ifreq.c \
-	in6_addr.c inet6_option.c inet_addr.c \
-	inet_lnaof.c inet_mkadr.c inet_net.c inet_neta.c inet_netof.c \
-	inet_net_ntop.c inet_net_pton.c inet_ntoa.c inet_ntop.c \
-	inet_pton.c issetugid-stub.c key-lookup.c netgrp-lookup.c \
-	network-lookup.c nsswitch.c \
-	ns_name.c ns_netint.c ns_parse.c ns_print.c ns_samedomain.c \
-	ns_ttl.c nsap_addr.c proto-lookup.c opensock.c pwd-lookup.c recv.c \
-	res_comp.c res_data.c res_debug.c res_hconf.c res_init.c \
-	res_libc.c res_mkquery.c \
-	res_query.c res_send.c \
-	rexec.c rpc-lookup.c ruserpass.c send.c service-lookup.c spwd-lookup.c 
+GENERAL_SOURCES = accept.c ethera2n.c gethnmadr.c getnetent.c getsockname.c inet_network.c \
+		  recv.c res_send.c setsockopt.c bind.c ethere2a.c gethostent.c getpeername.c \
+		  getsockopt.c inet_ntoa.c recvfrom.c ruserok.c shutdown.c connect.c etherh2n.c \
+		  gethostname.c getproto.c getsrvbyname.c listen.c res_comp.c send.c socket.c \
+		  dhcp_gettag.c ether_line.c getifaddrs.c getprotoent.c getsrvbyport.c memcspn.c \
+		  res_init.c sendto.c strcasecmp.c dhcp_settag.c ethern2h.c getnetbyaddr.c \
+		  getprotoname.c hton.c oneC_sum.c res_mkquery.c servxcheck.c domainname.c \
+		  getdomain.c getnetbyname.c getservent.c inet_addr.c rcmd.c res_query.c \
+		  sethostent.c
 
-ELIX_4_SOURCES = \
-	ifname.c \
-	rcmd.$(oext) \
-	rcmdsh.$(oext)
-
+ELIX_4_SOURCES = 
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@ELIX_SOURCES = $(ELIX_4_SOURCES)
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_TRUE@ELIX_SOURCES = 
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_TRUE@ELIX_SOURCES = 
 @ELIX_LEVEL_1_TRUE@ELIX_SOURCES = 
 libnet_la_LDFLAGS = -Xcompiler -nostdlib
-libnet_la_CFLAGS = -DINET6
+#libnet_la_CFLAGS = -DINET6
 @USE_LIBTOOL_TRUE@noinst_LTLIBRARIES = libnet.la
 @USE_LIBTOOL_TRUE@libnet_la_SOURCES = $(GENERAL_SOURCES) $(ELIX_SOURCES)
 @USE_LIBTOOL_FALSE@noinst_DATA = 
@@ -432,197 +341,23 @@ distclean-compile:
 .c.lo:
 	$(LTCOMPILE) -c -o $@ $<
 
-lib_a-addr2ascii.o: addr2ascii.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-addr2ascii.o `test -f 'addr2ascii.c' || echo '$(srcdir)/'`addr2ascii.c
+lib_a-accept.o: accept.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-accept.o `test -f 'accept.c' || echo '$(srcdir)/'`accept.c
 
-lib_a-addr2ascii.obj: addr2ascii.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-addr2ascii.obj `if test -f 'addr2ascii.c'; then $(CYGPATH_W) 'addr2ascii.c'; else $(CYGPATH_W) '$(srcdir)/addr2ascii.c'; fi`
+lib_a-accept.obj: accept.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-accept.obj `if test -f 'accept.c'; then $(CYGPATH_W) 'accept.c'; else $(CYGPATH_W) '$(srcdir)/accept.c'; fi`
 
-lib_a-ascii2addr.o: ascii2addr.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ascii2addr.o `test -f 'ascii2addr.c' || echo '$(srcdir)/'`ascii2addr.c
+lib_a-ethera2n.o: ethera2n.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ethera2n.o `test -f 'ethera2n.c' || echo '$(srcdir)/'`ethera2n.c
 
-lib_a-ascii2addr.obj: ascii2addr.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ascii2addr.obj `if test -f 'ascii2addr.c'; then $(CYGPATH_W) 'ascii2addr.c'; else $(CYGPATH_W) '$(srcdir)/ascii2addr.c'; fi`
+lib_a-ethera2n.obj: ethera2n.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ethera2n.obj `if test -f 'ethera2n.c'; then $(CYGPATH_W) 'ethera2n.c'; else $(CYGPATH_W) '$(srcdir)/ethera2n.c'; fi`
 
-lib_a-alias-lookup.o: alias-lookup.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-alias-lookup.o `test -f 'alias-lookup.c' || echo '$(srcdir)/'`alias-lookup.c
+lib_a-gethnmadr.o: gethnmadr.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-gethnmadr.o `test -f 'gethnmadr.c' || echo '$(srcdir)/'`gethnmadr.c
 
-lib_a-alias-lookup.obj: alias-lookup.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-alias-lookup.obj `if test -f 'alias-lookup.c'; then $(CYGPATH_W) 'alias-lookup.c'; else $(CYGPATH_W) '$(srcdir)/alias-lookup.c'; fi`
-
-lib_a-base64.o: base64.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-base64.o `test -f 'base64.c' || echo '$(srcdir)/'`base64.c
-
-lib_a-base64.obj: base64.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-base64.obj `if test -f 'base64.c'; then $(CYGPATH_W) 'base64.c'; else $(CYGPATH_W) '$(srcdir)/base64.c'; fi`
-
-lib_a-check_pf.o: check_pf.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-check_pf.o `test -f 'check_pf.c' || echo '$(srcdir)/'`check_pf.c
-
-lib_a-check_pf.obj: check_pf.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-check_pf.obj `if test -f 'check_pf.c'; then $(CYGPATH_W) 'check_pf.c'; else $(CYGPATH_W) '$(srcdir)/check_pf.c'; fi`
-
-lib_a-digits_dots.o: digits_dots.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-digits_dots.o `test -f 'digits_dots.c' || echo '$(srcdir)/'`digits_dots.c
-
-lib_a-digits_dots.obj: digits_dots.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-digits_dots.obj `if test -f 'digits_dots.c'; then $(CYGPATH_W) 'digits_dots.c'; else $(CYGPATH_W) '$(srcdir)/digits_dots.c'; fi`
-
-lib_a-ether_aton.o: ether_aton.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ether_aton.o `test -f 'ether_aton.c' || echo '$(srcdir)/'`ether_aton.c
-
-lib_a-ether_aton.obj: ether_aton.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ether_aton.obj `if test -f 'ether_aton.c'; then $(CYGPATH_W) 'ether_aton.c'; else $(CYGPATH_W) '$(srcdir)/ether_aton.c'; fi`
-
-lib_a-ether_aton_r.o: ether_aton_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ether_aton_r.o `test -f 'ether_aton_r.c' || echo '$(srcdir)/'`ether_aton_r.c
-
-lib_a-ether_aton_r.obj: ether_aton_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ether_aton_r.obj `if test -f 'ether_aton_r.c'; then $(CYGPATH_W) 'ether_aton_r.c'; else $(CYGPATH_W) '$(srcdir)/ether_aton_r.c'; fi`
-
-lib_a-ether_hton.o: ether_hton.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ether_hton.o `test -f 'ether_hton.c' || echo '$(srcdir)/'`ether_hton.c
-
-lib_a-ether_hton.obj: ether_hton.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ether_hton.obj `if test -f 'ether_hton.c'; then $(CYGPATH_W) 'ether_hton.c'; else $(CYGPATH_W) '$(srcdir)/ether_hton.c'; fi`
-
-lib_a-ether_line.o: ether_line.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ether_line.o `test -f 'ether_line.c' || echo '$(srcdir)/'`ether_line.c
-
-lib_a-ether_line.obj: ether_line.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ether_line.obj `if test -f 'ether_line.c'; then $(CYGPATH_W) 'ether_line.c'; else $(CYGPATH_W) '$(srcdir)/ether_line.c'; fi`
-
-lib_a-ether_ntoa.o: ether_ntoa.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ether_ntoa.o `test -f 'ether_ntoa.c' || echo '$(srcdir)/'`ether_ntoa.c
-
-lib_a-ether_ntoa.obj: ether_ntoa.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ether_ntoa.obj `if test -f 'ether_ntoa.c'; then $(CYGPATH_W) 'ether_ntoa.c'; else $(CYGPATH_W) '$(srcdir)/ether_ntoa.c'; fi`
-
-lib_a-ether_ntoa_r.o: ether_ntoa_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ether_ntoa_r.o `test -f 'ether_ntoa_r.c' || echo '$(srcdir)/'`ether_ntoa_r.c
-
-lib_a-ether_ntoa_r.obj: ether_ntoa_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ether_ntoa_r.obj `if test -f 'ether_ntoa_r.c'; then $(CYGPATH_W) 'ether_ntoa_r.c'; else $(CYGPATH_W) '$(srcdir)/ether_ntoa_r.c'; fi`
-
-lib_a-ether_ntoh.o: ether_ntoh.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ether_ntoh.o `test -f 'ether_ntoh.c' || echo '$(srcdir)/'`ether_ntoh.c
-
-lib_a-ether_ntoh.obj: ether_ntoh.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ether_ntoh.obj `if test -f 'ether_ntoh.c'; then $(CYGPATH_W) 'ether_ntoh.c'; else $(CYGPATH_W) '$(srcdir)/ether_ntoh.c'; fi`
-
-lib_a-ethers-lookup.o: ethers-lookup.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ethers-lookup.o `test -f 'ethers-lookup.c' || echo '$(srcdir)/'`ethers-lookup.c
-
-lib_a-ethers-lookup.obj: ethers-lookup.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ethers-lookup.obj `if test -f 'ethers-lookup.c'; then $(CYGPATH_W) 'ethers-lookup.c'; else $(CYGPATH_W) '$(srcdir)/ethers-lookup.c'; fi`
-
-lib_a-getaddrinfo.o: getaddrinfo.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getaddrinfo.o `test -f 'getaddrinfo.c' || echo '$(srcdir)/'`getaddrinfo.c
-
-lib_a-getaddrinfo.obj: getaddrinfo.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getaddrinfo.obj `if test -f 'getaddrinfo.c'; then $(CYGPATH_W) 'getaddrinfo.c'; else $(CYGPATH_W) '$(srcdir)/getaddrinfo.c'; fi`
-
-lib_a-getaliasent.o: getaliasent.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getaliasent.o `test -f 'getaliasent.c' || echo '$(srcdir)/'`getaliasent.c
-
-lib_a-getaliasent.obj: getaliasent.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getaliasent.obj `if test -f 'getaliasent.c'; then $(CYGPATH_W) 'getaliasent.c'; else $(CYGPATH_W) '$(srcdir)/getaliasent.c'; fi`
-
-lib_a-getaliasent_r.o: getaliasent_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getaliasent_r.o `test -f 'getaliasent_r.c' || echo '$(srcdir)/'`getaliasent_r.c
-
-lib_a-getaliasent_r.obj: getaliasent_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getaliasent_r.obj `if test -f 'getaliasent_r.c'; then $(CYGPATH_W) 'getaliasent_r.c'; else $(CYGPATH_W) '$(srcdir)/getaliasent_r.c'; fi`
-
-lib_a-getaliasname.o: getaliasname.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getaliasname.o `test -f 'getaliasname.c' || echo '$(srcdir)/'`getaliasname.c
-
-lib_a-getaliasname.obj: getaliasname.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getaliasname.obj `if test -f 'getaliasname.c'; then $(CYGPATH_W) 'getaliasname.c'; else $(CYGPATH_W) '$(srcdir)/getaliasname.c'; fi`
-
-lib_a-getaliasname_r.o: getaliasname_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getaliasname_r.o `test -f 'getaliasname_r.c' || echo '$(srcdir)/'`getaliasname_r.c
-
-lib_a-getaliasname_r.obj: getaliasname_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getaliasname_r.obj `if test -f 'getaliasname_r.c'; then $(CYGPATH_W) 'getaliasname_r.c'; else $(CYGPATH_W) '$(srcdir)/getaliasname_r.c'; fi`
-
-lib_a-gethstbyad.o: gethstbyad.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-gethstbyad.o `test -f 'gethstbyad.c' || echo '$(srcdir)/'`gethstbyad.c
-
-lib_a-gethstbyad.obj: gethstbyad.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-gethstbyad.obj `if test -f 'gethstbyad.c'; then $(CYGPATH_W) 'gethstbyad.c'; else $(CYGPATH_W) '$(srcdir)/gethstbyad.c'; fi`
-
-lib_a-gethstbyad_r.o: gethstbyad_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-gethstbyad_r.o `test -f 'gethstbyad_r.c' || echo '$(srcdir)/'`gethstbyad_r.c
-
-lib_a-gethstbyad_r.obj: gethstbyad_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-gethstbyad_r.obj `if test -f 'gethstbyad_r.c'; then $(CYGPATH_W) 'gethstbyad_r.c'; else $(CYGPATH_W) '$(srcdir)/gethstbyad_r.c'; fi`
-
-lib_a-gethstbynm2.o: gethstbynm2.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-gethstbynm2.o `test -f 'gethstbynm2.c' || echo '$(srcdir)/'`gethstbynm2.c
-
-lib_a-gethstbynm2.obj: gethstbynm2.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-gethstbynm2.obj `if test -f 'gethstbynm2.c'; then $(CYGPATH_W) 'gethstbynm2.c'; else $(CYGPATH_W) '$(srcdir)/gethstbynm2.c'; fi`
-
-lib_a-gethstbynm2_r.o: gethstbynm2_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-gethstbynm2_r.o `test -f 'gethstbynm2_r.c' || echo '$(srcdir)/'`gethstbynm2_r.c
-
-lib_a-gethstbynm2_r.obj: gethstbynm2_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-gethstbynm2_r.obj `if test -f 'gethstbynm2_r.c'; then $(CYGPATH_W) 'gethstbynm2_r.c'; else $(CYGPATH_W) '$(srcdir)/gethstbynm2_r.c'; fi`
-
-lib_a-gethstbynm.o: gethstbynm.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-gethstbynm.o `test -f 'gethstbynm.c' || echo '$(srcdir)/'`gethstbynm.c
-
-lib_a-gethstbynm.obj: gethstbynm.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-gethstbynm.obj `if test -f 'gethstbynm.c'; then $(CYGPATH_W) 'gethstbynm.c'; else $(CYGPATH_W) '$(srcdir)/gethstbynm.c'; fi`
-
-lib_a-gethstbynm_r.o: gethstbynm_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-gethstbynm_r.o `test -f 'gethstbynm_r.c' || echo '$(srcdir)/'`gethstbynm_r.c
-
-lib_a-gethstbynm_r.obj: gethstbynm_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-gethstbynm_r.obj `if test -f 'gethstbynm_r.c'; then $(CYGPATH_W) 'gethstbynm_r.c'; else $(CYGPATH_W) '$(srcdir)/gethstbynm_r.c'; fi`
-
-lib_a-gethstent.o: gethstent.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-gethstent.o `test -f 'gethstent.c' || echo '$(srcdir)/'`gethstent.c
-
-lib_a-gethstent.obj: gethstent.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-gethstent.obj `if test -f 'gethstent.c'; then $(CYGPATH_W) 'gethstent.c'; else $(CYGPATH_W) '$(srcdir)/gethstent.c'; fi`
-
-lib_a-gethstent_r.o: gethstent_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-gethstent_r.o `test -f 'gethstent_r.c' || echo '$(srcdir)/'`gethstent_r.c
-
-lib_a-gethstent_r.obj: gethstent_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-gethstent_r.obj `if test -f 'gethstent_r.c'; then $(CYGPATH_W) 'gethstent_r.c'; else $(CYGPATH_W) '$(srcdir)/gethstent_r.c'; fi`
-
-lib_a-getnameinfo.o: getnameinfo.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getnameinfo.o `test -f 'getnameinfo.c' || echo '$(srcdir)/'`getnameinfo.c
-
-lib_a-getnameinfo.obj: getnameinfo.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getnameinfo.obj `if test -f 'getnameinfo.c'; then $(CYGPATH_W) 'getnameinfo.c'; else $(CYGPATH_W) '$(srcdir)/getnameinfo.c'; fi`
-
-lib_a-getnetbyad.o: getnetbyad.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getnetbyad.o `test -f 'getnetbyad.c' || echo '$(srcdir)/'`getnetbyad.c
-
-lib_a-getnetbyad.obj: getnetbyad.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getnetbyad.obj `if test -f 'getnetbyad.c'; then $(CYGPATH_W) 'getnetbyad.c'; else $(CYGPATH_W) '$(srcdir)/getnetbyad.c'; fi`
-
-lib_a-getnetbyad_r.o: getnetbyad_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getnetbyad_r.o `test -f 'getnetbyad_r.c' || echo '$(srcdir)/'`getnetbyad_r.c
-
-lib_a-getnetbyad_r.obj: getnetbyad_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getnetbyad_r.obj `if test -f 'getnetbyad_r.c'; then $(CYGPATH_W) 'getnetbyad_r.c'; else $(CYGPATH_W) '$(srcdir)/getnetbyad_r.c'; fi`
-
-lib_a-getnetbynm.o: getnetbynm.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getnetbynm.o `test -f 'getnetbynm.c' || echo '$(srcdir)/'`getnetbynm.c
-
-lib_a-getnetbynm.obj: getnetbynm.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getnetbynm.obj `if test -f 'getnetbynm.c'; then $(CYGPATH_W) 'getnetbynm.c'; else $(CYGPATH_W) '$(srcdir)/getnetbynm.c'; fi`
-
-lib_a-getnetbynm_r.o: getnetbynm_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getnetbynm_r.o `test -f 'getnetbynm_r.c' || echo '$(srcdir)/'`getnetbynm_r.c
-
-lib_a-getnetbynm_r.obj: getnetbynm_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getnetbynm_r.obj `if test -f 'getnetbynm_r.c'; then $(CYGPATH_W) 'getnetbynm_r.c'; else $(CYGPATH_W) '$(srcdir)/getnetbynm_r.c'; fi`
+lib_a-gethnmadr.obj: gethnmadr.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-gethnmadr.obj `if test -f 'gethnmadr.c'; then $(CYGPATH_W) 'gethnmadr.c'; else $(CYGPATH_W) '$(srcdir)/gethnmadr.c'; fi`
 
 lib_a-getnetent.o: getnetent.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getnetent.o `test -f 'getnetent.c' || echo '$(srcdir)/'`getnetent.c
@@ -630,335 +365,17 @@ lib_a-getnetent.o: getnetent.c
 lib_a-getnetent.obj: getnetent.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getnetent.obj `if test -f 'getnetent.c'; then $(CYGPATH_W) 'getnetent.c'; else $(CYGPATH_W) '$(srcdir)/getnetent.c'; fi`
 
-lib_a-getnetent_r.o: getnetent_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getnetent_r.o `test -f 'getnetent_r.c' || echo '$(srcdir)/'`getnetent_r.c
+lib_a-getsockname.o: getsockname.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getsockname.o `test -f 'getsockname.c' || echo '$(srcdir)/'`getsockname.c
 
-lib_a-getnetent_r.obj: getnetent_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getnetent_r.obj `if test -f 'getnetent_r.c'; then $(CYGPATH_W) 'getnetent_r.c'; else $(CYGPATH_W) '$(srcdir)/getnetent_r.c'; fi`
+lib_a-getsockname.obj: getsockname.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getsockname.obj `if test -f 'getsockname.c'; then $(CYGPATH_W) 'getsockname.c'; else $(CYGPATH_W) '$(srcdir)/getsockname.c'; fi`
 
-lib_a-getnetgrent.o: getnetgrent.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getnetgrent.o `test -f 'getnetgrent.c' || echo '$(srcdir)/'`getnetgrent.c
+lib_a-inet_network.o: inet_network.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-inet_network.o `test -f 'inet_network.c' || echo '$(srcdir)/'`inet_network.c
 
-lib_a-getnetgrent.obj: getnetgrent.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getnetgrent.obj `if test -f 'getnetgrent.c'; then $(CYGPATH_W) 'getnetgrent.c'; else $(CYGPATH_W) '$(srcdir)/getnetgrent.c'; fi`
-
-lib_a-getnetgrent_r.o: getnetgrent_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getnetgrent_r.o `test -f 'getnetgrent_r.c' || echo '$(srcdir)/'`getnetgrent_r.c
-
-lib_a-getnetgrent_r.obj: getnetgrent_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getnetgrent_r.obj `if test -f 'getnetgrent_r.c'; then $(CYGPATH_W) 'getnetgrent_r.c'; else $(CYGPATH_W) '$(srcdir)/getnetgrent_r.c'; fi`
-
-lib_a-getnssent.o: getnssent.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getnssent.o `test -f 'getnssent.c' || echo '$(srcdir)/'`getnssent.c
-
-lib_a-getnssent.obj: getnssent.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getnssent.obj `if test -f 'getnssent.c'; then $(CYGPATH_W) 'getnssent.c'; else $(CYGPATH_W) '$(srcdir)/getnssent.c'; fi`
-
-lib_a-getnssent_r.o: getnssent_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getnssent_r.o `test -f 'getnssent_r.c' || echo '$(srcdir)/'`getnssent_r.c
-
-lib_a-getnssent_r.obj: getnssent_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getnssent_r.obj `if test -f 'getnssent_r.c'; then $(CYGPATH_W) 'getnssent_r.c'; else $(CYGPATH_W) '$(srcdir)/getnssent_r.c'; fi`
-
-lib_a-getproto.o: getproto.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getproto.o `test -f 'getproto.c' || echo '$(srcdir)/'`getproto.c
-
-lib_a-getproto.obj: getproto.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getproto.obj `if test -f 'getproto.c'; then $(CYGPATH_W) 'getproto.c'; else $(CYGPATH_W) '$(srcdir)/getproto.c'; fi`
-
-lib_a-getproto_r.o: getproto_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getproto_r.o `test -f 'getproto_r.c' || echo '$(srcdir)/'`getproto_r.c
-
-lib_a-getproto_r.obj: getproto_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getproto_r.obj `if test -f 'getproto_r.c'; then $(CYGPATH_W) 'getproto_r.c'; else $(CYGPATH_W) '$(srcdir)/getproto_r.c'; fi`
-
-lib_a-getprtent.o: getprtent.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getprtent.o `test -f 'getprtent.c' || echo '$(srcdir)/'`getprtent.c
-
-lib_a-getprtent.obj: getprtent.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getprtent.obj `if test -f 'getprtent.c'; then $(CYGPATH_W) 'getprtent.c'; else $(CYGPATH_W) '$(srcdir)/getprtent.c'; fi`
-
-lib_a-getprtent_r.o: getprtent_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getprtent_r.o `test -f 'getprtent_r.c' || echo '$(srcdir)/'`getprtent_r.c
-
-lib_a-getprtent_r.obj: getprtent_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getprtent_r.obj `if test -f 'getprtent_r.c'; then $(CYGPATH_W) 'getprtent_r.c'; else $(CYGPATH_W) '$(srcdir)/getprtent_r.c'; fi`
-
-lib_a-getprtname.o: getprtname.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getprtname.o `test -f 'getprtname.c' || echo '$(srcdir)/'`getprtname.c
-
-lib_a-getprtname.obj: getprtname.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getprtname.obj `if test -f 'getprtname.c'; then $(CYGPATH_W) 'getprtname.c'; else $(CYGPATH_W) '$(srcdir)/getprtname.c'; fi`
-
-lib_a-getprtname_r.o: getprtname_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getprtname_r.o `test -f 'getprtname_r.c' || echo '$(srcdir)/'`getprtname_r.c
-
-lib_a-getprtname_r.obj: getprtname_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getprtname_r.obj `if test -f 'getprtname_r.c'; then $(CYGPATH_W) 'getprtname_r.c'; else $(CYGPATH_W) '$(srcdir)/getprtname_r.c'; fi`
-
-lib_a-getrpcbyname.o: getrpcbyname.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getrpcbyname.o `test -f 'getrpcbyname.c' || echo '$(srcdir)/'`getrpcbyname.c
-
-lib_a-getrpcbyname.obj: getrpcbyname.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getrpcbyname.obj `if test -f 'getrpcbyname.c'; then $(CYGPATH_W) 'getrpcbyname.c'; else $(CYGPATH_W) '$(srcdir)/getrpcbyname.c'; fi`
-
-lib_a-getrpcbyname_r.o: getrpcbyname_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getrpcbyname_r.o `test -f 'getrpcbyname_r.c' || echo '$(srcdir)/'`getrpcbyname_r.c
-
-lib_a-getrpcbyname_r.obj: getrpcbyname_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getrpcbyname_r.obj `if test -f 'getrpcbyname_r.c'; then $(CYGPATH_W) 'getrpcbyname_r.c'; else $(CYGPATH_W) '$(srcdir)/getrpcbyname_r.c'; fi`
-
-lib_a-getrpcbynumber.o: getrpcbynumber.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getrpcbynumber.o `test -f 'getrpcbynumber.c' || echo '$(srcdir)/'`getrpcbynumber.c
-
-lib_a-getrpcbynumber.obj: getrpcbynumber.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getrpcbynumber.obj `if test -f 'getrpcbynumber.c'; then $(CYGPATH_W) 'getrpcbynumber.c'; else $(CYGPATH_W) '$(srcdir)/getrpcbynumber.c'; fi`
-
-lib_a-getrpcbynumber_r.o: getrpcbynumber_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getrpcbynumber_r.o `test -f 'getrpcbynumber_r.c' || echo '$(srcdir)/'`getrpcbynumber_r.c
-
-lib_a-getrpcbynumber_r.obj: getrpcbynumber_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getrpcbynumber_r.obj `if test -f 'getrpcbynumber_r.c'; then $(CYGPATH_W) 'getrpcbynumber_r.c'; else $(CYGPATH_W) '$(srcdir)/getrpcbynumber_r.c'; fi`
-
-lib_a-getrpcent.o: getrpcent.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getrpcent.o `test -f 'getrpcent.c' || echo '$(srcdir)/'`getrpcent.c
-
-lib_a-getrpcent.obj: getrpcent.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getrpcent.obj `if test -f 'getrpcent.c'; then $(CYGPATH_W) 'getrpcent.c'; else $(CYGPATH_W) '$(srcdir)/getrpcent.c'; fi`
-
-lib_a-getrpcent_r.o: getrpcent_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getrpcent_r.o `test -f 'getrpcent_r.c' || echo '$(srcdir)/'`getrpcent_r.c
-
-lib_a-getrpcent_r.obj: getrpcent_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getrpcent_r.obj `if test -f 'getrpcent_r.c'; then $(CYGPATH_W) 'getrpcent_r.c'; else $(CYGPATH_W) '$(srcdir)/getrpcent_r.c'; fi`
-
-lib_a-getservent.o: getservent.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getservent.o `test -f 'getservent.c' || echo '$(srcdir)/'`getservent.c
-
-lib_a-getservent.obj: getservent.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getservent.obj `if test -f 'getservent.c'; then $(CYGPATH_W) 'getservent.c'; else $(CYGPATH_W) '$(srcdir)/getservent.c'; fi`
-
-lib_a-getservent_r.o: getservent_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getservent_r.o `test -f 'getservent_r.c' || echo '$(srcdir)/'`getservent_r.c
-
-lib_a-getservent_r.obj: getservent_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getservent_r.obj `if test -f 'getservent_r.c'; then $(CYGPATH_W) 'getservent_r.c'; else $(CYGPATH_W) '$(srcdir)/getservent_r.c'; fi`
-
-lib_a-getsrvbynm.o: getsrvbynm.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getsrvbynm.o `test -f 'getsrvbynm.c' || echo '$(srcdir)/'`getsrvbynm.c
-
-lib_a-getsrvbynm.obj: getsrvbynm.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getsrvbynm.obj `if test -f 'getsrvbynm.c'; then $(CYGPATH_W) 'getsrvbynm.c'; else $(CYGPATH_W) '$(srcdir)/getsrvbynm.c'; fi`
-
-lib_a-getsrvbynm_r.o: getsrvbynm_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getsrvbynm_r.o `test -f 'getsrvbynm_r.c' || echo '$(srcdir)/'`getsrvbynm_r.c
-
-lib_a-getsrvbynm_r.obj: getsrvbynm_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getsrvbynm_r.obj `if test -f 'getsrvbynm_r.c'; then $(CYGPATH_W) 'getsrvbynm_r.c'; else $(CYGPATH_W) '$(srcdir)/getsrvbynm_r.c'; fi`
-
-lib_a-getsrvbypt.o: getsrvbypt.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getsrvbypt.o `test -f 'getsrvbypt.c' || echo '$(srcdir)/'`getsrvbypt.c
-
-lib_a-getsrvbypt.obj: getsrvbypt.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getsrvbypt.obj `if test -f 'getsrvbypt.c'; then $(CYGPATH_W) 'getsrvbypt.c'; else $(CYGPATH_W) '$(srcdir)/getsrvbypt.c'; fi`
-
-lib_a-getsrvbypt_r.o: getsrvbypt_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getsrvbypt_r.o `test -f 'getsrvbypt_r.c' || echo '$(srcdir)/'`getsrvbypt_r.c
-
-lib_a-getsrvbypt_r.obj: getsrvbypt_r.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getsrvbypt_r.obj `if test -f 'getsrvbypt_r.c'; then $(CYGPATH_W) 'getsrvbypt_r.c'; else $(CYGPATH_W) '$(srcdir)/getsrvbypt_r.c'; fi`
-
-lib_a-grp-lookup.o: grp-lookup.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-grp-lookup.o `test -f 'grp-lookup.c' || echo '$(srcdir)/'`grp-lookup.c
-
-lib_a-grp-lookup.obj: grp-lookup.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-grp-lookup.obj `if test -f 'grp-lookup.c'; then $(CYGPATH_W) 'grp-lookup.c'; else $(CYGPATH_W) '$(srcdir)/grp-lookup.c'; fi`
-
-lib_a-herrno.o: herrno.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-herrno.o `test -f 'herrno.c' || echo '$(srcdir)/'`herrno.c
-
-lib_a-herrno.obj: herrno.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-herrno.obj `if test -f 'herrno.c'; then $(CYGPATH_W) 'herrno.c'; else $(CYGPATH_W) '$(srcdir)/herrno.c'; fi`
-
-lib_a-hosts-lookup.o: hosts-lookup.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-hosts-lookup.o `test -f 'hosts-lookup.c' || echo '$(srcdir)/'`hosts-lookup.c
-
-lib_a-hosts-lookup.obj: hosts-lookup.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-hosts-lookup.obj `if test -f 'hosts-lookup.c'; then $(CYGPATH_W) 'hosts-lookup.c'; else $(CYGPATH_W) '$(srcdir)/hosts-lookup.c'; fi`
-
-lib_a-ifreq.o: ifreq.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ifreq.o `test -f 'ifreq.c' || echo '$(srcdir)/'`ifreq.c
-
-lib_a-ifreq.obj: ifreq.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ifreq.obj `if test -f 'ifreq.c'; then $(CYGPATH_W) 'ifreq.c'; else $(CYGPATH_W) '$(srcdir)/ifreq.c'; fi`
-
-lib_a-in6_addr.o: in6_addr.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-in6_addr.o `test -f 'in6_addr.c' || echo '$(srcdir)/'`in6_addr.c
-
-lib_a-in6_addr.obj: in6_addr.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-in6_addr.obj `if test -f 'in6_addr.c'; then $(CYGPATH_W) 'in6_addr.c'; else $(CYGPATH_W) '$(srcdir)/in6_addr.c'; fi`
-
-lib_a-inet6_option.o: inet6_option.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-inet6_option.o `test -f 'inet6_option.c' || echo '$(srcdir)/'`inet6_option.c
-
-lib_a-inet6_option.obj: inet6_option.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-inet6_option.obj `if test -f 'inet6_option.c'; then $(CYGPATH_W) 'inet6_option.c'; else $(CYGPATH_W) '$(srcdir)/inet6_option.c'; fi`
-
-lib_a-inet_addr.o: inet_addr.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-inet_addr.o `test -f 'inet_addr.c' || echo '$(srcdir)/'`inet_addr.c
-
-lib_a-inet_addr.obj: inet_addr.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-inet_addr.obj `if test -f 'inet_addr.c'; then $(CYGPATH_W) 'inet_addr.c'; else $(CYGPATH_W) '$(srcdir)/inet_addr.c'; fi`
-
-lib_a-inet_lnaof.o: inet_lnaof.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-inet_lnaof.o `test -f 'inet_lnaof.c' || echo '$(srcdir)/'`inet_lnaof.c
-
-lib_a-inet_lnaof.obj: inet_lnaof.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-inet_lnaof.obj `if test -f 'inet_lnaof.c'; then $(CYGPATH_W) 'inet_lnaof.c'; else $(CYGPATH_W) '$(srcdir)/inet_lnaof.c'; fi`
-
-lib_a-inet_mkadr.o: inet_mkadr.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-inet_mkadr.o `test -f 'inet_mkadr.c' || echo '$(srcdir)/'`inet_mkadr.c
-
-lib_a-inet_mkadr.obj: inet_mkadr.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-inet_mkadr.obj `if test -f 'inet_mkadr.c'; then $(CYGPATH_W) 'inet_mkadr.c'; else $(CYGPATH_W) '$(srcdir)/inet_mkadr.c'; fi`
-
-lib_a-inet_net.o: inet_net.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-inet_net.o `test -f 'inet_net.c' || echo '$(srcdir)/'`inet_net.c
-
-lib_a-inet_net.obj: inet_net.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-inet_net.obj `if test -f 'inet_net.c'; then $(CYGPATH_W) 'inet_net.c'; else $(CYGPATH_W) '$(srcdir)/inet_net.c'; fi`
-
-lib_a-inet_neta.o: inet_neta.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-inet_neta.o `test -f 'inet_neta.c' || echo '$(srcdir)/'`inet_neta.c
-
-lib_a-inet_neta.obj: inet_neta.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-inet_neta.obj `if test -f 'inet_neta.c'; then $(CYGPATH_W) 'inet_neta.c'; else $(CYGPATH_W) '$(srcdir)/inet_neta.c'; fi`
-
-lib_a-inet_netof.o: inet_netof.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-inet_netof.o `test -f 'inet_netof.c' || echo '$(srcdir)/'`inet_netof.c
-
-lib_a-inet_netof.obj: inet_netof.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-inet_netof.obj `if test -f 'inet_netof.c'; then $(CYGPATH_W) 'inet_netof.c'; else $(CYGPATH_W) '$(srcdir)/inet_netof.c'; fi`
-
-lib_a-inet_net_ntop.o: inet_net_ntop.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-inet_net_ntop.o `test -f 'inet_net_ntop.c' || echo '$(srcdir)/'`inet_net_ntop.c
-
-lib_a-inet_net_ntop.obj: inet_net_ntop.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-inet_net_ntop.obj `if test -f 'inet_net_ntop.c'; then $(CYGPATH_W) 'inet_net_ntop.c'; else $(CYGPATH_W) '$(srcdir)/inet_net_ntop.c'; fi`
-
-lib_a-inet_net_pton.o: inet_net_pton.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-inet_net_pton.o `test -f 'inet_net_pton.c' || echo '$(srcdir)/'`inet_net_pton.c
-
-lib_a-inet_net_pton.obj: inet_net_pton.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-inet_net_pton.obj `if test -f 'inet_net_pton.c'; then $(CYGPATH_W) 'inet_net_pton.c'; else $(CYGPATH_W) '$(srcdir)/inet_net_pton.c'; fi`
-
-lib_a-inet_ntoa.o: inet_ntoa.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-inet_ntoa.o `test -f 'inet_ntoa.c' || echo '$(srcdir)/'`inet_ntoa.c
-
-lib_a-inet_ntoa.obj: inet_ntoa.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-inet_ntoa.obj `if test -f 'inet_ntoa.c'; then $(CYGPATH_W) 'inet_ntoa.c'; else $(CYGPATH_W) '$(srcdir)/inet_ntoa.c'; fi`
-
-lib_a-inet_ntop.o: inet_ntop.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-inet_ntop.o `test -f 'inet_ntop.c' || echo '$(srcdir)/'`inet_ntop.c
-
-lib_a-inet_ntop.obj: inet_ntop.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-inet_ntop.obj `if test -f 'inet_ntop.c'; then $(CYGPATH_W) 'inet_ntop.c'; else $(CYGPATH_W) '$(srcdir)/inet_ntop.c'; fi`
-
-lib_a-inet_pton.o: inet_pton.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-inet_pton.o `test -f 'inet_pton.c' || echo '$(srcdir)/'`inet_pton.c
-
-lib_a-inet_pton.obj: inet_pton.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-inet_pton.obj `if test -f 'inet_pton.c'; then $(CYGPATH_W) 'inet_pton.c'; else $(CYGPATH_W) '$(srcdir)/inet_pton.c'; fi`
-
-lib_a-issetugid-stub.o: issetugid-stub.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-issetugid-stub.o `test -f 'issetugid-stub.c' || echo '$(srcdir)/'`issetugid-stub.c
-
-lib_a-issetugid-stub.obj: issetugid-stub.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-issetugid-stub.obj `if test -f 'issetugid-stub.c'; then $(CYGPATH_W) 'issetugid-stub.c'; else $(CYGPATH_W) '$(srcdir)/issetugid-stub.c'; fi`
-
-lib_a-key-lookup.o: key-lookup.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-key-lookup.o `test -f 'key-lookup.c' || echo '$(srcdir)/'`key-lookup.c
-
-lib_a-key-lookup.obj: key-lookup.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-key-lookup.obj `if test -f 'key-lookup.c'; then $(CYGPATH_W) 'key-lookup.c'; else $(CYGPATH_W) '$(srcdir)/key-lookup.c'; fi`
-
-lib_a-netgrp-lookup.o: netgrp-lookup.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-netgrp-lookup.o `test -f 'netgrp-lookup.c' || echo '$(srcdir)/'`netgrp-lookup.c
-
-lib_a-netgrp-lookup.obj: netgrp-lookup.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-netgrp-lookup.obj `if test -f 'netgrp-lookup.c'; then $(CYGPATH_W) 'netgrp-lookup.c'; else $(CYGPATH_W) '$(srcdir)/netgrp-lookup.c'; fi`
-
-lib_a-network-lookup.o: network-lookup.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-network-lookup.o `test -f 'network-lookup.c' || echo '$(srcdir)/'`network-lookup.c
-
-lib_a-network-lookup.obj: network-lookup.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-network-lookup.obj `if test -f 'network-lookup.c'; then $(CYGPATH_W) 'network-lookup.c'; else $(CYGPATH_W) '$(srcdir)/network-lookup.c'; fi`
-
-lib_a-nsswitch.o: nsswitch.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-nsswitch.o `test -f 'nsswitch.c' || echo '$(srcdir)/'`nsswitch.c
-
-lib_a-nsswitch.obj: nsswitch.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-nsswitch.obj `if test -f 'nsswitch.c'; then $(CYGPATH_W) 'nsswitch.c'; else $(CYGPATH_W) '$(srcdir)/nsswitch.c'; fi`
-
-lib_a-ns_name.o: ns_name.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ns_name.o `test -f 'ns_name.c' || echo '$(srcdir)/'`ns_name.c
-
-lib_a-ns_name.obj: ns_name.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ns_name.obj `if test -f 'ns_name.c'; then $(CYGPATH_W) 'ns_name.c'; else $(CYGPATH_W) '$(srcdir)/ns_name.c'; fi`
-
-lib_a-ns_netint.o: ns_netint.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ns_netint.o `test -f 'ns_netint.c' || echo '$(srcdir)/'`ns_netint.c
-
-lib_a-ns_netint.obj: ns_netint.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ns_netint.obj `if test -f 'ns_netint.c'; then $(CYGPATH_W) 'ns_netint.c'; else $(CYGPATH_W) '$(srcdir)/ns_netint.c'; fi`
-
-lib_a-ns_parse.o: ns_parse.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ns_parse.o `test -f 'ns_parse.c' || echo '$(srcdir)/'`ns_parse.c
-
-lib_a-ns_parse.obj: ns_parse.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ns_parse.obj `if test -f 'ns_parse.c'; then $(CYGPATH_W) 'ns_parse.c'; else $(CYGPATH_W) '$(srcdir)/ns_parse.c'; fi`
-
-lib_a-ns_print.o: ns_print.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ns_print.o `test -f 'ns_print.c' || echo '$(srcdir)/'`ns_print.c
-
-lib_a-ns_print.obj: ns_print.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ns_print.obj `if test -f 'ns_print.c'; then $(CYGPATH_W) 'ns_print.c'; else $(CYGPATH_W) '$(srcdir)/ns_print.c'; fi`
-
-lib_a-ns_samedomain.o: ns_samedomain.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ns_samedomain.o `test -f 'ns_samedomain.c' || echo '$(srcdir)/'`ns_samedomain.c
-
-lib_a-ns_samedomain.obj: ns_samedomain.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ns_samedomain.obj `if test -f 'ns_samedomain.c'; then $(CYGPATH_W) 'ns_samedomain.c'; else $(CYGPATH_W) '$(srcdir)/ns_samedomain.c'; fi`
-
-lib_a-ns_ttl.o: ns_ttl.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ns_ttl.o `test -f 'ns_ttl.c' || echo '$(srcdir)/'`ns_ttl.c
-
-lib_a-ns_ttl.obj: ns_ttl.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ns_ttl.obj `if test -f 'ns_ttl.c'; then $(CYGPATH_W) 'ns_ttl.c'; else $(CYGPATH_W) '$(srcdir)/ns_ttl.c'; fi`
-
-lib_a-nsap_addr.o: nsap_addr.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-nsap_addr.o `test -f 'nsap_addr.c' || echo '$(srcdir)/'`nsap_addr.c
-
-lib_a-nsap_addr.obj: nsap_addr.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-nsap_addr.obj `if test -f 'nsap_addr.c'; then $(CYGPATH_W) 'nsap_addr.c'; else $(CYGPATH_W) '$(srcdir)/nsap_addr.c'; fi`
-
-lib_a-proto-lookup.o: proto-lookup.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-proto-lookup.o `test -f 'proto-lookup.c' || echo '$(srcdir)/'`proto-lookup.c
-
-lib_a-proto-lookup.obj: proto-lookup.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-proto-lookup.obj `if test -f 'proto-lookup.c'; then $(CYGPATH_W) 'proto-lookup.c'; else $(CYGPATH_W) '$(srcdir)/proto-lookup.c'; fi`
-
-lib_a-opensock.o: opensock.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-opensock.o `test -f 'opensock.c' || echo '$(srcdir)/'`opensock.c
-
-lib_a-opensock.obj: opensock.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-opensock.obj `if test -f 'opensock.c'; then $(CYGPATH_W) 'opensock.c'; else $(CYGPATH_W) '$(srcdir)/opensock.c'; fi`
-
-lib_a-pwd-lookup.o: pwd-lookup.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-pwd-lookup.o `test -f 'pwd-lookup.c' || echo '$(srcdir)/'`pwd-lookup.c
-
-lib_a-pwd-lookup.obj: pwd-lookup.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-pwd-lookup.obj `if test -f 'pwd-lookup.c'; then $(CYGPATH_W) 'pwd-lookup.c'; else $(CYGPATH_W) '$(srcdir)/pwd-lookup.c'; fi`
+lib_a-inet_network.obj: inet_network.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-inet_network.obj `if test -f 'inet_network.c'; then $(CYGPATH_W) 'inet_network.c'; else $(CYGPATH_W) '$(srcdir)/inet_network.c'; fi`
 
 lib_a-recv.o: recv.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-recv.o `test -f 'recv.c' || echo '$(srcdir)/'`recv.c
@@ -966,77 +383,113 @@ lib_a-recv.o: recv.c
 lib_a-recv.obj: recv.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-recv.obj `if test -f 'recv.c'; then $(CYGPATH_W) 'recv.c'; else $(CYGPATH_W) '$(srcdir)/recv.c'; fi`
 
-lib_a-res_comp.o: res_comp.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-res_comp.o `test -f 'res_comp.c' || echo '$(srcdir)/'`res_comp.c
-
-lib_a-res_comp.obj: res_comp.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-res_comp.obj `if test -f 'res_comp.c'; then $(CYGPATH_W) 'res_comp.c'; else $(CYGPATH_W) '$(srcdir)/res_comp.c'; fi`
-
-lib_a-res_data.o: res_data.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-res_data.o `test -f 'res_data.c' || echo '$(srcdir)/'`res_data.c
-
-lib_a-res_data.obj: res_data.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-res_data.obj `if test -f 'res_data.c'; then $(CYGPATH_W) 'res_data.c'; else $(CYGPATH_W) '$(srcdir)/res_data.c'; fi`
-
-lib_a-res_debug.o: res_debug.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-res_debug.o `test -f 'res_debug.c' || echo '$(srcdir)/'`res_debug.c
-
-lib_a-res_debug.obj: res_debug.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-res_debug.obj `if test -f 'res_debug.c'; then $(CYGPATH_W) 'res_debug.c'; else $(CYGPATH_W) '$(srcdir)/res_debug.c'; fi`
-
-lib_a-res_hconf.o: res_hconf.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-res_hconf.o `test -f 'res_hconf.c' || echo '$(srcdir)/'`res_hconf.c
-
-lib_a-res_hconf.obj: res_hconf.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-res_hconf.obj `if test -f 'res_hconf.c'; then $(CYGPATH_W) 'res_hconf.c'; else $(CYGPATH_W) '$(srcdir)/res_hconf.c'; fi`
-
-lib_a-res_init.o: res_init.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-res_init.o `test -f 'res_init.c' || echo '$(srcdir)/'`res_init.c
-
-lib_a-res_init.obj: res_init.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-res_init.obj `if test -f 'res_init.c'; then $(CYGPATH_W) 'res_init.c'; else $(CYGPATH_W) '$(srcdir)/res_init.c'; fi`
-
-lib_a-res_libc.o: res_libc.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-res_libc.o `test -f 'res_libc.c' || echo '$(srcdir)/'`res_libc.c
-
-lib_a-res_libc.obj: res_libc.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-res_libc.obj `if test -f 'res_libc.c'; then $(CYGPATH_W) 'res_libc.c'; else $(CYGPATH_W) '$(srcdir)/res_libc.c'; fi`
-
-lib_a-res_mkquery.o: res_mkquery.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-res_mkquery.o `test -f 'res_mkquery.c' || echo '$(srcdir)/'`res_mkquery.c
-
-lib_a-res_mkquery.obj: res_mkquery.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-res_mkquery.obj `if test -f 'res_mkquery.c'; then $(CYGPATH_W) 'res_mkquery.c'; else $(CYGPATH_W) '$(srcdir)/res_mkquery.c'; fi`
-
-lib_a-res_query.o: res_query.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-res_query.o `test -f 'res_query.c' || echo '$(srcdir)/'`res_query.c
-
-lib_a-res_query.obj: res_query.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-res_query.obj `if test -f 'res_query.c'; then $(CYGPATH_W) 'res_query.c'; else $(CYGPATH_W) '$(srcdir)/res_query.c'; fi`
-
 lib_a-res_send.o: res_send.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-res_send.o `test -f 'res_send.c' || echo '$(srcdir)/'`res_send.c
 
 lib_a-res_send.obj: res_send.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-res_send.obj `if test -f 'res_send.c'; then $(CYGPATH_W) 'res_send.c'; else $(CYGPATH_W) '$(srcdir)/res_send.c'; fi`
 
-lib_a-rexec.o: rexec.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-rexec.o `test -f 'rexec.c' || echo '$(srcdir)/'`rexec.c
+lib_a-setsockopt.o: setsockopt.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-setsockopt.o `test -f 'setsockopt.c' || echo '$(srcdir)/'`setsockopt.c
 
-lib_a-rexec.obj: rexec.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-rexec.obj `if test -f 'rexec.c'; then $(CYGPATH_W) 'rexec.c'; else $(CYGPATH_W) '$(srcdir)/rexec.c'; fi`
+lib_a-setsockopt.obj: setsockopt.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-setsockopt.obj `if test -f 'setsockopt.c'; then $(CYGPATH_W) 'setsockopt.c'; else $(CYGPATH_W) '$(srcdir)/setsockopt.c'; fi`
 
-lib_a-rpc-lookup.o: rpc-lookup.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-rpc-lookup.o `test -f 'rpc-lookup.c' || echo '$(srcdir)/'`rpc-lookup.c
+lib_a-bind.o: bind.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-bind.o `test -f 'bind.c' || echo '$(srcdir)/'`bind.c
 
-lib_a-rpc-lookup.obj: rpc-lookup.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-rpc-lookup.obj `if test -f 'rpc-lookup.c'; then $(CYGPATH_W) 'rpc-lookup.c'; else $(CYGPATH_W) '$(srcdir)/rpc-lookup.c'; fi`
+lib_a-bind.obj: bind.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-bind.obj `if test -f 'bind.c'; then $(CYGPATH_W) 'bind.c'; else $(CYGPATH_W) '$(srcdir)/bind.c'; fi`
 
-lib_a-ruserpass.o: ruserpass.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ruserpass.o `test -f 'ruserpass.c' || echo '$(srcdir)/'`ruserpass.c
+lib_a-ethere2a.o: ethere2a.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ethere2a.o `test -f 'ethere2a.c' || echo '$(srcdir)/'`ethere2a.c
 
-lib_a-ruserpass.obj: ruserpass.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ruserpass.obj `if test -f 'ruserpass.c'; then $(CYGPATH_W) 'ruserpass.c'; else $(CYGPATH_W) '$(srcdir)/ruserpass.c'; fi`
+lib_a-ethere2a.obj: ethere2a.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ethere2a.obj `if test -f 'ethere2a.c'; then $(CYGPATH_W) 'ethere2a.c'; else $(CYGPATH_W) '$(srcdir)/ethere2a.c'; fi`
+
+lib_a-gethostent.o: gethostent.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-gethostent.o `test -f 'gethostent.c' || echo '$(srcdir)/'`gethostent.c
+
+lib_a-gethostent.obj: gethostent.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-gethostent.obj `if test -f 'gethostent.c'; then $(CYGPATH_W) 'gethostent.c'; else $(CYGPATH_W) '$(srcdir)/gethostent.c'; fi`
+
+lib_a-getpeername.o: getpeername.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getpeername.o `test -f 'getpeername.c' || echo '$(srcdir)/'`getpeername.c
+
+lib_a-getpeername.obj: getpeername.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getpeername.obj `if test -f 'getpeername.c'; then $(CYGPATH_W) 'getpeername.c'; else $(CYGPATH_W) '$(srcdir)/getpeername.c'; fi`
+
+lib_a-getsockopt.o: getsockopt.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getsockopt.o `test -f 'getsockopt.c' || echo '$(srcdir)/'`getsockopt.c
+
+lib_a-getsockopt.obj: getsockopt.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getsockopt.obj `if test -f 'getsockopt.c'; then $(CYGPATH_W) 'getsockopt.c'; else $(CYGPATH_W) '$(srcdir)/getsockopt.c'; fi`
+
+lib_a-inet_ntoa.o: inet_ntoa.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-inet_ntoa.o `test -f 'inet_ntoa.c' || echo '$(srcdir)/'`inet_ntoa.c
+
+lib_a-inet_ntoa.obj: inet_ntoa.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-inet_ntoa.obj `if test -f 'inet_ntoa.c'; then $(CYGPATH_W) 'inet_ntoa.c'; else $(CYGPATH_W) '$(srcdir)/inet_ntoa.c'; fi`
+
+lib_a-recvfrom.o: recvfrom.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-recvfrom.o `test -f 'recvfrom.c' || echo '$(srcdir)/'`recvfrom.c
+
+lib_a-recvfrom.obj: recvfrom.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-recvfrom.obj `if test -f 'recvfrom.c'; then $(CYGPATH_W) 'recvfrom.c'; else $(CYGPATH_W) '$(srcdir)/recvfrom.c'; fi`
+
+lib_a-ruserok.o: ruserok.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ruserok.o `test -f 'ruserok.c' || echo '$(srcdir)/'`ruserok.c
+
+lib_a-ruserok.obj: ruserok.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ruserok.obj `if test -f 'ruserok.c'; then $(CYGPATH_W) 'ruserok.c'; else $(CYGPATH_W) '$(srcdir)/ruserok.c'; fi`
+
+lib_a-shutdown.o: shutdown.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-shutdown.o `test -f 'shutdown.c' || echo '$(srcdir)/'`shutdown.c
+
+lib_a-shutdown.obj: shutdown.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-shutdown.obj `if test -f 'shutdown.c'; then $(CYGPATH_W) 'shutdown.c'; else $(CYGPATH_W) '$(srcdir)/shutdown.c'; fi`
+
+lib_a-connect.o: connect.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-connect.o `test -f 'connect.c' || echo '$(srcdir)/'`connect.c
+
+lib_a-connect.obj: connect.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-connect.obj `if test -f 'connect.c'; then $(CYGPATH_W) 'connect.c'; else $(CYGPATH_W) '$(srcdir)/connect.c'; fi`
+
+lib_a-etherh2n.o: etherh2n.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-etherh2n.o `test -f 'etherh2n.c' || echo '$(srcdir)/'`etherh2n.c
+
+lib_a-etherh2n.obj: etherh2n.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-etherh2n.obj `if test -f 'etherh2n.c'; then $(CYGPATH_W) 'etherh2n.c'; else $(CYGPATH_W) '$(srcdir)/etherh2n.c'; fi`
+
+lib_a-gethostname.o: gethostname.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-gethostname.o `test -f 'gethostname.c' || echo '$(srcdir)/'`gethostname.c
+
+lib_a-gethostname.obj: gethostname.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-gethostname.obj `if test -f 'gethostname.c'; then $(CYGPATH_W) 'gethostname.c'; else $(CYGPATH_W) '$(srcdir)/gethostname.c'; fi`
+
+lib_a-getproto.o: getproto.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getproto.o `test -f 'getproto.c' || echo '$(srcdir)/'`getproto.c
+
+lib_a-getproto.obj: getproto.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getproto.obj `if test -f 'getproto.c'; then $(CYGPATH_W) 'getproto.c'; else $(CYGPATH_W) '$(srcdir)/getproto.c'; fi`
+
+lib_a-getsrvbyname.o: getsrvbyname.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getsrvbyname.o `test -f 'getsrvbyname.c' || echo '$(srcdir)/'`getsrvbyname.c
+
+lib_a-getsrvbyname.obj: getsrvbyname.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getsrvbyname.obj `if test -f 'getsrvbyname.c'; then $(CYGPATH_W) 'getsrvbyname.c'; else $(CYGPATH_W) '$(srcdir)/getsrvbyname.c'; fi`
+
+lib_a-listen.o: listen.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-listen.o `test -f 'listen.c' || echo '$(srcdir)/'`listen.c
+
+lib_a-listen.obj: listen.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-listen.obj `if test -f 'listen.c'; then $(CYGPATH_W) 'listen.c'; else $(CYGPATH_W) '$(srcdir)/listen.c'; fi`
+
+lib_a-res_comp.o: res_comp.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-res_comp.o `test -f 'res_comp.c' || echo '$(srcdir)/'`res_comp.c
+
+lib_a-res_comp.obj: res_comp.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-res_comp.obj `if test -f 'res_comp.c'; then $(CYGPATH_W) 'res_comp.c'; else $(CYGPATH_W) '$(srcdir)/res_comp.c'; fi`
 
 lib_a-send.o: send.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-send.o `test -f 'send.c' || echo '$(srcdir)/'`send.c
@@ -1044,338 +497,161 @@ lib_a-send.o: send.c
 lib_a-send.obj: send.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-send.obj `if test -f 'send.c'; then $(CYGPATH_W) 'send.c'; else $(CYGPATH_W) '$(srcdir)/send.c'; fi`
 
-lib_a-service-lookup.o: service-lookup.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-service-lookup.o `test -f 'service-lookup.c' || echo '$(srcdir)/'`service-lookup.c
+lib_a-socket.o: socket.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-socket.o `test -f 'socket.c' || echo '$(srcdir)/'`socket.c
 
-lib_a-service-lookup.obj: service-lookup.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-service-lookup.obj `if test -f 'service-lookup.c'; then $(CYGPATH_W) 'service-lookup.c'; else $(CYGPATH_W) '$(srcdir)/service-lookup.c'; fi`
+lib_a-socket.obj: socket.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-socket.obj `if test -f 'socket.c'; then $(CYGPATH_W) 'socket.c'; else $(CYGPATH_W) '$(srcdir)/socket.c'; fi`
 
-lib_a-spwd-lookup.o: spwd-lookup.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-spwd-lookup.o `test -f 'spwd-lookup.c' || echo '$(srcdir)/'`spwd-lookup.c
+lib_a-dhcp_gettag.o: dhcp_gettag.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-dhcp_gettag.o `test -f 'dhcp_gettag.c' || echo '$(srcdir)/'`dhcp_gettag.c
 
-lib_a-spwd-lookup.obj: spwd-lookup.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-spwd-lookup.obj `if test -f 'spwd-lookup.c'; then $(CYGPATH_W) 'spwd-lookup.c'; else $(CYGPATH_W) '$(srcdir)/spwd-lookup.c'; fi`
+lib_a-dhcp_gettag.obj: dhcp_gettag.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-dhcp_gettag.obj `if test -f 'dhcp_gettag.c'; then $(CYGPATH_W) 'dhcp_gettag.c'; else $(CYGPATH_W) '$(srcdir)/dhcp_gettag.c'; fi`
 
-lib_a-ifname.o: ifname.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ifname.o `test -f 'ifname.c' || echo '$(srcdir)/'`ifname.c
+lib_a-ether_line.o: ether_line.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ether_line.o `test -f 'ether_line.c' || echo '$(srcdir)/'`ether_line.c
 
-lib_a-ifname.obj: ifname.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ifname.obj `if test -f 'ifname.c'; then $(CYGPATH_W) 'ifname.c'; else $(CYGPATH_W) '$(srcdir)/ifname.c'; fi`
+lib_a-ether_line.obj: ether_line.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ether_line.obj `if test -f 'ether_line.c'; then $(CYGPATH_W) 'ether_line.c'; else $(CYGPATH_W) '$(srcdir)/ether_line.c'; fi`
 
-libnet_la-addr2ascii.lo: addr2ascii.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-addr2ascii.lo `test -f 'addr2ascii.c' || echo '$(srcdir)/'`addr2ascii.c
+lib_a-getifaddrs.o: getifaddrs.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getifaddrs.o `test -f 'getifaddrs.c' || echo '$(srcdir)/'`getifaddrs.c
 
-libnet_la-ascii2addr.lo: ascii2addr.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-ascii2addr.lo `test -f 'ascii2addr.c' || echo '$(srcdir)/'`ascii2addr.c
+lib_a-getifaddrs.obj: getifaddrs.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getifaddrs.obj `if test -f 'getifaddrs.c'; then $(CYGPATH_W) 'getifaddrs.c'; else $(CYGPATH_W) '$(srcdir)/getifaddrs.c'; fi`
 
-libnet_la-alias-lookup.lo: alias-lookup.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-alias-lookup.lo `test -f 'alias-lookup.c' || echo '$(srcdir)/'`alias-lookup.c
+lib_a-getprotoent.o: getprotoent.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getprotoent.o `test -f 'getprotoent.c' || echo '$(srcdir)/'`getprotoent.c
 
-libnet_la-base64.lo: base64.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-base64.lo `test -f 'base64.c' || echo '$(srcdir)/'`base64.c
+lib_a-getprotoent.obj: getprotoent.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getprotoent.obj `if test -f 'getprotoent.c'; then $(CYGPATH_W) 'getprotoent.c'; else $(CYGPATH_W) '$(srcdir)/getprotoent.c'; fi`
 
-libnet_la-check_pf.lo: check_pf.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-check_pf.lo `test -f 'check_pf.c' || echo '$(srcdir)/'`check_pf.c
+lib_a-getsrvbyport.o: getsrvbyport.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getsrvbyport.o `test -f 'getsrvbyport.c' || echo '$(srcdir)/'`getsrvbyport.c
 
-libnet_la-digits_dots.lo: digits_dots.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-digits_dots.lo `test -f 'digits_dots.c' || echo '$(srcdir)/'`digits_dots.c
+lib_a-getsrvbyport.obj: getsrvbyport.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getsrvbyport.obj `if test -f 'getsrvbyport.c'; then $(CYGPATH_W) 'getsrvbyport.c'; else $(CYGPATH_W) '$(srcdir)/getsrvbyport.c'; fi`
 
-libnet_la-ether_aton.lo: ether_aton.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-ether_aton.lo `test -f 'ether_aton.c' || echo '$(srcdir)/'`ether_aton.c
+lib_a-memcspn.o: memcspn.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-memcspn.o `test -f 'memcspn.c' || echo '$(srcdir)/'`memcspn.c
 
-libnet_la-ether_aton_r.lo: ether_aton_r.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-ether_aton_r.lo `test -f 'ether_aton_r.c' || echo '$(srcdir)/'`ether_aton_r.c
+lib_a-memcspn.obj: memcspn.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-memcspn.obj `if test -f 'memcspn.c'; then $(CYGPATH_W) 'memcspn.c'; else $(CYGPATH_W) '$(srcdir)/memcspn.c'; fi`
 
-libnet_la-ether_hton.lo: ether_hton.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-ether_hton.lo `test -f 'ether_hton.c' || echo '$(srcdir)/'`ether_hton.c
+lib_a-res_init.o: res_init.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-res_init.o `test -f 'res_init.c' || echo '$(srcdir)/'`res_init.c
 
-libnet_la-ether_line.lo: ether_line.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-ether_line.lo `test -f 'ether_line.c' || echo '$(srcdir)/'`ether_line.c
+lib_a-res_init.obj: res_init.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-res_init.obj `if test -f 'res_init.c'; then $(CYGPATH_W) 'res_init.c'; else $(CYGPATH_W) '$(srcdir)/res_init.c'; fi`
 
-libnet_la-ether_ntoa.lo: ether_ntoa.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-ether_ntoa.lo `test -f 'ether_ntoa.c' || echo '$(srcdir)/'`ether_ntoa.c
+lib_a-sendto.o: sendto.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-sendto.o `test -f 'sendto.c' || echo '$(srcdir)/'`sendto.c
 
-libnet_la-ether_ntoa_r.lo: ether_ntoa_r.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-ether_ntoa_r.lo `test -f 'ether_ntoa_r.c' || echo '$(srcdir)/'`ether_ntoa_r.c
+lib_a-sendto.obj: sendto.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-sendto.obj `if test -f 'sendto.c'; then $(CYGPATH_W) 'sendto.c'; else $(CYGPATH_W) '$(srcdir)/sendto.c'; fi`
 
-libnet_la-ether_ntoh.lo: ether_ntoh.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-ether_ntoh.lo `test -f 'ether_ntoh.c' || echo '$(srcdir)/'`ether_ntoh.c
+lib_a-strcasecmp.o: strcasecmp.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-strcasecmp.o `test -f 'strcasecmp.c' || echo '$(srcdir)/'`strcasecmp.c
 
-libnet_la-ethers-lookup.lo: ethers-lookup.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-ethers-lookup.lo `test -f 'ethers-lookup.c' || echo '$(srcdir)/'`ethers-lookup.c
+lib_a-strcasecmp.obj: strcasecmp.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-strcasecmp.obj `if test -f 'strcasecmp.c'; then $(CYGPATH_W) 'strcasecmp.c'; else $(CYGPATH_W) '$(srcdir)/strcasecmp.c'; fi`
 
-libnet_la-getaddrinfo.lo: getaddrinfo.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-getaddrinfo.lo `test -f 'getaddrinfo.c' || echo '$(srcdir)/'`getaddrinfo.c
+lib_a-dhcp_settag.o: dhcp_settag.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-dhcp_settag.o `test -f 'dhcp_settag.c' || echo '$(srcdir)/'`dhcp_settag.c
 
-libnet_la-getaliasent.lo: getaliasent.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-getaliasent.lo `test -f 'getaliasent.c' || echo '$(srcdir)/'`getaliasent.c
+lib_a-dhcp_settag.obj: dhcp_settag.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-dhcp_settag.obj `if test -f 'dhcp_settag.c'; then $(CYGPATH_W) 'dhcp_settag.c'; else $(CYGPATH_W) '$(srcdir)/dhcp_settag.c'; fi`
 
-libnet_la-getaliasent_r.lo: getaliasent_r.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-getaliasent_r.lo `test -f 'getaliasent_r.c' || echo '$(srcdir)/'`getaliasent_r.c
+lib_a-ethern2h.o: ethern2h.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ethern2h.o `test -f 'ethern2h.c' || echo '$(srcdir)/'`ethern2h.c
 
-libnet_la-getaliasname.lo: getaliasname.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-getaliasname.lo `test -f 'getaliasname.c' || echo '$(srcdir)/'`getaliasname.c
+lib_a-ethern2h.obj: ethern2h.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ethern2h.obj `if test -f 'ethern2h.c'; then $(CYGPATH_W) 'ethern2h.c'; else $(CYGPATH_W) '$(srcdir)/ethern2h.c'; fi`
 
-libnet_la-getaliasname_r.lo: getaliasname_r.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-getaliasname_r.lo `test -f 'getaliasname_r.c' || echo '$(srcdir)/'`getaliasname_r.c
+lib_a-getnetbyaddr.o: getnetbyaddr.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getnetbyaddr.o `test -f 'getnetbyaddr.c' || echo '$(srcdir)/'`getnetbyaddr.c
 
-libnet_la-gethstbyad.lo: gethstbyad.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-gethstbyad.lo `test -f 'gethstbyad.c' || echo '$(srcdir)/'`gethstbyad.c
+lib_a-getnetbyaddr.obj: getnetbyaddr.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getnetbyaddr.obj `if test -f 'getnetbyaddr.c'; then $(CYGPATH_W) 'getnetbyaddr.c'; else $(CYGPATH_W) '$(srcdir)/getnetbyaddr.c'; fi`
 
-libnet_la-gethstbyad_r.lo: gethstbyad_r.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-gethstbyad_r.lo `test -f 'gethstbyad_r.c' || echo '$(srcdir)/'`gethstbyad_r.c
+lib_a-getprotoname.o: getprotoname.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getprotoname.o `test -f 'getprotoname.c' || echo '$(srcdir)/'`getprotoname.c
 
-libnet_la-gethstbynm2.lo: gethstbynm2.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-gethstbynm2.lo `test -f 'gethstbynm2.c' || echo '$(srcdir)/'`gethstbynm2.c
+lib_a-getprotoname.obj: getprotoname.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getprotoname.obj `if test -f 'getprotoname.c'; then $(CYGPATH_W) 'getprotoname.c'; else $(CYGPATH_W) '$(srcdir)/getprotoname.c'; fi`
 
-libnet_la-gethstbynm2_r.lo: gethstbynm2_r.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-gethstbynm2_r.lo `test -f 'gethstbynm2_r.c' || echo '$(srcdir)/'`gethstbynm2_r.c
+lib_a-hton.o: hton.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-hton.o `test -f 'hton.c' || echo '$(srcdir)/'`hton.c
 
-libnet_la-gethstbynm.lo: gethstbynm.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-gethstbynm.lo `test -f 'gethstbynm.c' || echo '$(srcdir)/'`gethstbynm.c
+lib_a-hton.obj: hton.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-hton.obj `if test -f 'hton.c'; then $(CYGPATH_W) 'hton.c'; else $(CYGPATH_W) '$(srcdir)/hton.c'; fi`
 
-libnet_la-gethstbynm_r.lo: gethstbynm_r.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-gethstbynm_r.lo `test -f 'gethstbynm_r.c' || echo '$(srcdir)/'`gethstbynm_r.c
+lib_a-oneC_sum.o: oneC_sum.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-oneC_sum.o `test -f 'oneC_sum.c' || echo '$(srcdir)/'`oneC_sum.c
 
-libnet_la-gethstent.lo: gethstent.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-gethstent.lo `test -f 'gethstent.c' || echo '$(srcdir)/'`gethstent.c
+lib_a-oneC_sum.obj: oneC_sum.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-oneC_sum.obj `if test -f 'oneC_sum.c'; then $(CYGPATH_W) 'oneC_sum.c'; else $(CYGPATH_W) '$(srcdir)/oneC_sum.c'; fi`
 
-libnet_la-gethstent_r.lo: gethstent_r.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-gethstent_r.lo `test -f 'gethstent_r.c' || echo '$(srcdir)/'`gethstent_r.c
+lib_a-res_mkquery.o: res_mkquery.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-res_mkquery.o `test -f 'res_mkquery.c' || echo '$(srcdir)/'`res_mkquery.c
 
-libnet_la-getnameinfo.lo: getnameinfo.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-getnameinfo.lo `test -f 'getnameinfo.c' || echo '$(srcdir)/'`getnameinfo.c
+lib_a-res_mkquery.obj: res_mkquery.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-res_mkquery.obj `if test -f 'res_mkquery.c'; then $(CYGPATH_W) 'res_mkquery.c'; else $(CYGPATH_W) '$(srcdir)/res_mkquery.c'; fi`
 
-libnet_la-getnetbyad.lo: getnetbyad.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-getnetbyad.lo `test -f 'getnetbyad.c' || echo '$(srcdir)/'`getnetbyad.c
+lib_a-servxcheck.o: servxcheck.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-servxcheck.o `test -f 'servxcheck.c' || echo '$(srcdir)/'`servxcheck.c
 
-libnet_la-getnetbyad_r.lo: getnetbyad_r.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-getnetbyad_r.lo `test -f 'getnetbyad_r.c' || echo '$(srcdir)/'`getnetbyad_r.c
+lib_a-servxcheck.obj: servxcheck.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-servxcheck.obj `if test -f 'servxcheck.c'; then $(CYGPATH_W) 'servxcheck.c'; else $(CYGPATH_W) '$(srcdir)/servxcheck.c'; fi`
 
-libnet_la-getnetbynm.lo: getnetbynm.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-getnetbynm.lo `test -f 'getnetbynm.c' || echo '$(srcdir)/'`getnetbynm.c
+lib_a-domainname.o: domainname.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-domainname.o `test -f 'domainname.c' || echo '$(srcdir)/'`domainname.c
 
-libnet_la-getnetbynm_r.lo: getnetbynm_r.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-getnetbynm_r.lo `test -f 'getnetbynm_r.c' || echo '$(srcdir)/'`getnetbynm_r.c
+lib_a-domainname.obj: domainname.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-domainname.obj `if test -f 'domainname.c'; then $(CYGPATH_W) 'domainname.c'; else $(CYGPATH_W) '$(srcdir)/domainname.c'; fi`
 
-libnet_la-getnetent.lo: getnetent.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-getnetent.lo `test -f 'getnetent.c' || echo '$(srcdir)/'`getnetent.c
+lib_a-getdomain.o: getdomain.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getdomain.o `test -f 'getdomain.c' || echo '$(srcdir)/'`getdomain.c
 
-libnet_la-getnetent_r.lo: getnetent_r.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-getnetent_r.lo `test -f 'getnetent_r.c' || echo '$(srcdir)/'`getnetent_r.c
+lib_a-getdomain.obj: getdomain.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getdomain.obj `if test -f 'getdomain.c'; then $(CYGPATH_W) 'getdomain.c'; else $(CYGPATH_W) '$(srcdir)/getdomain.c'; fi`
 
-libnet_la-getnetgrent.lo: getnetgrent.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-getnetgrent.lo `test -f 'getnetgrent.c' || echo '$(srcdir)/'`getnetgrent.c
+lib_a-getnetbyname.o: getnetbyname.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getnetbyname.o `test -f 'getnetbyname.c' || echo '$(srcdir)/'`getnetbyname.c
 
-libnet_la-getnetgrent_r.lo: getnetgrent_r.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-getnetgrent_r.lo `test -f 'getnetgrent_r.c' || echo '$(srcdir)/'`getnetgrent_r.c
+lib_a-getnetbyname.obj: getnetbyname.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getnetbyname.obj `if test -f 'getnetbyname.c'; then $(CYGPATH_W) 'getnetbyname.c'; else $(CYGPATH_W) '$(srcdir)/getnetbyname.c'; fi`
 
-libnet_la-getnssent.lo: getnssent.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-getnssent.lo `test -f 'getnssent.c' || echo '$(srcdir)/'`getnssent.c
+lib_a-getservent.o: getservent.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getservent.o `test -f 'getservent.c' || echo '$(srcdir)/'`getservent.c
 
-libnet_la-getnssent_r.lo: getnssent_r.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-getnssent_r.lo `test -f 'getnssent_r.c' || echo '$(srcdir)/'`getnssent_r.c
+lib_a-getservent.obj: getservent.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getservent.obj `if test -f 'getservent.c'; then $(CYGPATH_W) 'getservent.c'; else $(CYGPATH_W) '$(srcdir)/getservent.c'; fi`
 
-libnet_la-getproto.lo: getproto.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-getproto.lo `test -f 'getproto.c' || echo '$(srcdir)/'`getproto.c
+lib_a-inet_addr.o: inet_addr.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-inet_addr.o `test -f 'inet_addr.c' || echo '$(srcdir)/'`inet_addr.c
 
-libnet_la-getproto_r.lo: getproto_r.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-getproto_r.lo `test -f 'getproto_r.c' || echo '$(srcdir)/'`getproto_r.c
+lib_a-inet_addr.obj: inet_addr.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-inet_addr.obj `if test -f 'inet_addr.c'; then $(CYGPATH_W) 'inet_addr.c'; else $(CYGPATH_W) '$(srcdir)/inet_addr.c'; fi`
 
-libnet_la-getprtent.lo: getprtent.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-getprtent.lo `test -f 'getprtent.c' || echo '$(srcdir)/'`getprtent.c
+lib_a-rcmd.o: rcmd.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-rcmd.o `test -f 'rcmd.c' || echo '$(srcdir)/'`rcmd.c
 
-libnet_la-getprtent_r.lo: getprtent_r.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-getprtent_r.lo `test -f 'getprtent_r.c' || echo '$(srcdir)/'`getprtent_r.c
+lib_a-rcmd.obj: rcmd.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-rcmd.obj `if test -f 'rcmd.c'; then $(CYGPATH_W) 'rcmd.c'; else $(CYGPATH_W) '$(srcdir)/rcmd.c'; fi`
 
-libnet_la-getprtname.lo: getprtname.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-getprtname.lo `test -f 'getprtname.c' || echo '$(srcdir)/'`getprtname.c
+lib_a-res_query.o: res_query.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-res_query.o `test -f 'res_query.c' || echo '$(srcdir)/'`res_query.c
 
-libnet_la-getprtname_r.lo: getprtname_r.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-getprtname_r.lo `test -f 'getprtname_r.c' || echo '$(srcdir)/'`getprtname_r.c
+lib_a-res_query.obj: res_query.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-res_query.obj `if test -f 'res_query.c'; then $(CYGPATH_W) 'res_query.c'; else $(CYGPATH_W) '$(srcdir)/res_query.c'; fi`
 
-libnet_la-getrpcbyname.lo: getrpcbyname.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-getrpcbyname.lo `test -f 'getrpcbyname.c' || echo '$(srcdir)/'`getrpcbyname.c
+lib_a-sethostent.o: sethostent.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-sethostent.o `test -f 'sethostent.c' || echo '$(srcdir)/'`sethostent.c
 
-libnet_la-getrpcbyname_r.lo: getrpcbyname_r.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-getrpcbyname_r.lo `test -f 'getrpcbyname_r.c' || echo '$(srcdir)/'`getrpcbyname_r.c
-
-libnet_la-getrpcbynumber.lo: getrpcbynumber.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-getrpcbynumber.lo `test -f 'getrpcbynumber.c' || echo '$(srcdir)/'`getrpcbynumber.c
-
-libnet_la-getrpcbynumber_r.lo: getrpcbynumber_r.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-getrpcbynumber_r.lo `test -f 'getrpcbynumber_r.c' || echo '$(srcdir)/'`getrpcbynumber_r.c
-
-libnet_la-getrpcent.lo: getrpcent.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-getrpcent.lo `test -f 'getrpcent.c' || echo '$(srcdir)/'`getrpcent.c
-
-libnet_la-getrpcent_r.lo: getrpcent_r.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-getrpcent_r.lo `test -f 'getrpcent_r.c' || echo '$(srcdir)/'`getrpcent_r.c
-
-libnet_la-getservent.lo: getservent.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-getservent.lo `test -f 'getservent.c' || echo '$(srcdir)/'`getservent.c
-
-libnet_la-getservent_r.lo: getservent_r.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-getservent_r.lo `test -f 'getservent_r.c' || echo '$(srcdir)/'`getservent_r.c
-
-libnet_la-getsrvbynm.lo: getsrvbynm.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-getsrvbynm.lo `test -f 'getsrvbynm.c' || echo '$(srcdir)/'`getsrvbynm.c
-
-libnet_la-getsrvbynm_r.lo: getsrvbynm_r.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-getsrvbynm_r.lo `test -f 'getsrvbynm_r.c' || echo '$(srcdir)/'`getsrvbynm_r.c
-
-libnet_la-getsrvbypt.lo: getsrvbypt.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-getsrvbypt.lo `test -f 'getsrvbypt.c' || echo '$(srcdir)/'`getsrvbypt.c
-
-libnet_la-getsrvbypt_r.lo: getsrvbypt_r.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-getsrvbypt_r.lo `test -f 'getsrvbypt_r.c' || echo '$(srcdir)/'`getsrvbypt_r.c
-
-libnet_la-grp-lookup.lo: grp-lookup.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-grp-lookup.lo `test -f 'grp-lookup.c' || echo '$(srcdir)/'`grp-lookup.c
-
-libnet_la-herrno.lo: herrno.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-herrno.lo `test -f 'herrno.c' || echo '$(srcdir)/'`herrno.c
-
-libnet_la-hosts-lookup.lo: hosts-lookup.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-hosts-lookup.lo `test -f 'hosts-lookup.c' || echo '$(srcdir)/'`hosts-lookup.c
-
-libnet_la-ifreq.lo: ifreq.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-ifreq.lo `test -f 'ifreq.c' || echo '$(srcdir)/'`ifreq.c
-
-libnet_la-in6_addr.lo: in6_addr.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-in6_addr.lo `test -f 'in6_addr.c' || echo '$(srcdir)/'`in6_addr.c
-
-libnet_la-inet6_option.lo: inet6_option.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-inet6_option.lo `test -f 'inet6_option.c' || echo '$(srcdir)/'`inet6_option.c
-
-libnet_la-inet_addr.lo: inet_addr.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-inet_addr.lo `test -f 'inet_addr.c' || echo '$(srcdir)/'`inet_addr.c
-
-libnet_la-inet_lnaof.lo: inet_lnaof.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-inet_lnaof.lo `test -f 'inet_lnaof.c' || echo '$(srcdir)/'`inet_lnaof.c
-
-libnet_la-inet_mkadr.lo: inet_mkadr.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-inet_mkadr.lo `test -f 'inet_mkadr.c' || echo '$(srcdir)/'`inet_mkadr.c
-
-libnet_la-inet_net.lo: inet_net.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-inet_net.lo `test -f 'inet_net.c' || echo '$(srcdir)/'`inet_net.c
-
-libnet_la-inet_neta.lo: inet_neta.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-inet_neta.lo `test -f 'inet_neta.c' || echo '$(srcdir)/'`inet_neta.c
-
-libnet_la-inet_netof.lo: inet_netof.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-inet_netof.lo `test -f 'inet_netof.c' || echo '$(srcdir)/'`inet_netof.c
-
-libnet_la-inet_net_ntop.lo: inet_net_ntop.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-inet_net_ntop.lo `test -f 'inet_net_ntop.c' || echo '$(srcdir)/'`inet_net_ntop.c
-
-libnet_la-inet_net_pton.lo: inet_net_pton.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-inet_net_pton.lo `test -f 'inet_net_pton.c' || echo '$(srcdir)/'`inet_net_pton.c
-
-libnet_la-inet_ntoa.lo: inet_ntoa.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-inet_ntoa.lo `test -f 'inet_ntoa.c' || echo '$(srcdir)/'`inet_ntoa.c
-
-libnet_la-inet_ntop.lo: inet_ntop.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-inet_ntop.lo `test -f 'inet_ntop.c' || echo '$(srcdir)/'`inet_ntop.c
-
-libnet_la-inet_pton.lo: inet_pton.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-inet_pton.lo `test -f 'inet_pton.c' || echo '$(srcdir)/'`inet_pton.c
-
-libnet_la-issetugid-stub.lo: issetugid-stub.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-issetugid-stub.lo `test -f 'issetugid-stub.c' || echo '$(srcdir)/'`issetugid-stub.c
-
-libnet_la-key-lookup.lo: key-lookup.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-key-lookup.lo `test -f 'key-lookup.c' || echo '$(srcdir)/'`key-lookup.c
-
-libnet_la-netgrp-lookup.lo: netgrp-lookup.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-netgrp-lookup.lo `test -f 'netgrp-lookup.c' || echo '$(srcdir)/'`netgrp-lookup.c
-
-libnet_la-network-lookup.lo: network-lookup.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-network-lookup.lo `test -f 'network-lookup.c' || echo '$(srcdir)/'`network-lookup.c
-
-libnet_la-nsswitch.lo: nsswitch.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-nsswitch.lo `test -f 'nsswitch.c' || echo '$(srcdir)/'`nsswitch.c
-
-libnet_la-ns_name.lo: ns_name.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-ns_name.lo `test -f 'ns_name.c' || echo '$(srcdir)/'`ns_name.c
-
-libnet_la-ns_netint.lo: ns_netint.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-ns_netint.lo `test -f 'ns_netint.c' || echo '$(srcdir)/'`ns_netint.c
-
-libnet_la-ns_parse.lo: ns_parse.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-ns_parse.lo `test -f 'ns_parse.c' || echo '$(srcdir)/'`ns_parse.c
-
-libnet_la-ns_print.lo: ns_print.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-ns_print.lo `test -f 'ns_print.c' || echo '$(srcdir)/'`ns_print.c
-
-libnet_la-ns_samedomain.lo: ns_samedomain.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-ns_samedomain.lo `test -f 'ns_samedomain.c' || echo '$(srcdir)/'`ns_samedomain.c
-
-libnet_la-ns_ttl.lo: ns_ttl.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-ns_ttl.lo `test -f 'ns_ttl.c' || echo '$(srcdir)/'`ns_ttl.c
-
-libnet_la-nsap_addr.lo: nsap_addr.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-nsap_addr.lo `test -f 'nsap_addr.c' || echo '$(srcdir)/'`nsap_addr.c
-
-libnet_la-proto-lookup.lo: proto-lookup.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-proto-lookup.lo `test -f 'proto-lookup.c' || echo '$(srcdir)/'`proto-lookup.c
-
-libnet_la-opensock.lo: opensock.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-opensock.lo `test -f 'opensock.c' || echo '$(srcdir)/'`opensock.c
-
-libnet_la-pwd-lookup.lo: pwd-lookup.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-pwd-lookup.lo `test -f 'pwd-lookup.c' || echo '$(srcdir)/'`pwd-lookup.c
-
-libnet_la-recv.lo: recv.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-recv.lo `test -f 'recv.c' || echo '$(srcdir)/'`recv.c
-
-libnet_la-res_comp.lo: res_comp.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-res_comp.lo `test -f 'res_comp.c' || echo '$(srcdir)/'`res_comp.c
-
-libnet_la-res_data.lo: res_data.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-res_data.lo `test -f 'res_data.c' || echo '$(srcdir)/'`res_data.c
-
-libnet_la-res_debug.lo: res_debug.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-res_debug.lo `test -f 'res_debug.c' || echo '$(srcdir)/'`res_debug.c
-
-libnet_la-res_hconf.lo: res_hconf.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-res_hconf.lo `test -f 'res_hconf.c' || echo '$(srcdir)/'`res_hconf.c
-
-libnet_la-res_init.lo: res_init.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-res_init.lo `test -f 'res_init.c' || echo '$(srcdir)/'`res_init.c
-
-libnet_la-res_libc.lo: res_libc.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-res_libc.lo `test -f 'res_libc.c' || echo '$(srcdir)/'`res_libc.c
-
-libnet_la-res_mkquery.lo: res_mkquery.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-res_mkquery.lo `test -f 'res_mkquery.c' || echo '$(srcdir)/'`res_mkquery.c
-
-libnet_la-res_query.lo: res_query.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-res_query.lo `test -f 'res_query.c' || echo '$(srcdir)/'`res_query.c
-
-libnet_la-res_send.lo: res_send.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-res_send.lo `test -f 'res_send.c' || echo '$(srcdir)/'`res_send.c
-
-libnet_la-rexec.lo: rexec.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-rexec.lo `test -f 'rexec.c' || echo '$(srcdir)/'`rexec.c
-
-libnet_la-rpc-lookup.lo: rpc-lookup.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-rpc-lookup.lo `test -f 'rpc-lookup.c' || echo '$(srcdir)/'`rpc-lookup.c
-
-libnet_la-ruserpass.lo: ruserpass.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-ruserpass.lo `test -f 'ruserpass.c' || echo '$(srcdir)/'`ruserpass.c
-
-libnet_la-send.lo: send.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-send.lo `test -f 'send.c' || echo '$(srcdir)/'`send.c
-
-libnet_la-service-lookup.lo: service-lookup.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-service-lookup.lo `test -f 'service-lookup.c' || echo '$(srcdir)/'`service-lookup.c
-
-libnet_la-spwd-lookup.lo: spwd-lookup.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-spwd-lookup.lo `test -f 'spwd-lookup.c' || echo '$(srcdir)/'`spwd-lookup.c
-
-libnet_la-ifname.lo: ifname.c
-	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnet_la_CFLAGS) $(CFLAGS) -c -o libnet_la-ifname.lo `test -f 'ifname.c' || echo '$(srcdir)/'`ifname.c
+lib_a-sethostent.obj: sethostent.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-sethostent.obj `if test -f 'sethostent.c'; then $(CYGPATH_W) 'sethostent.c'; else $(CYGPATH_W) '$(srcdir)/sethostent.c'; fi`
 
 mostlyclean-libtool:
 	-rm -f *.lo

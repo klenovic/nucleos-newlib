@@ -1,0 +1,2 @@
+awk '{ max = 32 } /#define.SIG.*[1-9][0-9]*/ { n[$$3] = $$2 } /#define.NSIG.*[1-9][0-9]*/ { max = $$3 } /#define.SIGUNUSED/ { for (i = 0; i <= max; i++) print "\"" n[i] "\"," }' < /home/devel/tmp/git/newlib/newlib/libc/sys/nucleos/include/asm/signal.h > siglist.inc || { rm -f siglist.inc; exit 1; }
+

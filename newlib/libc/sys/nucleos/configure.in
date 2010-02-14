@@ -43,15 +43,16 @@ if test "x${newlib_elix_level}" = "x1"; then
 EXTRA_SUBDIRS=
 #@nucleos: n/a nucleosthreads net
 else 
-EXTRA_SUBDIRS=
+EXTRA_SUBDIRS="libcrypt"
 #@nucleos: n/a "nucleosthreads net intl iconv dl"
 EXTRA_SUBLIBS=
+#"libcrypt.${aext}"
 #@nucleos: n/a "net/libnet.la intl/libintl.la iconv/libiconv.la dl/libdl.la"
 fi
 
 AC_SUBST(EXTRA_SUBDIRS)
 AC_SUBST(EXTRA_SUBLIBS)
 
-AC_CONFIG_FILES([Makefile])
+AC_CONFIG_FILES([Makefile libcrypt/Makefile net/Makefile])
 #AC_CONFIG_FILES([Makefile intl/Makefile net/Makefile iconv/Makefile dl/Makefile cmath/Makefile argp/Makefile])
 AC_OUTPUT

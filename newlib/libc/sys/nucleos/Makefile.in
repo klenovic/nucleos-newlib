@@ -61,10 +61,8 @@ am__objects_1 = lib_a-access.$(OBJEXT) lib_a-alarm.$(OBJEXT) \
 	lib_a-chmod.$(OBJEXT) lib_a-chown.$(OBJEXT) \
 	lib_a-chroot.$(OBJEXT) lib_a-close.$(OBJEXT) \
 	lib_a-cprofile.$(OBJEXT) lib_a-creat.$(OBJEXT) \
-	lib_a-dup2.$(OBJEXT) lib_a-dup.$(OBJEXT) lib_a-execl.$(OBJEXT) \
-	lib_a-execle.$(OBJEXT) lib_a-execlp.$(OBJEXT) \
-	lib_a-execv.$(OBJEXT) lib_a-execve.$(OBJEXT) \
-	lib_a-execvp.$(OBJEXT) lib_a-_exit.$(OBJEXT) \
+	lib_a-dup2.$(OBJEXT) lib_a-dup.$(OBJEXT) \
+	lib_a-execve.$(OBJEXT) lib_a-_exit.$(OBJEXT) \
 	lib_a-fchdir.$(OBJEXT) lib_a-fchmod.$(OBJEXT) \
 	lib_a-fchown.$(OBJEXT) lib_a-fcntl.$(OBJEXT) \
 	lib_a-fork.$(OBJEXT) lib_a-fstat.$(OBJEXT) \
@@ -81,32 +79,54 @@ am__objects_1 = lib_a-access.$(OBJEXT) lib_a-alarm.$(OBJEXT) \
 	lib_a-mkdir.$(OBJEXT) lib_a-mknod.$(OBJEXT) \
 	lib_a-mmap.$(OBJEXT) lib_a-mount.$(OBJEXT) \
 	lib_a-munmap.$(OBJEXT) lib_a-munmap_text.$(OBJEXT) \
-	lib_a-open.$(OBJEXT) lib_a-pause.$(OBJEXT) \
-	lib_a-pipe.$(OBJEXT) lib_a-read.$(OBJEXT) \
-	lib_a-readlink.$(OBJEXT) lib_a-reboot.$(OBJEXT) \
-	lib_a-rename.$(OBJEXT) lib_a-rmdir.$(OBJEXT) \
-	lib_a-select.$(OBJEXT) lib_a-setegid.$(OBJEXT) \
-	lib_a-seteuid.$(OBJEXT) lib_a-setgid.$(OBJEXT) \
-	lib_a-setitimer.$(OBJEXT) lib_a-setpriority.$(OBJEXT) \
-	lib_a-setsid.$(OBJEXT) lib_a-setuid.$(OBJEXT) \
-	lib_a-sigaction.$(OBJEXT) lib_a-sigpending.$(OBJEXT) \
-	lib_a-sigprocmask.$(OBJEXT) lib_a-sigreturn.$(OBJEXT) \
-	lib_a-sigsuspend.$(OBJEXT) lib_a-sprofile.$(OBJEXT) \
-	lib_a-stat.$(OBJEXT) lib_a-stime.$(OBJEXT) \
-	lib_a-symlink.$(OBJEXT) lib_a-sync.$(OBJEXT) \
-	lib_a-time.$(OBJEXT) lib_a-times.$(OBJEXT) \
-	lib_a-truncate.$(OBJEXT) lib_a-umask.$(OBJEXT) \
-	lib_a-umount.$(OBJEXT) lib_a-uname.$(OBJEXT) \
-	lib_a-unlink.$(OBJEXT) lib_a-utime.$(OBJEXT) \
-	lib_a-wait.$(OBJEXT) lib_a-waitpid.$(OBJEXT) \
-	lib_a-write.$(OBJEXT) lib_a-poll.$(OBJEXT) \
-	lib_a-killpg.$(OBJEXT) lib_a-sbrk.$(OBJEXT) \
-	lib_a-sysconf.$(OBJEXT) lib_a-sys_siglist.$(OBJEXT) \
-	lib_a-strsignal.$(OBJEXT) lib_a-sigmisc.$(OBJEXT) \
-	lib_a-signal.$(OBJEXT) lib_a-flockfile.$(OBJEXT) \
-	lib_a-funlockfile.$(OBJEXT) lib_a-getgroups.$(OBJEXT) \
-	lib_a-closedir.$(OBJEXT) lib_a-opendir.$(OBJEXT) \
-	lib_a-readdir.$(OBJEXT) lib_a-nanosleep.$(OBJEXT)
+	lib_a-open.$(OBJEXT) lib_a-closedir.$(OBJEXT) \
+	lib_a-opendir.$(OBJEXT) lib_a-readdir.$(OBJEXT) \
+	lib_a-pause.$(OBJEXT) lib_a-pipe.$(OBJEXT) \
+	lib_a-read.$(OBJEXT) lib_a-readlink.$(OBJEXT) \
+	lib_a-reboot.$(OBJEXT) lib_a-rename.$(OBJEXT) \
+	lib_a-rewinddir.$(OBJEXT) lib_a-rmdir.$(OBJEXT) \
+	lib_a-seekdir.$(OBJEXT) lib_a-select.$(OBJEXT) \
+	lib_a-setegid.$(OBJEXT) lib_a-seteuid.$(OBJEXT) \
+	lib_a-setgid.$(OBJEXT) lib_a-setitimer.$(OBJEXT) \
+	lib_a-setpriority.$(OBJEXT) lib_a-setsid.$(OBJEXT) \
+	lib_a-setuid.$(OBJEXT) lib_a-sigaction.$(OBJEXT) \
+	lib_a-sigpending.$(OBJEXT) lib_a-sigprocmask.$(OBJEXT) \
+	lib_a-sigreturn.$(OBJEXT) lib_a-sigsuspend.$(OBJEXT) \
+	lib_a-sprofile.$(OBJEXT) lib_a-stat.$(OBJEXT) \
+	lib_a-stime.$(OBJEXT) lib_a-symlink.$(OBJEXT) \
+	lib_a-sync.$(OBJEXT) lib_a-time.$(OBJEXT) \
+	lib_a-times.$(OBJEXT) lib_a-truncate.$(OBJEXT) \
+	lib_a-umask.$(OBJEXT) lib_a-umount.$(OBJEXT) \
+	lib_a-uname.$(OBJEXT) lib_a-unlink.$(OBJEXT) \
+	lib_a-utime.$(OBJEXT) lib_a-wait.$(OBJEXT) \
+	lib_a-waitpid.$(OBJEXT) lib_a-write.$(OBJEXT) \
+	lib_a-poll.$(OBJEXT) lib_a-killpg.$(OBJEXT) \
+	lib_a-sbrk.$(OBJEXT) lib_a-sysconf.$(OBJEXT) \
+	lib_a-sys_siglist.$(OBJEXT) lib_a-strsignal.$(OBJEXT) \
+	lib_a-sigmisc.$(OBJEXT) lib_a-signal.$(OBJEXT) \
+	lib_a-flockfile.$(OBJEXT) lib_a-funlockfile.$(OBJEXT) \
+	lib_a-getgroups.$(OBJEXT) lib_a-nanosleep.$(OBJEXT) \
+	lib_a-realpath.$(OBJEXT) lib_a-ctermid.$(OBJEXT) \
+	lib_a-getlogin.$(OBJEXT) lib_a-getpwent.$(OBJEXT) \
+	lib_a-mkfifo.$(OBJEXT) lib_a-siglongjmp.$(OBJEXT) \
+	lib_a-cuserid.$(OBJEXT) lib_a-fpathconf.$(OBJEXT) \
+	lib_a-pathconf.$(OBJEXT) lib_a-sigset.$(OBJEXT) \
+	lib_a-strchrnul.$(OBJEXT) lib_a-mntent.$(OBJEXT) \
+	lib_a-lchown.$(OBJEXT) lib_a-getgrent.$(OBJEXT) \
+	lib_a-utimes.$(OBJEXT) lib_a-statfs.$(OBJEXT) \
+	lib_a-fdatasync.$(OBJEXT) lib_a-putenv.$(OBJEXT) \
+	lib_a-vfork.$(OBJEXT) lib_a-isatty.$(OBJEXT) \
+	lib_a-tcgetattr.$(OBJEXT) lib_a-cfgetispeed.$(OBJEXT) \
+	lib_a-cfgetospeed.$(OBJEXT) lib_a-cfsetispeed.$(OBJEXT) \
+	lib_a-cfsetospeed.$(OBJEXT) lib_a-tcsetattr.$(OBJEXT) \
+	lib_a-tcsendbreak.$(OBJEXT) lib_a-memrchr.$(OBJEXT) \
+	lib_a-tcflush.$(OBJEXT) lib_a-tcdrain.$(OBJEXT) \
+	lib_a-tcflow.$(OBJEXT) lib_a-getopt.$(OBJEXT) \
+	lib_a-syslog.$(OBJEXT) lib_a-mtab.$(OBJEXT) \
+	lib_a-stderr.$(OBJEXT) lib_a-getttyent.$(OBJEXT) \
+	lib_a-ttyslot.$(OBJEXT) lib_a-sigblock.$(OBJEXT) \
+	lib_a-siggetmask.$(OBJEXT) lib_a-sigsetmask.$(OBJEXT) \
+	lib_a-fsversion.$(OBJEXT)
 am__objects_2 =
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@am__objects_3 = $(am__objects_2) \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@	$(am__objects_2) \
@@ -121,23 +141,31 @@ lib_a_OBJECTS = $(am_lib_a_OBJECTS)
 LTLIBRARIES = $(noinst_LTLIBRARIES)
 am__objects_4 = access.lo alarm.lo brk.lo chdir.lo chmod.lo chown.lo \
 	chroot.lo close.lo cprofile.lo creat.lo dup2.lo dup.lo \
-	execl.lo execle.lo execlp.lo execv.lo execve.lo execvp.lo \
-	_exit.lo fchdir.lo fchmod.lo fchown.lo fcntl.lo fork.lo \
-	fstat.lo fstatfs.lo fsync.lo ftruncate.lo getdents.lo \
+	execve.lo _exit.lo fchdir.lo fchmod.lo fchown.lo fcntl.lo \
+	fork.lo fstat.lo fstatfs.lo fsync.lo ftruncate.lo getdents.lo \
 	getegid.lo geteuid.lo getgid.lo getitimer.lo getpgrp.lo \
 	getpid.lo getppid.lo getpriority.lo gettimeofday.lo getuid.lo \
 	ioctl.lo kill.lo link.lo lseek64.lo lseek.lo lstat.lo mkdir.lo \
 	mknod.lo mmap.lo mount.lo munmap.lo munmap_text.lo open.lo \
-	pause.lo pipe.lo read.lo readlink.lo reboot.lo rename.lo \
-	rmdir.lo select.lo setegid.lo seteuid.lo setgid.lo \
+	closedir.lo opendir.lo readdir.lo pause.lo pipe.lo read.lo \
+	readlink.lo reboot.lo rename.lo rewinddir.lo rmdir.lo \
+	seekdir.lo select.lo setegid.lo seteuid.lo setgid.lo \
 	setitimer.lo setpriority.lo setsid.lo setuid.lo sigaction.lo \
 	sigpending.lo sigprocmask.lo sigreturn.lo sigsuspend.lo \
 	sprofile.lo stat.lo stime.lo symlink.lo sync.lo time.lo \
 	times.lo truncate.lo umask.lo umount.lo uname.lo unlink.lo \
 	utime.lo wait.lo waitpid.lo write.lo poll.lo killpg.lo sbrk.lo \
 	sysconf.lo sys_siglist.lo strsignal.lo sigmisc.lo signal.lo \
-	flockfile.lo funlockfile.lo getgroups.lo closedir.lo \
-	opendir.lo readdir.lo nanosleep.lo
+	flockfile.lo funlockfile.lo getgroups.lo nanosleep.lo \
+	realpath.lo ctermid.lo getlogin.lo getpwent.lo mkfifo.lo \
+	siglongjmp.lo cuserid.lo fpathconf.lo pathconf.lo sigset.lo \
+	strchrnul.lo mntent.lo lchown.lo getgrent.lo utimes.lo \
+	statfs.lo fdatasync.lo putenv.lo vfork.lo isatty.lo \
+	tcgetattr.lo cfgetispeed.lo cfgetospeed.lo cfsetispeed.lo \
+	cfsetospeed.lo tcsetattr.lo tcsendbreak.lo memrchr.lo \
+	tcflush.lo tcdrain.lo tcflow.lo getopt.lo syslog.lo mtab.lo \
+	stderr.lo getttyent.lo ttyslot.lo sigblock.lo siggetmask.lo \
+	sigsetmask.lo fsversion.lo
 @USE_LIBTOOL_TRUE@am_libnucleos_la_OBJECTS = $(am__objects_4) \
 @USE_LIBTOOL_TRUE@	$(am__objects_3)
 libnucleos_la_OBJECTS = $(am_libnucleos_la_OBJECTS)
@@ -309,17 +337,18 @@ INCLUDES = -I$(srcdir)/include $(NEWLIB_CFLAGS) $(CROSS_CFLAGS) $(TARGET_CFLAGS)
 #argp/libargp.la
 SUBDIRS = machine \
 	$(argp_dir) \
-	$(EXTRA_SUBDIRS)\
+	$(EXTRA_SUBDIRS) \
+	libcrypt \
 	.
 
-#cmath
+#cmath net
 SUBLIBS = \
 	$(ARGP_LIB) \
 	$(EXTRA_SUBLIBS) \
-	$(NUCLEOS_MACH_LIB)
+	$(NUCLEOS_MACH_LIB) \
+	libcrypt/lib.a
 
-
-#cmath/libcmath.la
+# net/lib.a
 GENERAL_SOURCES = \
 	access.c \
 	alarm.c \
@@ -333,12 +362,7 @@ GENERAL_SOURCES = \
 	creat.c \
 	dup2.c \
 	dup.c \
-	execl.c \
-	execle.c \
-	execlp.c \
-	execv.c \
 	execve.c \
-	execvp.c \
 	_exit.c \
 	fchdir.c \
 	fchmod.c \
@@ -373,13 +397,18 @@ GENERAL_SOURCES = \
 	munmap.c \
 	munmap_text.c \
 	open.c \
+	closedir.c \
+	opendir.c \
+	readdir.c \
 	pause.c \
 	pipe.c \
 	read.c \
 	readlink.c \
 	reboot.c \
 	rename.c \
+	rewinddir.c \
 	rmdir.c \
+	seekdir.c \
 	select.c \
 	setegid.c \
 	seteuid.c \
@@ -420,10 +449,48 @@ GENERAL_SOURCES = \
 	flockfile.c \
 	funlockfile.c \
 	getgroups.c \
-	closedir.c \
-	opendir.c \
-	readdir.c \
-	nanosleep.c
+	nanosleep.c \
+	realpath.c \
+	ctermid.c \
+	getlogin.c \
+	getpwent.c \
+	mkfifo.c \
+	siglongjmp.c \
+	cuserid.c \
+	fpathconf.c \
+	pathconf.c \
+	sigset.c \
+	strchrnul.c \
+	mntent.c \
+	lchown.c \
+	getgrent.c \
+	utimes.c \
+	statfs.c \
+	fdatasync.c \
+	putenv.c \
+	vfork.c \
+	isatty.c \
+	tcgetattr.c \
+	cfgetispeed.c \
+	cfgetospeed.c \
+	cfsetispeed.c \
+	cfsetospeed.c \
+	tcsetattr.c \
+	tcsendbreak.c \
+	memrchr.c \
+	tcflush.c \
+	tcdrain.c \
+	tcflow.c \
+	getopt.c \
+	syslog.c \
+	mtab.c \
+	stderr.c \
+	getttyent.c \
+	ttyslot.c \
+	sigblock.c \
+	siggetmask.c \
+	sigsetmask.c \
+	fsversion.c
 
 ELIX_2_SOURCES = 
 ELIX_3_SOURCES = 
@@ -450,7 +517,7 @@ ADD_OBJS = \
 @USE_LIBTOOL_FALSE@lib_a_LIBADD = $(ADD_OBJS)
 @USE_LIBTOOL_FALSE@lib_a_DEPENDENCIES = $(ADD_OBJS)
 @USE_LIBTOOL_FALSE@lib_a_CFLAGS = $(AM_CFLAGS)
-AM_CFLAGS = -I $(srcdir)/../../stdio
+AM_CFLAGS = -I $(srcdir)/../../stdio -D__nucleos__
 ACLOCAL_AMFLAGS = -I ../../.. -I ../../../..
 CONFIG_STATUS_DEPENDENCIES = $(newlib_basedir)/configure.host
 all: all-recursive
@@ -596,41 +663,11 @@ lib_a-dup.o: dup.c
 lib_a-dup.obj: dup.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-dup.obj `if test -f 'dup.c'; then $(CYGPATH_W) 'dup.c'; else $(CYGPATH_W) '$(srcdir)/dup.c'; fi`
 
-lib_a-execl.o: execl.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-execl.o `test -f 'execl.c' || echo '$(srcdir)/'`execl.c
-
-lib_a-execl.obj: execl.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-execl.obj `if test -f 'execl.c'; then $(CYGPATH_W) 'execl.c'; else $(CYGPATH_W) '$(srcdir)/execl.c'; fi`
-
-lib_a-execle.o: execle.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-execle.o `test -f 'execle.c' || echo '$(srcdir)/'`execle.c
-
-lib_a-execle.obj: execle.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-execle.obj `if test -f 'execle.c'; then $(CYGPATH_W) 'execle.c'; else $(CYGPATH_W) '$(srcdir)/execle.c'; fi`
-
-lib_a-execlp.o: execlp.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-execlp.o `test -f 'execlp.c' || echo '$(srcdir)/'`execlp.c
-
-lib_a-execlp.obj: execlp.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-execlp.obj `if test -f 'execlp.c'; then $(CYGPATH_W) 'execlp.c'; else $(CYGPATH_W) '$(srcdir)/execlp.c'; fi`
-
-lib_a-execv.o: execv.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-execv.o `test -f 'execv.c' || echo '$(srcdir)/'`execv.c
-
-lib_a-execv.obj: execv.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-execv.obj `if test -f 'execv.c'; then $(CYGPATH_W) 'execv.c'; else $(CYGPATH_W) '$(srcdir)/execv.c'; fi`
-
 lib_a-execve.o: execve.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-execve.o `test -f 'execve.c' || echo '$(srcdir)/'`execve.c
 
 lib_a-execve.obj: execve.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-execve.obj `if test -f 'execve.c'; then $(CYGPATH_W) 'execve.c'; else $(CYGPATH_W) '$(srcdir)/execve.c'; fi`
-
-lib_a-execvp.o: execvp.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-execvp.o `test -f 'execvp.c' || echo '$(srcdir)/'`execvp.c
-
-lib_a-execvp.obj: execvp.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-execvp.obj `if test -f 'execvp.c'; then $(CYGPATH_W) 'execvp.c'; else $(CYGPATH_W) '$(srcdir)/execvp.c'; fi`
 
 lib_a-_exit.o: _exit.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-_exit.o `test -f '_exit.c' || echo '$(srcdir)/'`_exit.c
@@ -836,6 +873,24 @@ lib_a-open.o: open.c
 lib_a-open.obj: open.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-open.obj `if test -f 'open.c'; then $(CYGPATH_W) 'open.c'; else $(CYGPATH_W) '$(srcdir)/open.c'; fi`
 
+lib_a-closedir.o: closedir.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-closedir.o `test -f 'closedir.c' || echo '$(srcdir)/'`closedir.c
+
+lib_a-closedir.obj: closedir.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-closedir.obj `if test -f 'closedir.c'; then $(CYGPATH_W) 'closedir.c'; else $(CYGPATH_W) '$(srcdir)/closedir.c'; fi`
+
+lib_a-opendir.o: opendir.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-opendir.o `test -f 'opendir.c' || echo '$(srcdir)/'`opendir.c
+
+lib_a-opendir.obj: opendir.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-opendir.obj `if test -f 'opendir.c'; then $(CYGPATH_W) 'opendir.c'; else $(CYGPATH_W) '$(srcdir)/opendir.c'; fi`
+
+lib_a-readdir.o: readdir.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-readdir.o `test -f 'readdir.c' || echo '$(srcdir)/'`readdir.c
+
+lib_a-readdir.obj: readdir.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-readdir.obj `if test -f 'readdir.c'; then $(CYGPATH_W) 'readdir.c'; else $(CYGPATH_W) '$(srcdir)/readdir.c'; fi`
+
 lib_a-pause.o: pause.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-pause.o `test -f 'pause.c' || echo '$(srcdir)/'`pause.c
 
@@ -872,11 +927,23 @@ lib_a-rename.o: rename.c
 lib_a-rename.obj: rename.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-rename.obj `if test -f 'rename.c'; then $(CYGPATH_W) 'rename.c'; else $(CYGPATH_W) '$(srcdir)/rename.c'; fi`
 
+lib_a-rewinddir.o: rewinddir.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-rewinddir.o `test -f 'rewinddir.c' || echo '$(srcdir)/'`rewinddir.c
+
+lib_a-rewinddir.obj: rewinddir.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-rewinddir.obj `if test -f 'rewinddir.c'; then $(CYGPATH_W) 'rewinddir.c'; else $(CYGPATH_W) '$(srcdir)/rewinddir.c'; fi`
+
 lib_a-rmdir.o: rmdir.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-rmdir.o `test -f 'rmdir.c' || echo '$(srcdir)/'`rmdir.c
 
 lib_a-rmdir.obj: rmdir.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-rmdir.obj `if test -f 'rmdir.c'; then $(CYGPATH_W) 'rmdir.c'; else $(CYGPATH_W) '$(srcdir)/rmdir.c'; fi`
+
+lib_a-seekdir.o: seekdir.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-seekdir.o `test -f 'seekdir.c' || echo '$(srcdir)/'`seekdir.c
+
+lib_a-seekdir.obj: seekdir.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-seekdir.obj `if test -f 'seekdir.c'; then $(CYGPATH_W) 'seekdir.c'; else $(CYGPATH_W) '$(srcdir)/seekdir.c'; fi`
 
 lib_a-select.o: select.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-select.o `test -f 'select.c' || echo '$(srcdir)/'`select.c
@@ -1118,29 +1185,257 @@ lib_a-getgroups.o: getgroups.c
 lib_a-getgroups.obj: getgroups.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getgroups.obj `if test -f 'getgroups.c'; then $(CYGPATH_W) 'getgroups.c'; else $(CYGPATH_W) '$(srcdir)/getgroups.c'; fi`
 
-lib_a-closedir.o: closedir.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-closedir.o `test -f 'closedir.c' || echo '$(srcdir)/'`closedir.c
-
-lib_a-closedir.obj: closedir.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-closedir.obj `if test -f 'closedir.c'; then $(CYGPATH_W) 'closedir.c'; else $(CYGPATH_W) '$(srcdir)/closedir.c'; fi`
-
-lib_a-opendir.o: opendir.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-opendir.o `test -f 'opendir.c' || echo '$(srcdir)/'`opendir.c
-
-lib_a-opendir.obj: opendir.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-opendir.obj `if test -f 'opendir.c'; then $(CYGPATH_W) 'opendir.c'; else $(CYGPATH_W) '$(srcdir)/opendir.c'; fi`
-
-lib_a-readdir.o: readdir.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-readdir.o `test -f 'readdir.c' || echo '$(srcdir)/'`readdir.c
-
-lib_a-readdir.obj: readdir.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-readdir.obj `if test -f 'readdir.c'; then $(CYGPATH_W) 'readdir.c'; else $(CYGPATH_W) '$(srcdir)/readdir.c'; fi`
-
 lib_a-nanosleep.o: nanosleep.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-nanosleep.o `test -f 'nanosleep.c' || echo '$(srcdir)/'`nanosleep.c
 
 lib_a-nanosleep.obj: nanosleep.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-nanosleep.obj `if test -f 'nanosleep.c'; then $(CYGPATH_W) 'nanosleep.c'; else $(CYGPATH_W) '$(srcdir)/nanosleep.c'; fi`
+
+lib_a-realpath.o: realpath.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-realpath.o `test -f 'realpath.c' || echo '$(srcdir)/'`realpath.c
+
+lib_a-realpath.obj: realpath.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-realpath.obj `if test -f 'realpath.c'; then $(CYGPATH_W) 'realpath.c'; else $(CYGPATH_W) '$(srcdir)/realpath.c'; fi`
+
+lib_a-ctermid.o: ctermid.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ctermid.o `test -f 'ctermid.c' || echo '$(srcdir)/'`ctermid.c
+
+lib_a-ctermid.obj: ctermid.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ctermid.obj `if test -f 'ctermid.c'; then $(CYGPATH_W) 'ctermid.c'; else $(CYGPATH_W) '$(srcdir)/ctermid.c'; fi`
+
+lib_a-getlogin.o: getlogin.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getlogin.o `test -f 'getlogin.c' || echo '$(srcdir)/'`getlogin.c
+
+lib_a-getlogin.obj: getlogin.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getlogin.obj `if test -f 'getlogin.c'; then $(CYGPATH_W) 'getlogin.c'; else $(CYGPATH_W) '$(srcdir)/getlogin.c'; fi`
+
+lib_a-getpwent.o: getpwent.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getpwent.o `test -f 'getpwent.c' || echo '$(srcdir)/'`getpwent.c
+
+lib_a-getpwent.obj: getpwent.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getpwent.obj `if test -f 'getpwent.c'; then $(CYGPATH_W) 'getpwent.c'; else $(CYGPATH_W) '$(srcdir)/getpwent.c'; fi`
+
+lib_a-mkfifo.o: mkfifo.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-mkfifo.o `test -f 'mkfifo.c' || echo '$(srcdir)/'`mkfifo.c
+
+lib_a-mkfifo.obj: mkfifo.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-mkfifo.obj `if test -f 'mkfifo.c'; then $(CYGPATH_W) 'mkfifo.c'; else $(CYGPATH_W) '$(srcdir)/mkfifo.c'; fi`
+
+lib_a-siglongjmp.o: siglongjmp.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-siglongjmp.o `test -f 'siglongjmp.c' || echo '$(srcdir)/'`siglongjmp.c
+
+lib_a-siglongjmp.obj: siglongjmp.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-siglongjmp.obj `if test -f 'siglongjmp.c'; then $(CYGPATH_W) 'siglongjmp.c'; else $(CYGPATH_W) '$(srcdir)/siglongjmp.c'; fi`
+
+lib_a-cuserid.o: cuserid.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-cuserid.o `test -f 'cuserid.c' || echo '$(srcdir)/'`cuserid.c
+
+lib_a-cuserid.obj: cuserid.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-cuserid.obj `if test -f 'cuserid.c'; then $(CYGPATH_W) 'cuserid.c'; else $(CYGPATH_W) '$(srcdir)/cuserid.c'; fi`
+
+lib_a-fpathconf.o: fpathconf.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-fpathconf.o `test -f 'fpathconf.c' || echo '$(srcdir)/'`fpathconf.c
+
+lib_a-fpathconf.obj: fpathconf.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-fpathconf.obj `if test -f 'fpathconf.c'; then $(CYGPATH_W) 'fpathconf.c'; else $(CYGPATH_W) '$(srcdir)/fpathconf.c'; fi`
+
+lib_a-pathconf.o: pathconf.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-pathconf.o `test -f 'pathconf.c' || echo '$(srcdir)/'`pathconf.c
+
+lib_a-pathconf.obj: pathconf.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-pathconf.obj `if test -f 'pathconf.c'; then $(CYGPATH_W) 'pathconf.c'; else $(CYGPATH_W) '$(srcdir)/pathconf.c'; fi`
+
+lib_a-sigset.o: sigset.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-sigset.o `test -f 'sigset.c' || echo '$(srcdir)/'`sigset.c
+
+lib_a-sigset.obj: sigset.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-sigset.obj `if test -f 'sigset.c'; then $(CYGPATH_W) 'sigset.c'; else $(CYGPATH_W) '$(srcdir)/sigset.c'; fi`
+
+lib_a-strchrnul.o: strchrnul.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-strchrnul.o `test -f 'strchrnul.c' || echo '$(srcdir)/'`strchrnul.c
+
+lib_a-strchrnul.obj: strchrnul.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-strchrnul.obj `if test -f 'strchrnul.c'; then $(CYGPATH_W) 'strchrnul.c'; else $(CYGPATH_W) '$(srcdir)/strchrnul.c'; fi`
+
+lib_a-mntent.o: mntent.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-mntent.o `test -f 'mntent.c' || echo '$(srcdir)/'`mntent.c
+
+lib_a-mntent.obj: mntent.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-mntent.obj `if test -f 'mntent.c'; then $(CYGPATH_W) 'mntent.c'; else $(CYGPATH_W) '$(srcdir)/mntent.c'; fi`
+
+lib_a-lchown.o: lchown.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-lchown.o `test -f 'lchown.c' || echo '$(srcdir)/'`lchown.c
+
+lib_a-lchown.obj: lchown.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-lchown.obj `if test -f 'lchown.c'; then $(CYGPATH_W) 'lchown.c'; else $(CYGPATH_W) '$(srcdir)/lchown.c'; fi`
+
+lib_a-getgrent.o: getgrent.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getgrent.o `test -f 'getgrent.c' || echo '$(srcdir)/'`getgrent.c
+
+lib_a-getgrent.obj: getgrent.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getgrent.obj `if test -f 'getgrent.c'; then $(CYGPATH_W) 'getgrent.c'; else $(CYGPATH_W) '$(srcdir)/getgrent.c'; fi`
+
+lib_a-utimes.o: utimes.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-utimes.o `test -f 'utimes.c' || echo '$(srcdir)/'`utimes.c
+
+lib_a-utimes.obj: utimes.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-utimes.obj `if test -f 'utimes.c'; then $(CYGPATH_W) 'utimes.c'; else $(CYGPATH_W) '$(srcdir)/utimes.c'; fi`
+
+lib_a-statfs.o: statfs.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-statfs.o `test -f 'statfs.c' || echo '$(srcdir)/'`statfs.c
+
+lib_a-statfs.obj: statfs.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-statfs.obj `if test -f 'statfs.c'; then $(CYGPATH_W) 'statfs.c'; else $(CYGPATH_W) '$(srcdir)/statfs.c'; fi`
+
+lib_a-fdatasync.o: fdatasync.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-fdatasync.o `test -f 'fdatasync.c' || echo '$(srcdir)/'`fdatasync.c
+
+lib_a-fdatasync.obj: fdatasync.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-fdatasync.obj `if test -f 'fdatasync.c'; then $(CYGPATH_W) 'fdatasync.c'; else $(CYGPATH_W) '$(srcdir)/fdatasync.c'; fi`
+
+lib_a-putenv.o: putenv.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-putenv.o `test -f 'putenv.c' || echo '$(srcdir)/'`putenv.c
+
+lib_a-putenv.obj: putenv.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-putenv.obj `if test -f 'putenv.c'; then $(CYGPATH_W) 'putenv.c'; else $(CYGPATH_W) '$(srcdir)/putenv.c'; fi`
+
+lib_a-vfork.o: vfork.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-vfork.o `test -f 'vfork.c' || echo '$(srcdir)/'`vfork.c
+
+lib_a-vfork.obj: vfork.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-vfork.obj `if test -f 'vfork.c'; then $(CYGPATH_W) 'vfork.c'; else $(CYGPATH_W) '$(srcdir)/vfork.c'; fi`
+
+lib_a-isatty.o: isatty.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-isatty.o `test -f 'isatty.c' || echo '$(srcdir)/'`isatty.c
+
+lib_a-isatty.obj: isatty.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-isatty.obj `if test -f 'isatty.c'; then $(CYGPATH_W) 'isatty.c'; else $(CYGPATH_W) '$(srcdir)/isatty.c'; fi`
+
+lib_a-tcgetattr.o: tcgetattr.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-tcgetattr.o `test -f 'tcgetattr.c' || echo '$(srcdir)/'`tcgetattr.c
+
+lib_a-tcgetattr.obj: tcgetattr.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-tcgetattr.obj `if test -f 'tcgetattr.c'; then $(CYGPATH_W) 'tcgetattr.c'; else $(CYGPATH_W) '$(srcdir)/tcgetattr.c'; fi`
+
+lib_a-cfgetispeed.o: cfgetispeed.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-cfgetispeed.o `test -f 'cfgetispeed.c' || echo '$(srcdir)/'`cfgetispeed.c
+
+lib_a-cfgetispeed.obj: cfgetispeed.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-cfgetispeed.obj `if test -f 'cfgetispeed.c'; then $(CYGPATH_W) 'cfgetispeed.c'; else $(CYGPATH_W) '$(srcdir)/cfgetispeed.c'; fi`
+
+lib_a-cfgetospeed.o: cfgetospeed.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-cfgetospeed.o `test -f 'cfgetospeed.c' || echo '$(srcdir)/'`cfgetospeed.c
+
+lib_a-cfgetospeed.obj: cfgetospeed.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-cfgetospeed.obj `if test -f 'cfgetospeed.c'; then $(CYGPATH_W) 'cfgetospeed.c'; else $(CYGPATH_W) '$(srcdir)/cfgetospeed.c'; fi`
+
+lib_a-cfsetispeed.o: cfsetispeed.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-cfsetispeed.o `test -f 'cfsetispeed.c' || echo '$(srcdir)/'`cfsetispeed.c
+
+lib_a-cfsetispeed.obj: cfsetispeed.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-cfsetispeed.obj `if test -f 'cfsetispeed.c'; then $(CYGPATH_W) 'cfsetispeed.c'; else $(CYGPATH_W) '$(srcdir)/cfsetispeed.c'; fi`
+
+lib_a-cfsetospeed.o: cfsetospeed.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-cfsetospeed.o `test -f 'cfsetospeed.c' || echo '$(srcdir)/'`cfsetospeed.c
+
+lib_a-cfsetospeed.obj: cfsetospeed.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-cfsetospeed.obj `if test -f 'cfsetospeed.c'; then $(CYGPATH_W) 'cfsetospeed.c'; else $(CYGPATH_W) '$(srcdir)/cfsetospeed.c'; fi`
+
+lib_a-tcsetattr.o: tcsetattr.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-tcsetattr.o `test -f 'tcsetattr.c' || echo '$(srcdir)/'`tcsetattr.c
+
+lib_a-tcsetattr.obj: tcsetattr.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-tcsetattr.obj `if test -f 'tcsetattr.c'; then $(CYGPATH_W) 'tcsetattr.c'; else $(CYGPATH_W) '$(srcdir)/tcsetattr.c'; fi`
+
+lib_a-tcsendbreak.o: tcsendbreak.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-tcsendbreak.o `test -f 'tcsendbreak.c' || echo '$(srcdir)/'`tcsendbreak.c
+
+lib_a-tcsendbreak.obj: tcsendbreak.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-tcsendbreak.obj `if test -f 'tcsendbreak.c'; then $(CYGPATH_W) 'tcsendbreak.c'; else $(CYGPATH_W) '$(srcdir)/tcsendbreak.c'; fi`
+
+lib_a-memrchr.o: memrchr.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-memrchr.o `test -f 'memrchr.c' || echo '$(srcdir)/'`memrchr.c
+
+lib_a-memrchr.obj: memrchr.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-memrchr.obj `if test -f 'memrchr.c'; then $(CYGPATH_W) 'memrchr.c'; else $(CYGPATH_W) '$(srcdir)/memrchr.c'; fi`
+
+lib_a-tcflush.o: tcflush.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-tcflush.o `test -f 'tcflush.c' || echo '$(srcdir)/'`tcflush.c
+
+lib_a-tcflush.obj: tcflush.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-tcflush.obj `if test -f 'tcflush.c'; then $(CYGPATH_W) 'tcflush.c'; else $(CYGPATH_W) '$(srcdir)/tcflush.c'; fi`
+
+lib_a-tcdrain.o: tcdrain.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-tcdrain.o `test -f 'tcdrain.c' || echo '$(srcdir)/'`tcdrain.c
+
+lib_a-tcdrain.obj: tcdrain.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-tcdrain.obj `if test -f 'tcdrain.c'; then $(CYGPATH_W) 'tcdrain.c'; else $(CYGPATH_W) '$(srcdir)/tcdrain.c'; fi`
+
+lib_a-tcflow.o: tcflow.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-tcflow.o `test -f 'tcflow.c' || echo '$(srcdir)/'`tcflow.c
+
+lib_a-tcflow.obj: tcflow.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-tcflow.obj `if test -f 'tcflow.c'; then $(CYGPATH_W) 'tcflow.c'; else $(CYGPATH_W) '$(srcdir)/tcflow.c'; fi`
+
+lib_a-getopt.o: getopt.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getopt.o `test -f 'getopt.c' || echo '$(srcdir)/'`getopt.c
+
+lib_a-getopt.obj: getopt.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getopt.obj `if test -f 'getopt.c'; then $(CYGPATH_W) 'getopt.c'; else $(CYGPATH_W) '$(srcdir)/getopt.c'; fi`
+
+lib_a-syslog.o: syslog.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-syslog.o `test -f 'syslog.c' || echo '$(srcdir)/'`syslog.c
+
+lib_a-syslog.obj: syslog.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-syslog.obj `if test -f 'syslog.c'; then $(CYGPATH_W) 'syslog.c'; else $(CYGPATH_W) '$(srcdir)/syslog.c'; fi`
+
+lib_a-mtab.o: mtab.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-mtab.o `test -f 'mtab.c' || echo '$(srcdir)/'`mtab.c
+
+lib_a-mtab.obj: mtab.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-mtab.obj `if test -f 'mtab.c'; then $(CYGPATH_W) 'mtab.c'; else $(CYGPATH_W) '$(srcdir)/mtab.c'; fi`
+
+lib_a-stderr.o: stderr.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-stderr.o `test -f 'stderr.c' || echo '$(srcdir)/'`stderr.c
+
+lib_a-stderr.obj: stderr.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-stderr.obj `if test -f 'stderr.c'; then $(CYGPATH_W) 'stderr.c'; else $(CYGPATH_W) '$(srcdir)/stderr.c'; fi`
+
+lib_a-getttyent.o: getttyent.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getttyent.o `test -f 'getttyent.c' || echo '$(srcdir)/'`getttyent.c
+
+lib_a-getttyent.obj: getttyent.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getttyent.obj `if test -f 'getttyent.c'; then $(CYGPATH_W) 'getttyent.c'; else $(CYGPATH_W) '$(srcdir)/getttyent.c'; fi`
+
+lib_a-ttyslot.o: ttyslot.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ttyslot.o `test -f 'ttyslot.c' || echo '$(srcdir)/'`ttyslot.c
+
+lib_a-ttyslot.obj: ttyslot.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ttyslot.obj `if test -f 'ttyslot.c'; then $(CYGPATH_W) 'ttyslot.c'; else $(CYGPATH_W) '$(srcdir)/ttyslot.c'; fi`
+
+lib_a-sigblock.o: sigblock.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-sigblock.o `test -f 'sigblock.c' || echo '$(srcdir)/'`sigblock.c
+
+lib_a-sigblock.obj: sigblock.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-sigblock.obj `if test -f 'sigblock.c'; then $(CYGPATH_W) 'sigblock.c'; else $(CYGPATH_W) '$(srcdir)/sigblock.c'; fi`
+
+lib_a-siggetmask.o: siggetmask.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-siggetmask.o `test -f 'siggetmask.c' || echo '$(srcdir)/'`siggetmask.c
+
+lib_a-siggetmask.obj: siggetmask.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-siggetmask.obj `if test -f 'siggetmask.c'; then $(CYGPATH_W) 'siggetmask.c'; else $(CYGPATH_W) '$(srcdir)/siggetmask.c'; fi`
+
+lib_a-sigsetmask.o: sigsetmask.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-sigsetmask.o `test -f 'sigsetmask.c' || echo '$(srcdir)/'`sigsetmask.c
+
+lib_a-sigsetmask.obj: sigsetmask.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-sigsetmask.obj `if test -f 'sigsetmask.c'; then $(CYGPATH_W) 'sigsetmask.c'; else $(CYGPATH_W) '$(srcdir)/sigsetmask.c'; fi`
+
+lib_a-fsversion.o: fsversion.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-fsversion.o `test -f 'fsversion.c' || echo '$(srcdir)/'`fsversion.c
+
+lib_a-fsversion.obj: fsversion.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-fsversion.obj `if test -f 'fsversion.c'; then $(CYGPATH_W) 'fsversion.c'; else $(CYGPATH_W) '$(srcdir)/fsversion.c'; fi`
 
 mostlyclean-libtool:
 	-rm -f *.lo
@@ -1444,17 +1739,9 @@ install-data-local: config.status
 		$(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/asm-generic/`basename $$i`; \
 	done;
 	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/servers; \
-	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/servers/ds; \
-	for i in $(srcdir)/include/servers/ds/*.h; do \
-		$(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/servers/ds/`basename $$i`; \
-	done;
-	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/servers/rs; \
-	for i in $(srcdir)/include/servers/rs/*.h; do \
-		$(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/servers/rs/`basename $$i`; \
-	done;
-	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/servers/vm; \
-	for i in $(srcdir)/include/servers/vm/*.h; do \
-		$(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/servers/vm/`basename $$i`; \
+	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/servers/mfs; \
+	for i in $(srcdir)/include/servers/mfs/*.h; do \
+		$(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/servers/mfs/`basename $$i`; \
 	done;
 	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/arpa; \
 	for i in $(srcdir)/include/arpa/*.h; do \
@@ -1468,10 +1755,33 @@ install-data-local: config.status
 	for i in $(srcdir)/include/netinet/*.h; do \
 		$(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/netinet/`basename $$i`; \
 	done;
+	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/netinet6; \
+	for i in $(srcdir)/include/netinet6/*.h; do \
+		$(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/netinet6/`basename $$i`; \
+	done;
+	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/netns; \
+	for i in $(srcdir)/include/netns/*.h; do \
+		$(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/netns/`basename $$i`; \
+	done;
+	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/rpc; \
+	for i in $(srcdir)/include/rpc/*.h; do \
+		$(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/rpc/`basename $$i`; \
+	done;
 	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/nucleos; \
 	for i in $(srcdir)/include/nucleos/*.h; do \
 		$(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/nucleos/`basename $$i`; \
 	done;
+
+# NOTES:
+# ------
+# - The newlib's `getlogin' will be used once the `su' utility is replaced.
+#
+# - We use newlib's implementation (`environ' handling) of these below:
+#     execl.c
+#     execle.c
+#     execlp.c
+#     execv.c
+#     execvp.c
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
 .NOEXPORT:

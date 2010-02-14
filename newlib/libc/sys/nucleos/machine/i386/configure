@@ -747,7 +747,7 @@ PACKAGE_VERSION='1.18.0'
 PACKAGE_STRING='newlib 1.18.0'
 PACKAGE_BUGREPORT=''
 
-ac_unique_file="crt0.S"
+ac_unique_file="crt0.c"
 # Factoring default headers for most tests.
 ac_includes_default="\
 #include <stdio.h>

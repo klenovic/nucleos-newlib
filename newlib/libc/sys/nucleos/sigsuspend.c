@@ -9,8 +9,8 @@
  */
 #include <nucleos/unistd.h>
 #include <asm/syscall.h>
-#include <sys/errno.h>
-#include <sys/signal.h>
+#include <errno.h>
+#include <signal.h>
 
 int sigsuspend(const sigset_t *set)
 {

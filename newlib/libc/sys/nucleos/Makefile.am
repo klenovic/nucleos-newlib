@@ -16,16 +16,17 @@ endif
 
 SUBDIRS = machine \
 	$(argp_dir) \
-	$(EXTRA_SUBDIRS)\
+	$(EXTRA_SUBDIRS) \
+	libcrypt \
 	.
-#cmath
+#cmath net
 
 SUBLIBS = \
 	$(ARGP_LIB) \
 	$(EXTRA_SUBLIBS) \
-	$(NUCLEOS_MACH_LIB)
-
-#cmath/libcmath.la
+	$(NUCLEOS_MACH_LIB) \
+	libcrypt/lib.a
+# net/lib.a
 
 GENERAL_SOURCES = \
 	access.c \
@@ -40,12 +41,7 @@ GENERAL_SOURCES = \
 	creat.c \
 	dup2.c \
 	dup.c \
-	execl.c \
-	execle.c \
-	execlp.c \
-	execv.c \
 	execve.c \
-	execvp.c \
 	_exit.c \
 	fchdir.c \
 	fchmod.c \
@@ -80,13 +76,18 @@ GENERAL_SOURCES = \
 	munmap.c \
 	munmap_text.c \
 	open.c \
+	closedir.c \
+	opendir.c \
+	readdir.c \
 	pause.c \
 	pipe.c \
 	read.c \
 	readlink.c \
 	reboot.c \
 	rename.c \
+	rewinddir.c \
 	rmdir.c \
+	seekdir.c \
 	select.c \
 	setegid.c \
 	seteuid.c \
@@ -127,10 +128,48 @@ GENERAL_SOURCES = \
 	flockfile.c \
 	funlockfile.c \
 	getgroups.c \
-	closedir.c \
-	opendir.c \
-	readdir.c \
-	nanosleep.c
+	nanosleep.c \
+	realpath.c \
+	ctermid.c \
+	getlogin.c \
+	getpwent.c \
+	mkfifo.c \
+	siglongjmp.c \
+	cuserid.c \
+	fpathconf.c \
+	pathconf.c \
+	sigset.c \
+	strchrnul.c \
+	mntent.c \
+	lchown.c \
+	getgrent.c \
+	utimes.c \
+	statfs.c \
+	fdatasync.c \
+	putenv.c \
+	vfork.c \
+	isatty.c \
+	tcgetattr.c \
+	cfgetispeed.c \
+	cfgetospeed.c \
+	cfsetispeed.c \
+	cfsetospeed.c \
+	tcsetattr.c \
+	tcsendbreak.c \
+	memrchr.c \
+	tcflush.c \
+	tcdrain.c \
+	tcflow.c \
+	getopt.c \
+	syslog.c \
+	mtab.c \
+	stderr.c \
+	getttyent.c \
+	ttyslot.c \
+	sigblock.c \
+	siggetmask.c \
+	sigsetmask.c \
+	fsversion.c
 
 ELIX_2_SOURCES =
 
@@ -186,7 +225,6 @@ lib.a:  $(lib_a_OBJECTS)
 	$(AR) $(AR_FLAGS) ../$@ *.o ../*.o 
 	$(RANLIB) $@
 	rm -rf tmp
-
 endif # USE_LIBTOOL
 
 objectlist.awk.in: $(noinst_LTLIBRARIES) $(SUBLIBS)
@@ -232,17 +270,9 @@ install-data-local: config.status
 		$(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/asm-generic/`basename $$i`; \
 	done;
 	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/servers; \
-	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/servers/ds; \
-	for i in $(srcdir)/include/servers/ds/*.h; do \
-		$(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/servers/ds/`basename $$i`; \
-	done;
-	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/servers/rs; \
-	for i in $(srcdir)/include/servers/rs/*.h; do \
-		$(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/servers/rs/`basename $$i`; \
-	done;
-	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/servers/vm; \
-	for i in $(srcdir)/include/servers/vm/*.h; do \
-		$(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/servers/vm/`basename $$i`; \
+	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/servers/mfs; \
+	for i in $(srcdir)/include/servers/mfs/*.h; do \
+		$(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/servers/mfs/`basename $$i`; \
 	done;
 	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/arpa; \
 	for i in $(srcdir)/include/arpa/*.h; do \
@@ -256,11 +286,34 @@ install-data-local: config.status
 	for i in $(srcdir)/include/netinet/*.h; do \
 		$(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/netinet/`basename $$i`; \
 	done;
+	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/netinet6; \
+	for i in $(srcdir)/include/netinet6/*.h; do \
+		$(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/netinet6/`basename $$i`; \
+	done;
+	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/netns; \
+	for i in $(srcdir)/include/netns/*.h; do \
+		$(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/netns/`basename $$i`; \
+	done;
+	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/rpc; \
+	for i in $(srcdir)/include/rpc/*.h; do \
+		$(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/rpc/`basename $$i`; \
+	done;
 	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/nucleos; \
 	for i in $(srcdir)/include/nucleos/*.h; do \
 		$(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/nucleos/`basename $$i`; \
 	done;
 
-AM_CFLAGS = -I $(srcdir)/../../stdio
+AM_CFLAGS = -I $(srcdir)/../../stdio -D__nucleos__
 ACLOCAL_AMFLAGS = -I ../../.. -I ../../../..
 CONFIG_STATUS_DEPENDENCIES = $(newlib_basedir)/configure.host
+
+# NOTES:
+# ------
+# - The newlib's `getlogin' will be used once the `su' utility is replaced.
+#
+# - We use newlib's implementation (`environ' handling) of these below:
+#     execl.c
+#     execle.c
+#     execlp.c
+#     execv.c
+#     execvp.c

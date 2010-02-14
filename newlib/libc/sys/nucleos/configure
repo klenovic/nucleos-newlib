@@ -12570,16 +12570,17 @@ if test "x${newlib_elix_level}" = "x1"; then
 EXTRA_SUBDIRS=
 #@nucleos: n/a nucleosthreads net
 else
-EXTRA_SUBDIRS=
+EXTRA_SUBDIRS="libcrypt"
 #@nucleos: n/a "nucleosthreads net intl iconv dl"
 EXTRA_SUBLIBS=
+#"libcrypt.${aext}"
 #@nucleos: n/a "net/libnet.la intl/libintl.la iconv/libiconv.la dl/libdl.la"
 fi
 
 
 
 
-ac_config_files="$ac_config_files Makefile"
+ac_config_files="$ac_config_files Makefile libcrypt/Makefile net/Makefile"
 
 #AC_CONFIG_FILES([Makefile intl/Makefile net/Makefile iconv/Makefile dl/Makefile cmath/Makefile argp/Makefile])
 cat >confcache <<\_ACEOF
@@ -13538,6 +13539,8 @@ do
     "depfiles") CONFIG_COMMANDS="$CONFIG_COMMANDS depfiles" ;;
     "libtool") CONFIG_COMMANDS="$CONFIG_COMMANDS libtool" ;;
     "Makefile") CONFIG_FILES="$CONFIG_FILES Makefile" ;;
+    "libcrypt/Makefile") CONFIG_FILES="$CONFIG_FILES libcrypt/Makefile" ;;
+    "net/Makefile") CONFIG_FILES="$CONFIG_FILES net/Makefile" ;;
 
   *) { { $as_echo "$as_me:$LINENO: error: invalid argument: $ac_config_target" >&5
 $as_echo "$as_me: error: invalid argument: $ac_config_target" >&2;}

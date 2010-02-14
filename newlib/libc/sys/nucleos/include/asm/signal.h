@@ -1,0 +1,81 @@
+/*
+ *  Copyright (C) 2009  Ladislav Klenovic <klenovic@nucleonsoft.com>
+ *
+ *  This file is part of Nucleos kernel.
+ *
+ *  Nucleos kernel is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, version 2 of the License.
+ */
+/* The header defines all the ANSI and POSIX signals. Nucleos supports
+ * all the signals required by POSIX. They are defined below.
+ * Some additional signals are also supported.
+ */
+#ifndef __ASM_X86_SIGNAL_H
+#define __ASM_X86_SIGNAL_H
+
+#ifndef __ASSEMBLY__
+#include <nucleos/types.h>
+
+#define NSIG	29
+
+/* Here are types that are closely associated with signal handling. */
+
+typedef unsigned long sigset_t;
+#endif /* __ASSEMBLY__ */
+
+/* Regular signals. */
+#define SIGHUP		1	/* hangup */
+#define SIGINT		2	/* interrupt (DEL) */
+#define SIGQUIT		3	/* quit (ASCII FS_PROC_NR) */
+#define SIGILL		4	/* illegal instruction */
+#define SIGTRAP		5	/* trace trap (not reset when caught) */
+#define SIGABRT		6	/* IOT instruction */
+#define SIGIOT		6	/* IOT trap */
+#define SIGBUS		7	/* bus error */
+#define SIGFPE		8	/* floating point exception */
+#define SIGKILL		9	/* kill (cannot be caught or ignored) */
+#define SIGUSR1		10	/* user defined signal # 1 */
+#define SIGSEGV		11	/* segmentation violation */
+#define SIGUSR2		12	/* user defined signal # 2 */
+#define SIGPIPE		13	/* write on a pipe with no one to read it */
+#define SIGALRM		14	/* alarm clock */
+#define SIGTERM		15	/* software termination signal from kill */
+#define SIGEMT		16	/* EMT instruction */
+#define SIGCLD		SIGCHLD	/* child process terminated or stopped */
+#define SIGCHLD		17	/* child process terminated or stopped */
+#define SIGCONT		18	/* continue if stopped (n/a) */
+#define SIGSTOP		19	/* stop signal (n/a) */
+#define SIGTSTP		20	/* interactive stop signal (n/a) */
+#define SIGWINCH	21	/* window size has changed (n/a) */
+#define SIGTTIN		22	/* background process wants to read (n/a) */
+#define SIGTTOU		23	/* background process wants to write (n/a) */
+#define SIGVTALRM	24	/* virtual alarm */
+#define SIGPROF		25	/* profiler alarm */
+#define SIGXCPU		26	/* CPU limit exceeded (4.2 BSD) (n/a) */
+#define SIGXFSZ		27	/* File size limit exceeded (4.2 BSD) (n/a) */
+
+#define SIGSYS		28	/* bad argument to a system call (n/a) */
+#define SIGUNUSED	28	/* purpose at present but is intended for future use (n/a) */
+
+/* Fields for sa_flags. */
+#define SA_ONSTACK	0x0001	/* deliver signal on alternate stack */
+#define SA_RESETHAND	0x0002	/* reset signal handler when signal caught */
+#define SA_NODEFER	0x0004	/* don't block signal while catching it */
+#define SA_RESTART	0x0008	/* automatic system call restart */
+#define SA_SIGINFO	0x0010	/* extended signal handling */
+#define SA_NOCLDWAIT	0x0020	/* don't create zombies */
+#define SA_NOCLDSTOP	0x0040	/* don't receive SIGCHLD when child stops */
+
+
+#include <asm-generic/signal-defs.h>
+
+#ifndef __ASSEMBLY__
+struct sigaction {
+	__sighandler_t sa_handler;	/* SIG_DFL, SIG_IGN, or pointer to function */
+	sigset_t sa_mask;		/* signals to be blocked during handler */
+	int sa_flags;			/* special flags */
+};
+#endif /*__ASSEMBLY__ */
+
+#endif /* __ASM_X86_SIGNAL_H */

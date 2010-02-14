@@ -8,7 +8,7 @@
  *  the Free Software Foundation, version 2 of the License.
  */
 #include <nucleos/unistd.h>
-#include <nucleos/stat.h>
+#include <sys/stat.h>
 #include <asm/syscall.h>
 #include <sys/errno.h>
 #include <sys/types.h>

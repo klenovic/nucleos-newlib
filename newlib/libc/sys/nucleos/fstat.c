@@ -1,27 +1,16 @@
-/*
- *  Copyright (C) 2009  Ladislav Klenovic <klenovic@nucleonsoft.com>
- *
- *  This file is part of Nucleos kernel.
- *
- *  Nucleos kernel is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation, version 2 of the License.
- */
 #include <nucleos/unistd.h>
-#include <nucleos/stat.h>
 #include <asm/syscall.h>
-#include <sys/errno.h>
-#include <sys/kstat.h>
+#include <sys/stat.h>
+#include <errno.h>
 
-int fstat(int fd, struct stat *buffer)
+int fstat(int fd, struct stat *buf)
 {
 	int err;
-	struct kstat kbuffer;
+	struct kstat kbuf;
 
-	err = INLINE_SYSCALL(fstat, 2, fd, &kbuffer);
+	err = INLINE_SYSCALL(fstat, 2, fd, &kbuf);
 
-	if (!err)
-		kstat_to_stat(buffer, &kbuffer);
+	kstat_to_stat(buf, &kbuf);
 
 	return err;
 }

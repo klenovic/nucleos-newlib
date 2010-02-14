@@ -10,16 +10,17 @@
 /*	execve() - basic program execution call		Author: Kees J. Bot
  *								21 Jan 1994
  */
+#include <unistd.h>
+#include <errno.h>
+#include <string.h>
+#include <libc-symbols.h>
 #include <nucleos/unistd.h>
-#include <nucleos/string.h>
-#include <nucleos/errno.h>
 #include <asm/syscall.h>
-#include <sys/errno.h>
 
 /**
  * @nucleos: Change let kernel side setup the stack.
  */
-int execve(const char *path, char * const *argv, char * const *envp)
+int _execve(const char *path, char * const *argv, char * const *envp)
 {
 	char * const *ap;
 	char * const *ep;
@@ -120,3 +121,4 @@ int execve(const char *path, char * const *argv, char * const *envp)
 
 	return -1;
 }
+strong_alias(_execve, execve);

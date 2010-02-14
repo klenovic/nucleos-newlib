@@ -9,8 +9,8 @@
  */
 #include <nucleos/unistd.h>
 #include <asm/syscall.h>
-#include <sys/signal.h>
-#include <sys/errno.h>
+#include <signal.h>
+#include <errno.h>
 
 int sigprocmask(int how, const sigset_t *set, sigset_t *oldset)
 {
