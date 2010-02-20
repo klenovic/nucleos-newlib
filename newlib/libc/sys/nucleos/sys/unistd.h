@@ -112,6 +112,7 @@ void *_EXFUN(_sbrk,  (size_t __incr));
 int _EXFUN(_unlink, (const char *__path ));
 _READ_WRITE_RETURN_TYPE _EXFUN(_write, (int __fd, const void *__buf, size_t __nbyte ));
 int _EXFUN(_execve, (const char *__path, char * const __argv[], char * const __envp[] ));
+int _EXFUN(getdtablesize, (void));
 
 #define	F_OK	0
 #define	R_OK	4

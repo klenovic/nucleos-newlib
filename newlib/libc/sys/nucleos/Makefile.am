@@ -169,7 +169,8 @@ GENERAL_SOURCES = \
 	sigblock.c \
 	siggetmask.c \
 	sigsetmask.c \
-	fsversion.c
+	fsversion.c \
+	rlimit.c
 
 ELIX_2_SOURCES =
 

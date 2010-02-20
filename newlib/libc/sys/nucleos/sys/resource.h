@@ -1,16 +1,15 @@
-#ifndef _SYS_RESOURCE_H_
-#define _SYS_RESOURCE_H_
+#ifndef _SYS_RESOURCE_H
+#define _SYS_RESOURCE_H
 
 #include <sys/time.h>
-#include <nucleos/resource.h>
+#include <bits/resource.h>
 
-#define	RUSAGE_SELF	0		/* calling process */
-#define	RUSAGE_CHILDREN	-1		/* terminated child processes */
+int getpriority(int, int);
+int setpriority(int, int, int);
 
-struct rusage {
-  	struct timeval ru_utime;	/* user time used */
-	struct timeval ru_stime;	/* system time used */
-};
+#define RLIM_SAVED_CUR RLIM_INFINITY
+#define RLIM_SAVED_MAX RLIM_INFINITY
+
+int getrlimit(int resource, struct rlimit *rlp);
 
 #endif
-

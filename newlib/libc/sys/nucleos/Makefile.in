@@ -126,7 +126,7 @@ am__objects_1 = lib_a-access.$(OBJEXT) lib_a-alarm.$(OBJEXT) \
 	lib_a-stderr.$(OBJEXT) lib_a-getttyent.$(OBJEXT) \
 	lib_a-ttyslot.$(OBJEXT) lib_a-sigblock.$(OBJEXT) \
 	lib_a-siggetmask.$(OBJEXT) lib_a-sigsetmask.$(OBJEXT) \
-	lib_a-fsversion.$(OBJEXT)
+	lib_a-fsversion.$(OBJEXT) lib_a-rlimit.$(OBJEXT)
 am__objects_2 =
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@am__objects_3 = $(am__objects_2) \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@	$(am__objects_2) \
@@ -165,7 +165,7 @@ am__objects_4 = access.lo alarm.lo brk.lo chdir.lo chmod.lo chown.lo \
 	cfsetospeed.lo tcsetattr.lo tcsendbreak.lo memrchr.lo \
 	tcflush.lo tcdrain.lo tcflow.lo getopt.lo syslog.lo mtab.lo \
 	stderr.lo getttyent.lo ttyslot.lo sigblock.lo siggetmask.lo \
-	sigsetmask.lo fsversion.lo
+	sigsetmask.lo fsversion.lo rlimit.lo
 @USE_LIBTOOL_TRUE@am_libnucleos_la_OBJECTS = $(am__objects_4) \
 @USE_LIBTOOL_TRUE@	$(am__objects_3)
 libnucleos_la_OBJECTS = $(am_libnucleos_la_OBJECTS)
@@ -490,7 +490,8 @@ GENERAL_SOURCES = \
 	sigblock.c \
 	siggetmask.c \
 	sigsetmask.c \
-	fsversion.c
+	fsversion.c \
+	rlimit.c
 
 ELIX_2_SOURCES = 
 ELIX_3_SOURCES = 
@@ -1436,6 +1437,12 @@ lib_a-fsversion.o: fsversion.c
 
 lib_a-fsversion.obj: fsversion.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-fsversion.obj `if test -f 'fsversion.c'; then $(CYGPATH_W) 'fsversion.c'; else $(CYGPATH_W) '$(srcdir)/fsversion.c'; fi`
+
+lib_a-rlimit.o: rlimit.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-rlimit.o `test -f 'rlimit.c' || echo '$(srcdir)/'`rlimit.c
+
+lib_a-rlimit.obj: rlimit.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-rlimit.obj `if test -f 'rlimit.c'; then $(CYGPATH_W) 'rlimit.c'; else $(CYGPATH_W) '$(srcdir)/rlimit.c'; fi`
 
 mostlyclean-libtool:
 	-rm -f *.lo
