@@ -10,9 +10,8 @@ int lstat(const char *path, struct stat *buffer)
 
 	err = INLINE_SYSCALL(lstat, 2, path, &kbuffer);
 
-	kstat_to_stat(buffer, &kbuffer);
-
 	if (err >= 0) {
+		kstat_to_stat(buffer, &kbuffer);
 		return err;
 	}
 

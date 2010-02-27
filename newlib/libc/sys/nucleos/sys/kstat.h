@@ -17,6 +17,7 @@
 
 #include <sys/types.h>
 #include <sys/stat.h>
+#include <string.h>
 
 /* @nucleos: This how the current stat looks like in kernel. It neccessary to
 	      make a map for now. */
@@ -36,6 +37,8 @@ struct kstat {
 
 static inline void stat_to_kstat(struct kstat *ks, struct stat *s)
 {
+	memset(ks, 0, sizeof(struct kstat));
+
 	/* @nucleos: we must do this because kernel's `stat' structure differs a bit */
 	ks->st_dev = s->st_dev;
 	ks->st_ino = s->st_ino;
@@ -52,6 +55,8 @@ static inline void stat_to_kstat(struct kstat *ks, struct stat *s)
 
 static inline void kstat_to_stat(struct stat *s, struct kstat *ks)
 {
+	memset(s, 0, sizeof(struct stat));
+
 	/* @nucleos: we must do this because kernel's `stat' structure differs a bit */
 	s->st_dev = ks->st_dev;
 	s->st_ino = ks->st_ino;
