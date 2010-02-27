@@ -18,7 +18,7 @@
 #include <asm/syscall.h>
 
 #define FSPATH "/sbin/"
-#define FSDEFAULT "mfs"
+#define FSDEFAULT "minixfs"
 
 static int rs_down(char *label)
 {
