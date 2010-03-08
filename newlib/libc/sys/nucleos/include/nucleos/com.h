@@ -84,15 +84,20 @@
 /* User-space processes, that is, device drivers, servers, and INIT. */
 #define PM_PROC_NR	0		/* process manager */
 #define FS_PROC_NR	1		/* file system */
-#define VFS_PROC_NR	FS_PROC_NR	/* FS_PROC_NR has been renamed to VFS. */
-#define RS_PROC_NR	2		/* memory driver (RAM disk, null, etc.) */
+#define VFS_PROC_NR	FS_PROC_NR	/* FS has been renamed to VFS. */
+#define RS_PROC_NR 	  2  	/* reincarnation server */
 #define MEM_PROC_NR	3		/* memory driver (RAM disk, null, etc.) */
 #define LOG_PROC_NR	4		/* log device driver */
 #define TTY_PROC_NR	5		/* terminal (TTY) driver */
 #define DS_PROC_NR	6		/* data store server */
 #define MFS_PROC_NR	7		/* nucleos root filesystem */
 #define VM_PROC_NR	8		/* memory server */
-#define INIT_PROC_NR	9		/* init -- goes multiuser */
+#define PFS_PROC_NR       9     /* pipe filesystem */
+#define INIT_PROC_NR	  10   	/* init -- goes multiuser */
+
+/* Root system process and root user process. */
+#define ROOT_SYS_PROC_NR  RS_PROC_NR
+#define ROOT_USR_PROC_NR  INIT_PROC_NR
 
 /* Number of processes contained in the system image. */
 #define NR_BOOT_PROCS 	(NR_TASKS + INIT_PROC_NR + 1)
@@ -386,15 +391,15 @@
 #define SYS_ALL_CALLS (NR_SYS_CALLS)
 
 /* Subfunctions for SYS_PRIVCTL */
-#define SYS_PRIV_INIT		1	/* Initialize a privilege structure */
-#define SYS_PRIV_ADD_IO		2	/* Add I/O range (struct io_range) */
-#define SYS_PRIV_ADD_MEM	3	/* Add memory range (struct mem_range)
+#define SYS_PRIV_ALLOW		1	/* Allow process to run */
+#define SYS_PRIV_DISALLOW	2	/* Disallow process to run */
+#define SYS_PRIV_SET_SYS	3	/* Set a system privilege structure */
+#define SYS_PRIV_SET_USER	4	/* Set a user privilege structure */
+#define SYS_PRIV_ADD_IO 	5	/* Add I/O range (struct io_range) */
+#define SYS_PRIV_ADD_MEM	6	/* Add memory range (struct mem_range)
 					 */
-#define SYS_PRIV_ADD_IRQ	4	/* Add IRQ */
-#define SYS_PRIV_USER		5	/* Make a process an oridinary user 
-					 * process.
-					 */
-#define SYS_PRIV_QUERY_MEM	6	/* Verify memory privilege. */
+#define SYS_PRIV_ADD_IRQ	7	/* Add IRQ */
+#define SYS_PRIV_QUERY_MEM	8	/* Verify memory privilege. */
 
 /* Subfunctions for SYS_SETGRANT */
 #define SYS_PARAM_SET_GRANT	1	/* Set address and size of grant table */
@@ -510,11 +515,13 @@
 #   define GET_BIOSBUFFER 14	/* get a buffer for BIOS calls */
 #   define GET_LOADINFO   15	/* get load average information */
 #   define GET_IRQACTIDS  16	/* get the IRQ masks */
-#   define GET_PRIVID	  17	/* get ID of privilege structure */
+#   define GET_PRIV	  17	/* get privilege structure */
 #   define GET_HZ	  18	/* get HZ value */
 #   define GET_WHOAMI	  19	/* get own name and endpoint */
 #   define GET_RANDOMNESS_BIN 20 /* get one randomness bin */
-#   define GET_BOOTPARAM  21	/* get boot params */
+#   define GET_IDLETSC	  21	/* get cumulative idle time stamp counter */
+#   define GET_AOUTHEADER 22	/* get a.out headers from the boot image */
+#   define GET_BOOTPARAM  23	/* get boot params */
 #define I_ENDPT      m7_i4	/* calling process */
 #define I_VAL_PTR      m7_p1	/* virtual address at caller */ 
 #define I_VAL_LEN      m7_i1	/* max length of value */
@@ -702,14 +709,8 @@
 #define RS_DOWN		(RS_RQ_BASE + 1)	/* stop system service */
 #define RS_REFRESH	(RS_RQ_BASE + 2)	/* refresh system service */
 #define RS_RESTART	(RS_RQ_BASE + 3)	/* restart system service */
-#define RS_SHUTDOWN	(RS_RQ_BASE + 5)	/* alert about shutdown */
-#define RS_UP_COPY	(RS_RQ_BASE + 6)	/* start system service and
-						 * keep the binary in memory
-						 */
-#define RS_START	(RS_RQ_BASE + 7)	/* start a driver/service
-						 * arguments are passed in 
-						 * a struct rs_start
-						 */
+#define RS_SHUTDOWN	(RS_RQ_BASE + 4)	/* alert about shutdown */
+
 #define RS_LOOKUP	(RS_RQ_BASE + 8)	/* lookup server name */
 
 #  define RS_CMD_ADDR		m1_p1		/* command string */
@@ -785,6 +786,7 @@
 #define PM_FORK_NB	(PM_RQ_BASE + 8)	/* Non-blocking fork */
 #define PM_UNPAUSE	(PM_RQ_BASE + 9)	/* Interrupt process call */
 #define PM_REBOOT	(PM_RQ_BASE + 10)	/* System reboot */
+#define PM_SETGROUPS	(PM_RQ_BASE + 11)	/* Tell VFS about setgroups */
 
 /* Replies from VFS to PM */
 #define PM_SETUID_REPLY	(PM_RS_BASE + 21)
@@ -797,6 +799,7 @@
 #define PM_FORK_NB_REPLY	(PM_RS_BASE + 28)
 #define PM_UNPAUSE_REPLY	(PM_RS_BASE + 29)
 #define PM_REBOOT_REPLY	(PM_RS_BASE + 30)
+#define PM_SETGROUPS_REPLY	(PM_RS_BASE + 31)
 
 /* Standard parameters for all requests and replies, except PM_REBOOT */
 #  define PM_PROC		m1_i1	/* process */
@@ -804,6 +807,11 @@
 /* Additional parameters for PM_SETUID and PM_SETGID */
 #  define PM_EID		m1_i2	/* effective user/group id */
 #  define PM_RID		m1_i3	/* real user/group id */
+
+/* Additional parameter for PM_SETGROUPS */
+#define PM_GROUP_NO		m1_i2	/* number of groups */
+#define PM_GROUP_ADDR		m1_p1	/* struct holding group data */
+
 
 /* Additional parameters for PM_EXEC */
 #  define PM_PATH		m1_p1	/* executable */

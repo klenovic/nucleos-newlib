@@ -107,6 +107,8 @@
 #define __NNR_munmap		(83 + __syscall_offset)
 #define __NNR_munmap_text	(84 + __syscall_offset)
 #define __NNR_geteuid		(85 + __syscall_offset)
+#define __NNR_getgroups		(86 + __syscall_offset)
+#define __NNR_setgroups		(87 + __syscall_offset)
 
 
 #endif /* __ASM_X86_UNISTD_32_H */

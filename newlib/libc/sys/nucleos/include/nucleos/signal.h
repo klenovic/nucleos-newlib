@@ -12,6 +12,7 @@
 
 #include <nucleos/types.h>
 #include <asm/signal.h>
+#include <asm/siginfo.h>
 
 /* @nucleos: Probably useless since we don't wan't user programs but for now
 	     it used for testing. */

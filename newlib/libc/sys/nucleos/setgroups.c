@@ -7,17 +7,12 @@
  *  it under the terms of the GNU General Public License as published by
  *  the Free Software Foundation, version 2 of the License.
  */
-#ifndef __ASM_X86_PARAM_H
-#define __ASM_X86_PARAM_H
+#include <sys/types.h>
+#include <sys/errno.h>
+#include <nucleos/unistd.h>
+#include <asm/syscall.h>
 
-
-#ifndef HZ
-#define HZ	60
-#endif
-
-#define EXEC_PAGESIZE	4096
-
-#define MAXHOSTNAMELEN	256	/* max. lenght of hostname */
-#define NGROUPS		8	/* max number of supplementary groups */
-
-#endif /* __ASM_X86_PARAM_H */
+int setgroups(size_t ngroups, const gid_t *gidset)
+{
+	return INLINE_SYSCALL(setgroups, 2, ngroups, gidset);
+}

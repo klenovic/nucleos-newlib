@@ -32,7 +32,7 @@
 #define _POSIX_MAX_CANON	255  /* size of the canonical input queue */
 #define _POSIX_MAX_INPUT	255  /* you can type 255 chars ahead */
 #define _POSIX_NAME_MAX		60/* max. file name length; @klenovic: the value of DIRSIZ */
-#define _POSIX_NGROUPS_MAX	0  /* supplementary group IDs are optional */
+#define _POSIX_NGROUPS_MAX	8  /* supplementary group IDs are optional */
 #define _POSIX_OPEN_MAX		16  /* a process may have 16 files open */
 #define _POSIX_PATH_MAX		255  /* a pathname may contain 255 chars */
 #define _POSIX_PIPE_BUF		512  /* pipes writes of 512 bytes must be atomic */

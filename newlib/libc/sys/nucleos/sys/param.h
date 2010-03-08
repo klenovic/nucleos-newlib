@@ -7,6 +7,8 @@
 
 #include <sys/config.h>
 #include <limits.h>
+#include <nucleos/limits.h>
+#include <nucleos/param.h>
 #include <machine/endian.h>
 #include <machine/param.h>
 
@@ -18,6 +20,10 @@
 #endif
 #ifndef PATHSIZE
 # define PATHSIZE (1024)
+#endif
+
+#ifndef NGROUPS
+# define NGROUPS	NGROUPS_MAX
 #endif
 
 #define MAXSYMLINKS	16

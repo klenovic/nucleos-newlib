@@ -38,7 +38,7 @@ struct minix3_super_block {
 	__u16 s_nzones;		/* total device size, including bit maps etc */
 	__s16 s_imap_blocks;	/* # of blocks used by inode bit map */
 	__s16 s_zmap_blocks;	/* # of blocks used by zone bit map */
-	__u16 s_firstdatazone;	/* number of first data zone */
+	__u16 s_firstdatazone_old;	/* number of first data zone */
 	__s16 s_log_zone_size;	/* log2 of blocks/zone */
 	__s16 s_pad;		/* try to avoid compiler-dependent padding */
 	__s32 s_max_size;	/* maximum file size on this device */
@@ -59,6 +59,7 @@ struct minix3_super_block {
 	/*struct inode *s_isup;*/	/* inode for root dir of mounted file sys */
 	/*struct inode *s_imount;*/	/* inode mounted on */
 	__u32 s_inodes_per_block;	/* precalculated from magic number */
+	__u32 s_firstdatazone;		/* number of first data zone (big) */
 	__s16 s_dev;			/* whose super block is this? */
 	__s32 s_rd_only;		/* set to 1 iff file sys mounted read only */
 	__s32 s_native;			/* set to 1 iff not byte swapped file system */
