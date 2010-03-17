@@ -172,7 +172,8 @@ GENERAL_SOURCES = \
 	fsversion.c \
 	rlimit.c \
 	setgroups.c \
-	initgroups.c
+	initgroups.c \
+	getsysinfo.c
 
 ELIX_2_SOURCES =
 

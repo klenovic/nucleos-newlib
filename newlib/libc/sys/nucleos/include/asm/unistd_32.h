@@ -109,6 +109,9 @@
 #define __NNR_geteuid		(85 + __syscall_offset)
 #define __NNR_getgroups		(86 + __syscall_offset)
 #define __NNR_setgroups		(87 + __syscall_offset)
+#define __NNR_getsysinfo	(88 + __syscall_offset)	/* to PM or FS */
+#define __NNR_getsysinfo_up	(89 + __syscall_offset)	/* to PM or FS */
+#define __NNR_svrctl		(90 + __syscall_offset)
 
 
 #endif /* __ASM_X86_UNISTD_32_H */
