@@ -128,7 +128,7 @@ am__objects_1 = lib_a-access.$(OBJEXT) lib_a-alarm.$(OBJEXT) \
 	lib_a-siggetmask.$(OBJEXT) lib_a-sigsetmask.$(OBJEXT) \
 	lib_a-fsversion.$(OBJEXT) lib_a-rlimit.$(OBJEXT) \
 	lib_a-setgroups.$(OBJEXT) lib_a-initgroups.$(OBJEXT) \
-	lib_a-getsysinfo.$(OBJEXT)
+	lib_a-getsysinfo.$(OBJEXT) lib_a-ptrace.$(OBJEXT)
 am__objects_2 =
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@am__objects_3 = $(am__objects_2) \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@	$(am__objects_2) \
@@ -168,7 +168,7 @@ am__objects_4 = access.lo alarm.lo brk.lo chdir.lo chmod.lo chown.lo \
 	tcflush.lo tcdrain.lo tcflow.lo getopt.lo syslog.lo mtab.lo \
 	stderr.lo getttyent.lo ttyslot.lo sigblock.lo siggetmask.lo \
 	sigsetmask.lo fsversion.lo rlimit.lo setgroups.lo \
-	initgroups.lo getsysinfo.lo
+	initgroups.lo getsysinfo.lo ptrace.lo
 @USE_LIBTOOL_TRUE@am_libnucleos_la_OBJECTS = $(am__objects_4) \
 @USE_LIBTOOL_TRUE@	$(am__objects_3)
 libnucleos_la_OBJECTS = $(am_libnucleos_la_OBJECTS)
@@ -497,7 +497,8 @@ GENERAL_SOURCES = \
 	rlimit.c \
 	setgroups.c \
 	initgroups.c \
-	getsysinfo.c
+	getsysinfo.c \
+	ptrace.c
 
 ELIX_2_SOURCES = 
 ELIX_3_SOURCES = 
@@ -1467,6 +1468,12 @@ lib_a-getsysinfo.o: getsysinfo.c
 
 lib_a-getsysinfo.obj: getsysinfo.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getsysinfo.obj `if test -f 'getsysinfo.c'; then $(CYGPATH_W) 'getsysinfo.c'; else $(CYGPATH_W) '$(srcdir)/getsysinfo.c'; fi`
+
+lib_a-ptrace.o: ptrace.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ptrace.o `test -f 'ptrace.c' || echo '$(srcdir)/'`ptrace.c
+
+lib_a-ptrace.obj: ptrace.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-ptrace.obj `if test -f 'ptrace.c'; then $(CYGPATH_W) 'ptrace.c'; else $(CYGPATH_W) '$(srcdir)/ptrace.c'; fi`
 
 mostlyclean-libtool:
 	-rm -f *.lo

@@ -26,7 +26,7 @@ int sigreturn(register struct sigcontext *scp)
 	int resultvar = 0;
 	static int __msg[9];
 
-	__msg[1] = __NNR_sigreturn;
+	__msg[1] = __NR_sigreturn;
 
 	/* Protect against race conditions by blocking all interrupts. */
 	sigfillset(&set);		/* splhi */
@@ -37,8 +37,6 @@ int sigreturn(register struct sigcontext *scp)
 		: "0"(__msg), "b"(scp), "c"(scp->sc_mask), "d"(scp->sc_flags)
 		: "memory", "cc"
 	);
-
-	resultvar = __msg[1];
 
 	if (__builtin_expect(INTERNAL_SYSCALL_ERROR_P(resultvar, ), 0)) {
 		__set_errno (INTERNAL_SYSCALL_ERRNO (resultvar, ));

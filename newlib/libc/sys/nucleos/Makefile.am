@@ -173,7 +173,8 @@ GENERAL_SOURCES = \
 	rlimit.c \
 	setgroups.c \
 	initgroups.c \
-	getsysinfo.c
+	getsysinfo.c \
+	ptrace.c
 
 ELIX_2_SOURCES =
 

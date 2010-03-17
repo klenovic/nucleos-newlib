@@ -86,7 +86,7 @@ loff_t _EXFUN(lseek64,(int fd, loff_t offset, int whence));
 int _EXFUN(mknod,(const char *_name, mode_t _mode, dev_t _addr));
 int _EXFUN(mknod4,(const char *_name, mode_t _mode, dev_t _addr, long _size));
 char _EXFUN(*mktemp,(char *_template));
-long _EXFUN(ptrace,(int _req, pid_t _pid, long _addr, long _data));
+long _EXFUN(ptrace,(int request, ...));
 char _EXFUN(*sbrk,(int _incr));
 int _EXFUN(sync,(void));
 int _EXFUN(fsync,(int fd));
