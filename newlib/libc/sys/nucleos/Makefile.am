@@ -161,7 +161,6 @@ GENERAL_SOURCES = \
 	tcdrain.c \
 	tcflow.c \
 	getopt.c \
-	syslog.c \
 	mtab.c \
 	stderr.c \
 	getttyent.c \
@@ -175,7 +174,7 @@ GENERAL_SOURCES = \
 	initgroups.c \
 	getsysinfo.c \
 	ptrace.c
-
+#	syslog.c
 ELIX_2_SOURCES =
 
 ELIX_3_SOURCES =

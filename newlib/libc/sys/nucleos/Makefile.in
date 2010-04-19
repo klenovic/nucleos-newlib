@@ -122,13 +122,13 @@ am__objects_1 = lib_a-access.$(OBJEXT) lib_a-alarm.$(OBJEXT) \
 	lib_a-tcsendbreak.$(OBJEXT) lib_a-memrchr.$(OBJEXT) \
 	lib_a-tcflush.$(OBJEXT) lib_a-tcdrain.$(OBJEXT) \
 	lib_a-tcflow.$(OBJEXT) lib_a-getopt.$(OBJEXT) \
-	lib_a-syslog.$(OBJEXT) lib_a-mtab.$(OBJEXT) \
-	lib_a-stderr.$(OBJEXT) lib_a-getttyent.$(OBJEXT) \
-	lib_a-ttyslot.$(OBJEXT) lib_a-sigblock.$(OBJEXT) \
-	lib_a-siggetmask.$(OBJEXT) lib_a-sigsetmask.$(OBJEXT) \
-	lib_a-fsversion.$(OBJEXT) lib_a-rlimit.$(OBJEXT) \
-	lib_a-setgroups.$(OBJEXT) lib_a-initgroups.$(OBJEXT) \
-	lib_a-getsysinfo.$(OBJEXT) lib_a-ptrace.$(OBJEXT)
+	lib_a-mtab.$(OBJEXT) lib_a-stderr.$(OBJEXT) \
+	lib_a-getttyent.$(OBJEXT) lib_a-ttyslot.$(OBJEXT) \
+	lib_a-sigblock.$(OBJEXT) lib_a-siggetmask.$(OBJEXT) \
+	lib_a-sigsetmask.$(OBJEXT) lib_a-fsversion.$(OBJEXT) \
+	lib_a-rlimit.$(OBJEXT) lib_a-setgroups.$(OBJEXT) \
+	lib_a-initgroups.$(OBJEXT) lib_a-getsysinfo.$(OBJEXT) \
+	lib_a-ptrace.$(OBJEXT)
 am__objects_2 =
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@am__objects_3 = $(am__objects_2) \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@	$(am__objects_2) \
@@ -165,8 +165,8 @@ am__objects_4 = access.lo alarm.lo brk.lo chdir.lo chmod.lo chown.lo \
 	statfs.lo fdatasync.lo putenv.lo vfork.lo isatty.lo \
 	tcgetattr.lo cfgetispeed.lo cfgetospeed.lo cfsetispeed.lo \
 	cfsetospeed.lo tcsetattr.lo tcsendbreak.lo memrchr.lo \
-	tcflush.lo tcdrain.lo tcflow.lo getopt.lo syslog.lo mtab.lo \
-	stderr.lo getttyent.lo ttyslot.lo sigblock.lo siggetmask.lo \
+	tcflush.lo tcdrain.lo tcflow.lo getopt.lo mtab.lo stderr.lo \
+	getttyent.lo ttyslot.lo sigblock.lo siggetmask.lo \
 	sigsetmask.lo fsversion.lo rlimit.lo setgroups.lo \
 	initgroups.lo getsysinfo.lo ptrace.lo
 @USE_LIBTOOL_TRUE@am_libnucleos_la_OBJECTS = $(am__objects_4) \
@@ -485,7 +485,6 @@ GENERAL_SOURCES = \
 	tcdrain.c \
 	tcflow.c \
 	getopt.c \
-	syslog.c \
 	mtab.c \
 	stderr.c \
 	getttyent.c \
@@ -500,6 +499,7 @@ GENERAL_SOURCES = \
 	getsysinfo.c \
 	ptrace.c
 
+#	syslog.c
 ELIX_2_SOURCES = 
 ELIX_3_SOURCES = 
 ELIX_4_SOURCES = 
@@ -1390,12 +1390,6 @@ lib_a-getopt.o: getopt.c
 
 lib_a-getopt.obj: getopt.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-getopt.obj `if test -f 'getopt.c'; then $(CYGPATH_W) 'getopt.c'; else $(CYGPATH_W) '$(srcdir)/getopt.c'; fi`
-
-lib_a-syslog.o: syslog.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-syslog.o `test -f 'syslog.c' || echo '$(srcdir)/'`syslog.c
-
-lib_a-syslog.obj: syslog.c
-	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-syslog.obj `if test -f 'syslog.c'; then $(CYGPATH_W) 'syslog.c'; else $(CYGPATH_W) '$(srcdir)/syslog.c'; fi`
 
 lib_a-mtab.o: mtab.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-mtab.o `test -f 'mtab.c' || echo '$(srcdir)/'`mtab.c
