@@ -9,7 +9,7 @@
  */
 #include <nucleos/unistd.h>
 #include <nucleos/time.h>
-#include <asm/syscall.h>
+#include <machine/syscall.h>
 #include <sys/errno.h>
 
 int gettimeofday(struct timeval *tv, void *tz)

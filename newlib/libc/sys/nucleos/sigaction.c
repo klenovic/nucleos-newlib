@@ -9,7 +9,7 @@
  */
 #include <nucleos/unistd.h>
 #include <asm/sigcontext.h>
-#include <asm/syscall.h>
+#include <machine/syscall.h>
 #include <errno.h>
 #include <signal.h>
 

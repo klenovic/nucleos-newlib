@@ -9,7 +9,7 @@
  */
 #include <nucleos/unistd.h>
 #include <sys/time.h>
-#include <asm/syscall.h>
+#include <machine/syscall.h>
 #include <sys/select.h>
 #include <sys/errno.h>
 #include <sys/types.h>

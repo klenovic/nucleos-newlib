@@ -13,7 +13,7 @@
 #include <sys/ptrace.h>
 #include <sys/errno.h>
 #include <nucleos/unistd.h>
-#include <asm/syscall.h>
+#include <machine/syscall.h>
 
 /* long ptrace(int request, pid_t pid, long *addr, long *data) */
 long ptrace(int request, ...)

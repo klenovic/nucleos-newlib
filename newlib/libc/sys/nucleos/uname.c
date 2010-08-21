@@ -9,7 +9,7 @@
  */
 #include <nucleos/unistd.h>
 #include <sys/utsname.h>
-#include <asm/syscall.h>
+#include <machine/syscall.h>
 #include <sys/errno.h>
 
 int uname(struct utsname *buf)

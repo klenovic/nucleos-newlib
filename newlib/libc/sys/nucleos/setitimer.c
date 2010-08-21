@@ -12,7 +12,7 @@
  */
 #include <nucleos/unistd.h>
 #include <nucleos/time.h>
-#include <asm/syscall.h>
+#include <machine/syscall.h>
 #include <sys/errno.h>
 
 int setitimer(int which, const struct itimerval *__restrict value,

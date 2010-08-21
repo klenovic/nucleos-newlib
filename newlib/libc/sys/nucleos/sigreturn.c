@@ -8,7 +8,7 @@
  *  the Free Software Foundation, version 2 of the License.
  */
 #include <nucleos/unistd.h>
-#include <asm/syscall.h>
+#include <machine/syscall.h>
 #include <asm/sigcontext.h>
 #include <signal.h>
 #include <errno.h>

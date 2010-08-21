@@ -8,7 +8,7 @@
  *  the Free Software Foundation, version 2 of the License.
  */
 #include <nucleos/unistd.h>
-#include <asm/syscall.h>
+#include <machine/syscall.h>
 #include <sys/errno.h>
 
 int fsync(int fd)

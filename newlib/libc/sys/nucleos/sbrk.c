@@ -1,5 +1,5 @@
 #include <nucleos/unistd.h>
-#include <asm/syscall.h>
+#include <machine/syscall.h>
 
 extern void *__curbrk;
 

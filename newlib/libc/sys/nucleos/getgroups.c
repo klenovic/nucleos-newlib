@@ -10,7 +10,7 @@
 #include <sys/types.h>
 #include <sys/errno.h>
 #include <nucleos/unistd.h>
-#include <asm/syscall.h>
+#include <machine/syscall.h>
 
 int getgroups(int gidsetsize, gid_t grouplist[])
 {

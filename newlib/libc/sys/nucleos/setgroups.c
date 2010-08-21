@@ -10,7 +10,7 @@
 #include <sys/types.h>
 #include <sys/errno.h>
 #include <nucleos/unistd.h>
-#include <asm/syscall.h>
+#include <machine/syscall.h>
 
 int setgroups(size_t ngroups, const gid_t *gidset)
 {

@@ -10,7 +10,7 @@
 #include <nucleos/unistd.h>
 #include <nucleos/mman.h>
 #include <nucleos/errno.h>
-#include <asm/syscall.h>
+#include <machine/syscall.h>
 #include <stdarg.h>
 #include <sys/errno.h>
 #include <sys/types.h>

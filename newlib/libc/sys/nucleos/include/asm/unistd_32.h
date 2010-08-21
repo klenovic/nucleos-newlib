@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2009  Ladislav Klenovic <klenovic@nucleonsoft.com>
+ *  Copyright (C) 2010  Ladislav Klenovic <klenovic@nucleonsoft.com>
  *
  *  This file is part of Nucleos kernel.
  *
@@ -71,7 +71,6 @@
 #define __NR_getpgrp		52
 #define __NR_getitimer		53
 #define __NR_setitimer		54
-/* Posix signal handling. */
 #define __NR_sigaction		55
 #define __NR_sigsuspend		56
 #define __NR_sigpending		57

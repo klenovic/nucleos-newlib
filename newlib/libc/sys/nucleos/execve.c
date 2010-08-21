@@ -15,7 +15,7 @@
 #include <string.h>
 #include <libc-symbols.h>
 #include <nucleos/unistd.h>
-#include <asm/syscall.h>
+#include <machine/syscall.h>
 
 /**
  * @nucleos: Change let kernel side setup the stack.

@@ -15,7 +15,7 @@
 #include <sys/errno.h>
 #include <nucleos/unistd.h>
 #include <nucleos/string.h>
-#include <asm/syscall.h>
+#include <machine/syscall.h>
 
 #define FSPATH "/sbin/"
 #define FSDEFAULT "minixfs"

@@ -5,33 +5,13 @@
 extern "C" {
 #endif
 
+#include <asm/stat.h>
 #include <_ansi.h>
 #include <time.h>
 #include <sys/types.h>
 
 /* dj's stat defines _STAT_H_ */
 #ifndef _STAT_H_
-
-/* It is intended that the layout of this structure not change when the
-   sizes of any of the basic types change (short, int, long) [via a compile
-   time option].  */
-
-struct stat
-{
-	dev_t st_dev;		/* major/minor device number */
-	ino_t st_ino;		/* i-node number */
-	mode_t st_mode;		/* file mode, protection bits, etc. */
-	short int st_nlink;	/* # links; TEMPORARY HACK: should be nlink_t*/
-	uid_t st_uid;		/* uid of the file's owner */
-	short int st_gid;	/* gid; TEMPORARY HACK: should be gid_t */
-	dev_t st_rdev;		/* device ID (if special file) */
-	off_t st_size;		/* file size */
-	blksize_t st_blksize;	/* blocksize for file system I/O */
-	blkcnt_t  st_blocks;	/* number of 512B blocks allocated */
-	time_t st_atime;	/* time of last access */
-	time_t st_mtime;	/* time of last data modification */
-	time_t st_ctime;	/* time of last file status change */
-};
 
 /* Traditional mask definitions for st_mode. */
 #define S_IFMT		0170000	/* type of file */
@@ -97,9 +77,6 @@ struct stat64;
 int	_EXFUN(_fstat64,( int __fd, struct stat64 *__sbuf ));
 #endif
 #endif
-
-/* nucleos */
-#include <sys/kstat.h>
 
 #endif /* !_STAT_H_ */
 #ifdef __cplusplus

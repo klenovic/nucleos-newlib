@@ -11,7 +11,7 @@
 #include <sys/types.h>
 #include <nucleos/sysinfo.h>
 #include <nucleos/unistd.h>
-#include <asm/syscall.h>
+#include <machine/syscall.h>
 
 int getsysinfo(endpoint_t who, int what, void *where)
 {

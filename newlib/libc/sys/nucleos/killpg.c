@@ -1,6 +1,6 @@
 #include <sys/signal.h>
 #include <nucleos/unistd.h>
-#include <asm/syscall.h>
+#include <machine/syscall.h>
 
 /**
  * @brief killpg
