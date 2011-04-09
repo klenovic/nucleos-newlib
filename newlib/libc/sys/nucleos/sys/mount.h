@@ -20,6 +20,11 @@
 #define MS_RDONLY	0x001	/* Mount device read only */
 #define MS_REUSE	0x002	/* Tell RS to try reusing binary from memory */
 
+#define FSVERSION_MFS1	1
+#define FSVERSION_MFS2	2
+#define FSVERSION_MFS3	3
+#define FSVERSION_EXT2	4
+
 int mount(char *_spec, char *_name, int _mountflags, char *type, char *args);
 int umount(const char *_name);
 
