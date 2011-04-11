@@ -16,15 +16,18 @@
 #include <string.h>
 
 #include <nucleos/const.h>
-#include <servers/mfs/const.h>
-#include <servers/mfs/type.h>
-#include <servers/mfs/super.h>
+#include <nucleos/magic.h>
+#include <servers/fs/minixfs/const.h>
+#include <servers/fs/minixfs/type.h>
+#include <servers/fs/minixfs/super.h>
+#include <servers/fs/ext2/const.h>
+#include <servers/fs/ext2/type.h>
+#include <servers/fs/ext2/super.h>
 
 static char super[SUPER_BLOCK_BYTES];
 
-#define MAGIC_OFFSET_MFS	0x18
+#define MAGIC_OFFSET_MINIXFS	0x18
 #define MAGIC_OFFSET_EXT	0x38
-#define MAGIC_VALUE_EXT2	0xef53
 
 static int check_super(off_t offset, unsigned short magic)
 {
@@ -54,16 +57,16 @@ char *dev, *prog;
 	close(fd);
 
 	/* first check MFS, a valid MFS may look like EXT but not vice versa */
-	if (check_super(MAGIC_OFFSET_MFS, SUPER_MAGIC))
+	if (check_super(MAGIC_OFFSET_MINIXFS, MINIX_SUPER_MAGIC))
 		return FSVERSION_MFS1;
 
-	if (check_super(MAGIC_OFFSET_MFS, SUPER_V2))
+	if (check_super(MAGIC_OFFSET_MINIXFS, MINIX2_SUPER_MAGIC))
 		return FSVERSION_MFS2;
 
-	if (check_super(MAGIC_OFFSET_MFS, SUPER_V3))
+	if (check_super(MAGIC_OFFSET_MINIXFS, MINIX3_SUPER_MAGIC))
 		return FSVERSION_MFS3;
 
-	if (check_super(MAGIC_OFFSET_EXT, MAGIC_VALUE_EXT2))
+	if (check_super(MAGIC_OFFSET_EXT, EXT2_SUPER_MAGIC))
 		return FSVERSION_EXT2;
 
 	return(-1);

@@ -274,9 +274,14 @@ install-data-local: config.status
 		$(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/asm-generic/`basename $$i`; \
 	done;
 	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/servers; \
-	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/servers/mfs; \
-	for i in $(srcdir)/include/servers/mfs/*.h; do \
-		$(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/servers/mfs/`basename $$i`; \
+	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/servers/fs; \
+	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/servers/fs/minixfs; \
+	for i in $(srcdir)/include/servers/fs/minixfs/*.h; do \
+		$(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/servers/fs/minixfs/`basename $$i`; \
+	done;
+	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/servers/fs/ext2; \
+	for i in $(srcdir)/include/servers/fs/ext2/*.h; do \
+		$(INSTALL_DATA) $$i $(DESTDIR)$(tooldir)/include/servers/fs/ext2/`basename $$i`; \
 	done;
 	$(mkinstalldirs) $(DESTDIR)$(tooldir)/include/arpa; \
 	for i in $(srcdir)/include/arpa/*.h; do \

@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2010  Ladislav Klenovic <klenovic@nucleonsoft.com>
+ *  Copyright (C) 2011  Ladislav Klenovic <klenovic@nucleonsoft.com>
  *
  *  This file is part of Nucleos kernel.
  *
@@ -38,15 +38,13 @@
 
 #ifndef __ASSEMBLY__
 
-/*===========================================================================*
- *          	    		Magic process numbers			     *
- *===========================================================================*/
-
-/* These may not be any valid endpoint (see <nucleos/endpoint.h>). */
+/* Magic process numbers, these may not be any valid endpoint
+ * (see <nucleos/endpoint.h>).
+ */
 #define ENDPT_ANY		0x7ace	/* used to indicate 'any process' */
-#define ENDPT_NONE 		0x6ace  /* used to indicate 'no process at all' */
-#define ENDPT_SELF		0x8ace 	/* used to indicate 'own process' */
-#define _MAX_MAGIC_PROC		(ENDPT_SELF)	/* used by <minix/endpoint.h> 
+#define ENDPT_NONE		0x6ace	/* used to indicate 'no process at all' */
+#define ENDPT_SELF		0x8ace	/* used to indicate 'own process' */
+#define _MAX_MAGIC_PROC		(ENDPT_SELF)	/* used by <nucleos/endpoint.h>
 						   to determine generation size */
 
 /*===========================================================================*
@@ -61,15 +59,15 @@
  */
 
 /* Kernel tasks. These all run in the same address space. */
-#define IDLE             -4	/* runs when no one else can run */
-#define CLOCK  		 -3	/* alarms and other clock functions */
-#define SYSTEM           -2	/* request system functionality */
-#define KERNEL           -1	/* pseudo-process for IPC and scheduling */
-#define HARDWARE     KERNEL	/* for hardware interrupt handlers */
+#define IDLE		-4	/* runs when no one else can run */
+#define CLOCK		-3	/* alarms and other clock functions */
+#define SYSTEM		-2	/* request system functionality */
+#define KERNEL		-1	/* pseudo-process for IPC and scheduling */
+#define HARDWARE	KERNEL	/* for hardware interrupt handlers */
 
 /* Number of tasks. */
 #define MAX_NR_TASKS	1023
-#define NR_TASKS	4 
+#define NR_TASKS	4
 
 /* Number of slots in the process table for non-kernel processes. The number
  * of system processes defines how many processes with special privileges
@@ -82,33 +80,33 @@
 #define NR_CTRLRS	CONFIG_NR_CTRLRS
 
 /* User-space processes, that is, device drivers, servers, and INIT. */
-#define PM_PROC_NR	0		/* process manager */
-#define FS_PROC_NR	1		/* file system */
-#define VFS_PROC_NR	FS_PROC_NR	/* FS has been renamed to VFS. */
-#define RS_PROC_NR 	  2  	/* reincarnation server */
-#define MEM_PROC_NR	3		/* memory driver (RAM disk, null, etc.) */
-#define LOG_PROC_NR	4		/* log device driver */
-#define TTY_PROC_NR	5		/* terminal (TTY) driver */
-#define DS_PROC_NR	6		/* data store server */
-#define MFS_PROC_NR	7		/* nucleos root filesystem */
-#define VM_PROC_NR	8		/* memory server */
-#define PFS_PROC_NR       9     /* pipe filesystem */
-#define INIT_PROC_NR	  10   	/* init -- goes multiuser */
+#define PM_PROC_NR	0	/* process manager */
+#define VFS_PROC_NR	1	/* Virtual filesystem */
+#define RS_PROC_NR 	2	/* reincarnation server */
+#define MEM_PROC_NR	3	/* memory driver (RAM disk, null, etc.) */
+#define LOG_PROC_NR	4	/* log device driver */
+#define TTY_PROC_NR	5	/* terminal (TTY) driver */
+#define DS_PROC_NR	6	/* data store server */
+#define MFS_PROC_NR	7	/* nucleos root filesystem */
+#define VM_PROC_NR	8	/* memory server */
+#define PFS_PROC_NR	9	/* pipe filesystem */
+#define EXT2_PROC_NR	10	/* ext2 filesystem */
+#define INIT_PROC_NR	11	/* init -- goes multiuser */
 
 /* Root system process and root user process. */
-#define ROOT_SYS_PROC_NR  RS_PROC_NR
-#define ROOT_USR_PROC_NR  INIT_PROC_NR
+#define ROOT_SYS_PROC_NR	RS_PROC_NR
+#define ROOT_USR_PROC_NR	INIT_PROC_NR
 
 /* Number of processes contained in the system image. */
-#define NR_BOOT_PROCS 	(NR_TASKS + INIT_PROC_NR + 1)
+#define NR_BOOT_PROCS	(NR_TASKS + INIT_PROC_NR + 1)
 
 /* Which processes should receive diagnostics from the kernel and system?
  * Directly sending it to TTY only displays the output. Sending it to the
  * log driver will cause the diagnostics to be buffered and displayed.
  * Messages are sent by src/lib/sysutil/kputc.c to these processes, in
  * the order of this array, which must be terminated by ENDPT_NONE. This is used
- * by drivers and servers that printf().
- * The kernel does this for its own kprintf() in kernel/utility.c, also using
+ * by drivers and servers that printk().
+ * The kernel does this for its own printk() in kernel/utility.c, also using
  * this array, but a slightly different mechanism.
  */
 #define OUTPUT_PROCS_ARRAY	{ TTY_PROC_NR, LOG_PROC_NR, ENDPT_NONE }
@@ -613,7 +611,7 @@
 #define SCP_MAKEINFO(seg)  ((seg) & 0xffff)
 #define SCP_INFO2SEG(info) ((info) & 0xffff)
 
-/* Field names for SELECT (FS_PROC_NR). */
+/* Field names for SELECT (VFS_PROC_NR). */
 #define SEL_NFDS       m_data1
 #define SEL_READFDS    m_data3
 #define SEL_WRITEFDS   m_data4

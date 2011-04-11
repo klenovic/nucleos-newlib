@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2010  Ladislav Klenovic <klenovic@nucleonsoft.com>
+ *  Copyright (C) 2011  Ladislav Klenovic <klenovic@nucleonsoft.com>
  *
  *  This file is part of Nucleos kernel.
  *
@@ -7,11 +7,11 @@
  *  it under the terms of the GNU General Public License as published by
  *  the Free Software Foundation, version 2 of the License.
  */
-#ifndef __SERVERS_MFS_SUPER_H
-#define __SERVERS_MFS_SUPER_H
+#ifndef __SERVERS_FS_MINIXFS_SUPER_H
+#define __SERVERS_FS_MINIXFS_SUPER_H
 
 #include <nucleos/types.h>
-#include <servers/mfs/type.h>
+#include <servers/fs/minixfs/type.h>
 
 /* Super block table.  The root file system and every mounted file system
  * has an entry here.  The entry holds information about the sizes of the bit
@@ -71,4 +71,4 @@ struct minix3_super_block {
 };
 
 
-#endif /* __SERVERS_MFS_SUPER_H */
+#endif /* __SERVERS_FS_MINIXFS_SUPER_H */

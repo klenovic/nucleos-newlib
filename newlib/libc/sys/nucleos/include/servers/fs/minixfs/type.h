@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2010  Ladislav Klenovic <klenovic@nucleonsoft.com>
+ *  Copyright (C) 2011  Ladislav Klenovic <klenovic@nucleonsoft.com>
  *
  *  This file is part of Nucleos kernel.
  *
@@ -7,15 +7,11 @@
  *  it under the terms of the GNU General Public License as published by
  *  the Free Software Foundation, version 2 of the License.
  */
-#ifndef __SERVERS_MFS_TYPE_H
-#define __SERVERS_MFS_TYPE_H
+#ifndef __SERVERS_FS_MINIXFS_TYPE_H
+#define __SERVERS_FS_MINIXFS_TYPE_H
 
 #include <nucleos/types.h>
-#include <servers/mfs/const.h>
-
-typedef __u32 __kernel_zone_t;	/* zone number */
-typedef __u32 __kernel_block_t;	/* block number */
-typedef __u16 __kernel_zone1_t;	/* zone number for V1 file systems */
+#include <servers/fs/minixfs/const.h>
 
 /* Declaration of the V1 inode as it is on the disk (not in core). */
 typedef struct {		/* V1.x disk inode */
@@ -42,4 +38,4 @@ typedef struct {		/* V2.x disk inode */
 } d2_inode;
 
 
-#endif /* __SERVERS_MFS_TYPE_H */
+#endif /* __SERVERS_FS_MINIXFS_TYPE_H */

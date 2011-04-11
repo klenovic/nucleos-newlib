@@ -1,0 +1,1 @@
+cmd_/home/devel/devel/nucleos/git/nucleos/usr/include/servers/fs/minixfs/.check := for f in const.h super.h type.h ; do echo "/home/devel/devel/nucleos/git/nucleos/usr/include/servers/fs/minixfs/$${f}"; done | xargs perl scripts/headers_check.pl /home/devel/devel/nucleos/git/nucleos/usr/include x86; touch /home/devel/devel/nucleos/git/nucleos/usr/include/servers/fs/minixfs/.check

@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2010  Ladislav Klenovic <klenovic@nucleonsoft.com>
+ *  Copyright (C) 2011  Ladislav Klenovic <klenovic@nucleonsoft.com>
  *
  *  This file is part of Nucleos kernel.
  *
@@ -26,7 +26,7 @@ typedef unsigned long sigset_t;
 /* Regular signals. */
 #define SIGHUP		1	/* hangup */
 #define SIGINT		2	/* interrupt (DEL) */
-#define SIGQUIT		3	/* quit (ASCII FS_PROC_NR) */
+#define SIGQUIT		3	/* quit (ASCII VFS_PROC_NR) */
 #define SIGILL		4	/* illegal instruction */
 #define SIGTRAP		5	/* trace trap (not reset when caught) */
 #define SIGABRT		6	/* IOT instruction */

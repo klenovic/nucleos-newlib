@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2010  Ladislav Klenovic <klenovic@nucleonsoft.com>
+ *  Copyright (C) 2011  Ladislav Klenovic <klenovic@nucleonsoft.com>
  *
  *  This file is part of Nucleos kernel.
  *
@@ -17,7 +17,7 @@
 #include <asm-generic/types.h>
 
 /* possible select() operation types; read, write, errors */
-/* (FS_PROC_NR/driver internal use only) */
+/* (VFS_PROC_NR/driver internal use only) */
 #define SEL_RD          (1 << 0)
 #define SEL_WR          (1 << 1)
 #define SEL_ERR         (1 << 2)
