@@ -12,10 +12,13 @@
  * @file include/nucleos/types.h
  * @brief Data types (architecturally independent)
  */
-#ifndef __NUCLEOS_TYPES_H
-#define __NUCLEOS_TYPES_H
+#ifndef _NUCLEOS_TYPES_H
+#define _NUCLEOS_TYPES_H
 
 #include <asm/types.h>
+
+#ifndef __ASSEMBLY__
 #include <nucleos/posix_types.h>
 
-#endif /* __NUCLEOS_TYPES_H */
+#endif /*  __ASSEMBLY__ */
+#endif /* _NUCLEOS_TYPES_H */

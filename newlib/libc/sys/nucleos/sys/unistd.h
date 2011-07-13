@@ -90,7 +90,7 @@ long _EXFUN(ptrace,(int request, ...));
 char _EXFUN(*sbrk,(int _incr));
 int _EXFUN(sync,(void));
 int _EXFUN(fsync,(int fd));
-int _EXFUN(reboot,(int _how, ...));
+int _EXFUN(reboot,(int how));
 int _EXFUN(gethostname,(char *_hostname, size_t _len));
 int _EXFUN(getdomainname,(char *_domain, size_t _len));
 char _EXFUN(*getpass, (__const char *__prompt));
