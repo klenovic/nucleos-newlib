@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2011  Ladislav Klenovic <klenovic@nucleonsoft.com>
+ *  Copyright (C) 2012  Ladislav Klenovic <klenovic@nucleonsoft.com>
  *
  *  This file is part of Nucleos kernel.
  *
@@ -8,8 +8,8 @@
  *  the Free Software Foundation, version 2 of the License.
  */
 
-#ifndef __NUCLEOS_TTY_H
-#define __NUCLEOS_TTY_H
+#ifndef _NUCLEOS_TTY_H
+#define _NUCLEOS_TTY_H
 
 #include <nucleos/types.h>
 
@@ -33,4 +33,4 @@ struct boot_tty_info {
 #define BTIF_CONSORIGIN	0x01	/* consorigin is set */
 #define BTIF_CONSCURSOR	0x02	/* conscursor is set */
 
-#endif /* __NUCLEOS_TTY_H */
+#endif /* _NUCLEOS_TTY_H */

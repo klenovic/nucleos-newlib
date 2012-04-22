@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2011  Ladislav Klenovic <klenovic@nucleonsoft.com>
+ *  Copyright (C) 2012  Ladislav Klenovic <klenovic@nucleonsoft.com>
  *
  *  This file is part of Nucleos kernel.
  *
@@ -9,10 +9,10 @@
  */
 /* For kernel and user-kernel return negative error values. */
 
-#ifndef __NUCLEOS_ERRNO_H
-#define __NUCLEOS_ERRNO_H
+#ifndef _NUCLEOS_ERRNO_H
+#define _NUCLEOS_ERRNO_H
 
 #include <asm/errno.h>
 
 
-#endif /* __NUCLEOS_ERRNO_H */
+#endif /* _NUCLEOS_ERRNO_H */

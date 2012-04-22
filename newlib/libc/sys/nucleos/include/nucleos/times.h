@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2011  Ladislav Klenovic <klenovic@nucleonsoft.com>
+ *  Copyright (C) 2012  Ladislav Klenovic <klenovic@nucleonsoft.com>
  *
  *  This file is part of Nucleos kernel.
  *
@@ -9,8 +9,8 @@
  */
 /* The <times.h> header is for time times() system call. */
 
-#ifndef __NUCLEOS_TIMES_H
-#define __NUCLEOS_TIMES_H
+#ifndef _NUCLEOS_TIMES_H
+#define _NUCLEOS_TIMES_H
 
 #include <nucleos/types.h>
 
@@ -22,4 +22,4 @@ struct tms {
 };
 
 
-#endif /* __NUCLEOS_TIMES_H */
+#endif /* _NUCLEOS_TIMES_H */

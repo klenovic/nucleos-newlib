@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2011  Ladislav Klenovic <klenovic@nucleonsoft.com>
+ *  Copyright (C) 2012  Ladislav Klenovic <klenovic@nucleonsoft.com>
  *
  *  This file is part of Nucleos kernel.
  *
@@ -9,8 +9,8 @@
  */
 /* The <nucleos/utime.h> header is used for the utime() system call. */
 
-#ifndef __NUCLEOS_UTIME_H
-#define __NUCLEOS_UTIME_H
+#ifndef _NUCLEOS_UTIME_H
+#define _NUCLEOS_UTIME_H
 
 #include <nucleos/types.h>
 
@@ -20,4 +20,4 @@ struct utimbuf {
 };
 
 
-#endif /* __NUCLEOS_UTIME_H */
+#endif /* _NUCLEOS_UTIME_H */

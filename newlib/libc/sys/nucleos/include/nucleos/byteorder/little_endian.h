@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2011  Ladislav Klenovic <klenovic@nucleonsoft.com>
+ *  Copyright (C) 2012  Ladislav Klenovic <klenovic@nucleonsoft.com>
  *
  *  This file is part of Nucleos kernel.
  *
@@ -8,8 +8,8 @@
  *  the Free Software Foundation, version 2 of the License.
  */
 /* linux */
-#ifndef __NUCLEOS_BYTEORDER_LITTLE_ENDIAN_H
-#define __NUCLEOS_BYTEORDER_LITTLE_ENDIAN_H
+#ifndef _NUCLEOS_BYTEORDER_LITTLE_ENDIAN_H
+#define _NUCLEOS_BYTEORDER_LITTLE_ENDIAN_H
 
 #ifndef __LITTLE_ENDIAN
 #define __LITTLE_ENDIAN 1234
@@ -112,4 +112,4 @@ static __inline__ __u16 __be16_to_cpup(const __be16 *p)
 #define __be16_to_cpus(x) __swab16s((x))
 
 
-#endif /* _LINUX_BYTEORDER_LITTLE_ENDIAN_H */
+#endif /* _NUCLEOS_BYTEORDER_LITTLE_ENDIAN_H */

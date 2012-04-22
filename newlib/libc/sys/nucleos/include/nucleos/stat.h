@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2011  Ladislav Klenovic <klenovic@nucleonsoft.com>
+ *  Copyright (C) 2012  Ladislav Klenovic <klenovic@nucleonsoft.com>
  *
  *  This file is part of Nucleos kernel.
  *
@@ -12,8 +12,8 @@
  * some file.  These calls are the only approved way to inspect i-nodes.
  */
 
-#ifndef __NUCLEOS_STAT_H
-#define __NUCLEOS_STAT_H
+#ifndef _NUCLEOS_STAT_H
+#define _NUCLEOS_STAT_H
 
 
-#endif /* __NUCLEOS_STAT_H */
+#endif /* _NUCLEOS_STAT_H */

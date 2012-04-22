@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2011  Ladislav Klenovic <klenovic@nucleonsoft.com>
+ *  Copyright (C) 2012  Ladislav Klenovic <klenovic@nucleonsoft.com>
  *
  *  This file is part of Nucleos kernel.
  *
@@ -11,8 +11,8 @@
  * @file include/nucleos/binfmts.h
  * @brief handling of various binary formats
  */ 
-#ifndef __NUCLEOS_BINFMTS_H
-#define __NUCLEOS_BINFMTS_H
+#ifndef _NUCLEOS_BINFMTS_H
+#define _NUCLEOS_BINFMTS_H
 
 #include <nucleos/string.h>
 #include <nucleos/types.h>
@@ -21,4 +21,4 @@
 #define BINFMT_BUFSIZE	128
 
 
-#endif /* __NUCLEOS_BINFMTS_H */
+#endif /* _NUCLEOS_BINFMTS_H */

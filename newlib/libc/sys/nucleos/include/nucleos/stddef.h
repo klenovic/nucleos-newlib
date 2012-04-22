@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2011  Ladislav Klenovic <klenovic@nucleonsoft.com>
+ *  Copyright (C) 2012  Ladislav Klenovic <klenovic@nucleonsoft.com>
  *
  *  This file is part of Nucleos kernel.
  *
@@ -9,8 +9,8 @@
  */
 /* The <nucleos/stddef.h> header defines certain commonly used macros. */
 
-#ifndef __NUCLEOS_STDDEF_H
-#define __NUCLEOS_STDDEF_H
+#ifndef _NUCLEOS_STDDEF_H
+#define _NUCLEOS_STDDEF_H
 
 
 
@@ -22,4 +22,4 @@
 #endif
 
 
-#endif /* __NUCLEOS_STDDEF_H */
+#endif /* _NUCLEOS_STDDEF_H */

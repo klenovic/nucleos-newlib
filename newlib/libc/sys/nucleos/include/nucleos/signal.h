@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2011  Ladislav Klenovic <klenovic@nucleonsoft.com>
+ *  Copyright (C) 2012  Ladislav Klenovic <klenovic@nucleonsoft.com>
  *
  *  This file is part of Nucleos kernel.
  *
@@ -7,8 +7,8 @@
  *  it under the terms of the GNU General Public License as published by
  *  the Free Software Foundation, version 2 of the License.
  */
-#ifndef __NUCLEOS_SIGNAL_H
-#define __NUCLEOS_SIGNAL_H
+#ifndef _NUCLEOS_SIGNAL_H
+#define _NUCLEOS_SIGNAL_H
 
 #include <nucleos/types.h>
 #include <asm/signal.h>
@@ -27,4 +27,4 @@ int sigemptyset(sigset_t *_set);
 int sigfillset(sigset_t *_set);
 int sigismember(const sigset_t *_set, int _sig);
 
-#endif /* __NUCLEOS_SIGNAL_H */
+#endif /* _NUCLEOS_SIGNAL_H */

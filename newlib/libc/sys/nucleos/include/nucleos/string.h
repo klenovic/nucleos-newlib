@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2011  Ladislav Klenovic <klenovic@nucleonsoft.com>
+ *  Copyright (C) 2012  Ladislav Klenovic <klenovic@nucleonsoft.com>
  *
  *  This file is part of Nucleos kernel.
  *
@@ -7,14 +7,10 @@
  *  it under the terms of the GNU General Public License as published by
  *  the Free Software Foundation, version 2 of the License.
  */
-/* The <nucleos/string.h> header contains prototypes for the string handling 
- * functions.
- */
-#ifndef __NUCLEOS_STRING_H
-#define __NUCLEOS_STRING_H
+#ifndef _NUCLEOS_STRING_H
+#define _NUCLEOS_STRING_H
 
+/* We don't want strings.h stuff being used by user stuff by accident */
 
 #include <string.h>
-
-
-#endif /* __NUCLEOS_STRING_H */
+#endif /* _NUCLEOS_STRING_H */

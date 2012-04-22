@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2011  Ladislav Klenovic <klenovic@nucleonsoft.com>
+ *  Copyright (C) 2012  Ladislav Klenovic <klenovic@nucleonsoft.com>
  *
  *  This file is part of Nucleos kernel.
  *
@@ -33,8 +33,8 @@
  * Zero and negative values are widely used for OK and error responses.
  */
 
-#ifndef __NUCLEOS_COM_H
-#define __NUCLEOS_COM_H
+#ifndef _NUCLEOS_COM_H
+#define _NUCLEOS_COM_H
 
 #ifndef __ASSEMBLY__
 
@@ -504,7 +504,7 @@
 #   define GET_IMAGE	   1	/* get system image table */
 #   define GET_PROCTAB	   2	/* get kernel process table */
 #   define GET_RANDOMNESS  3	/* get randomness buffer */
-#   define GET_MONPARAMS   4	/* get monitor parameters */
+#   define GET_CMDLINE_PARAMS   4	/* get kernel command line */
 #   define GET_KENV	   5	/* get kernel environment string */
 #   define GET_IRQHOOKS	   6	/* get the IRQ table */
 #   define GET_KMESSAGES   7	/* get kernel messages */
@@ -1081,4 +1081,4 @@
 
 #endif /* __ASSEMBLY__ */
 
-#endif /* __NUCLEOS_COM_H */ 
+#endif /* _NUCLEOS_COM_H */ 

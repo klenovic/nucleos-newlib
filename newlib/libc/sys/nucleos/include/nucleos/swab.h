@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2011  Ladislav Klenovic <klenovic@nucleonsoft.com>
+ *  Copyright (C) 2012  Ladislav Klenovic <klenovic@nucleonsoft.com>
  *
  *  This file is part of Nucleos kernel.
  *
@@ -8,8 +8,8 @@
  *  the Free Software Foundation, version 2 of the License.
  */
 /* linux */
-#ifndef __NUCLEOS_SWAB_H
-#define __NUCLEOS_SWAB_H
+#ifndef _NUCLEOS_SWAB_H
+#define _NUCLEOS_SWAB_H
 
 #include <nucleos/types.h>
 
@@ -289,4 +289,4 @@ static __inline__ void __swahb32s(__u32 *p)
 }
 
 
-#endif /* __NUCLEOS_SWAB_H */
+#endif /* _NUCLEOS_SWAB_H */

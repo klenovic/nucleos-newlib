@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2011  Ladislav Klenovic <klenovic@nucleonsoft.com>
+ *  Copyright (C) 2012  Ladislav Klenovic <klenovic@nucleonsoft.com>
  *
  *  This file is part of Nucleos kernel.
  *
@@ -22,11 +22,11 @@
  *				+---------------------+
  */
 
-#ifndef __NUCLEOS_WAIT_H
-#define __NUCLEOS_WAIT_H
+#ifndef _NUCLEOS_WAIT_H
+#define _NUCLEOS_WAIT_H
 
 #define WNOHANG		1	/* do not wait for child to exit */
 #define WUNTRACED	2	/* for job control; not implemented */
 
 
-#endif /* __NUCLEOS_WAIT_H */
+#endif /* _NUCLEOS_WAIT_H */

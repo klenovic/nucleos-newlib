@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2011  Ladislav Klenovic <klenovic@nucleonsoft.com>
+ *  Copyright (C) 2012  Ladislav Klenovic <klenovic@nucleonsoft.com>
  *
  *  This file is part of Nucleos kernel.
  *
@@ -8,10 +8,10 @@
  *  the Free Software Foundation, version 2 of the License.
  */
 /* For controlling tty modes. */
-#ifndef __NUCLEOS_TERMIOS_H
-#define __NUCLEOS_TERMIOS_H
+#ifndef _NUCLEOS_TERMIOS_H
+#define _NUCLEOS_TERMIOS_H
 
 #include <asm/termios.h>
 
 
-#endif /* __NUCLEOS_TERMIOS_H */
+#endif /* _NUCLEOS_TERMIOS_H */

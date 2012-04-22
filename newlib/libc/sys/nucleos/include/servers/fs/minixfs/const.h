@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2011  Ladislav Klenovic <klenovic@nucleonsoft.com>
+ *  Copyright (C) 2012  Ladislav Klenovic <klenovic@nucleonsoft.com>
  *
  *  This file is part of Nucleos kernel.
  *
@@ -29,6 +29,8 @@
  * (small) long constants being passed to routines expecting an int.
  */
 #define usizeof(t)	((unsigned) sizeof(t))
+
+#define MINIXFS_NAME_MAX	60
 
 /* Miscellaneous constants */
 #define SU_UID		((uid_t) 0)	/* super_user's uid_t */
